@@ -92,7 +92,6 @@ monster.loot = {
 	{ id = 3492, chance = 19000, maxCount = 3 }, -- worm
 	{ id = 5914, chance = 900 }, -- yellow piece of cloth
 	{ id = 9649, chance = 10000 }, -- gauze bandage
-	{ id = 10290, chance = 10 }, -- mini mummy
 	{ id = 11466, chance = 11690 }, -- flask of embalming fluid
 }
 

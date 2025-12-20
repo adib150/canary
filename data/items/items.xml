@@ -26691,8 +26691,9 @@
 		<attribute key="primarytype" value="creature products"/>
 		<attribute key="weight" value="300"/>
 	</item>
-	<item id="10290" article="a" name="mini mummy">
+	<item id="10290" article="a" name="Loot Pouch Item Seller">
 		<attribute key="primarytype" value="dolls and bears"/>
+		<attribute key="description" value="Use this to sell all items inside your loot pouch."/>
 		<attribute key="weight" value="450"/>
 	</item>
 	<item id="10291" article="a" name="rotten piece of cloth" plural="rotten pieces of cloth">
@@ -53196,17 +53197,14 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 	</item>
 	<item fromid="28521" toid="28523" name="unknown item"/>
 	<item id="28524" name="RESERVED SPRITE"/>
-	<item id="28525" article="a" name="magic gold converter">
+	<item id="28525" article="a" name="magic gold bank">
 		<attribute key="primarytype" value="tools"/>
 		<attribute key="description" value="It is actually in the inactive state"/>
-		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="500"/>
 		<attribute key="wrapableto" value="23398"/>
 	</item>
-	<item id="28526" article="a" name="magic gold converter">
+	<item id="28526" article="a" name="magic gold bank">
 		<attribute key="primarytype" value="tools"/>
 		<attribute key="description" value="It is actually in the active state"/>
-		<attribute key="charges" value="500"/>
 	</item>
 	<item fromid="28527" toid="28528" article="a" name="altar of ritual sword"/>
 	<item fromid="28529" toid="28530" article="a" name="altar of exultant ritual figurine"/>

@@ -53,6 +53,8 @@ end
 npcConfig.shop = {
 	{ itemName = "abomination's eye", clientId = 36792, sell = 650000 },
 	{ itemName = "abomination's tail", clientId = 36791, sell = 700000 },
+	{ itemName = "demonic essence", clientId = 6499, sell = 1000 },
+	{ itemName = "purple tome", clientId = 2848, sell = 2000 },
 	{ itemName = "abomination's tongue", clientId = 36793, sell = 950000 },
 	{ itemName = "acorn", clientId = 10296, sell = 10 },
 	{ itemName = "afflicted strider head", clientId = 36789, sell = 900 },
