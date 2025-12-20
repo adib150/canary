@@ -673,15 +673,15 @@ QuestDoorAction = {
 		itemId = false,
 		itemPos = { { x = 32109, y = 32189, z = 8 } },
 	},
-	-- Hidden Threats Quest
-	[Storage.Quest.U11_50.HiddenThreats.RatterDoor] = {
-		itemId = 1644,
-		itemPos = { { x = 33046, y = 32066, z = 12 } },
-	},
-	[Storage.Quest.U11_50.HiddenThreats.ServantDoor] = {
-		itemId = 1642,
-		itemPos = { { x = 33036, y = 32008, z = 12 } },
-	},
+	-- Hidden Threats Quests
+	--[Storage.Quest.U11_50.HiddenThreats.RatterDoor] = {
+	--	itemId = 1644,
+	--	itemPos = { { x = 33046, y = 32066, z = 12 } },
+	--},
+	-- [Storage.Quest.U11_50.HiddenThreats.ServantDoor] = {
+	-- 	itemId = 1642,
+	-- 	itemPos = { { x = 33036, y = 32008, z = 12 } },
+	-- },
 	[Storage.Quest.U11_50.HiddenThreats.CorymWorksDoor01] = {
 		itemId = 1642,
 		itemPos = { { x = 33025, y = 32008, z = 12 } },

@@ -92,7 +92,6 @@ monster.loot = {
 	{ name = "worm", chance = 19000, maxCount = 3 },
 	{ name = "yellow piece of cloth", chance = 900 },
 	{ name = "gauze bandage", chance = 10000 },
-	{ name = "mini mummy", chance = 10 },
 	{ name = "flask of embalming fluid", chance = 11690 },
 }
 
