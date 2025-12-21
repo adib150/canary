@@ -77,8 +77,6 @@ monster.loot = {
 	{ name = "soul orb", chance = 10000 },
 	{ id = 6299, chance = 4000 }, -- death ring
 	{ name = "demonic essence", chance = 1538 },
-	{ id = 6570, chance = 5538, maxCount = 3 }, -- surprise bag
-	{ id = 6571, chance = 1538 }, -- surprise bag
 	{ name = "dragonbone staff", chance = 50000 },
 }
 

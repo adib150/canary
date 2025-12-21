@@ -87,8 +87,6 @@ monster.loot = {
 	{ id = 6491, chance = 1000 }, -- bat decoration
 	{ id = 6525, chance = 1000 }, -- skeleton decoration
 	{ name = "bar of chocolate", chance = 1000 },
-	{ id = 6570, chance = 1000 }, -- surprise bag
-	{ id = 6571, chance = 1000 }, -- surprise bag
 	{ id = 2977, chance = 1000 }, -- pumpkinhead
 }
 

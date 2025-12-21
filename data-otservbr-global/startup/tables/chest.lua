@@ -2024,7 +2024,7 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = { x = 32231, y = 31065, z = 7 },
 		container = 2856,
-		reward = { { 2995, 1 }, { 6570, 1 }, { 6574, 1 }, { 6569, 10 }, { 7377, 1 } },
+		reward = { { 2995, 1 }, { 6574, 1 }, { 6569, 10 }, { 7377, 1 } }, -- removed 6570 - now store-exclusive
 		weight = 25.10,
 		storage = Storage.Quest.U8_0.BarbarianArena.RewardGreenhornPresent,
 	},

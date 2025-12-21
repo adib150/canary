@@ -9,7 +9,7 @@ function chayenneReward.onUse(player, item, fromPosition, itemEx, toPosition)
 		backpack:addItem(5882, 1)
 		backpack:addItem(5791, 1)
 		backpack:addItem(2995, 1)
-		backpack:addItem(6570, 1)
+		-- backpack:addItem(6570, 1) -- removed - now store-exclusive surprise removal of slot of power
 		player:setStorageValue(Storage.ChayenneReward, 1)
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found a beach backpack.")
 	else

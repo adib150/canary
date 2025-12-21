@@ -1375,19 +1375,10 @@
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
-	<item id="673" article="a" name="fiery orcish maul">
-		<attribute key="primarytype" value="club weapons"/>
-		<attribute key="elementfire" value="7"/>
-		<attribute key="attack" value="35"/>
-		<attribute key="defense" value="18"/>
-		<attribute key="weight" value="5400"/>
-		<attribute key="script" value="moveevent;weapon">
-			<attribute key="action" value="removecharge"/>
-			<attribute key="level" value="35"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="weaponType" value="club"/>
-		</attribute>
-	</item>
+	<item id="673" article="a" name="hammer of power">
+                <attribute key="primarytype" value="tools"/>
+                <attribute key="description" value="Add and upgrade slots of power on equipments."/>
+                <attribute key="weight" value="400"/>        </item>
 	<item id="674" article="a" name="fiery war hammer">
 		<attribute key="primarytype" value="club weapons"/>
 		<attribute key="elementfire" value="9"/>
@@ -18126,8 +18117,15 @@
 		<attribute key="primarytype" value="food"/>
 		<attribute key="weight" value="5"/>
 	</item>
-	<item fromid="6570" toid="6571" article="a" name="surprise bag">
-		<attribute key="weight" value="1000"/>
+	<item id="6570" article="a" name="surprise removal of slot of power">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="description" value="Contains a random removal powder!"/>
+		<attribute key="weight" value="100"/>
+	</item>
+	<item id="6571" article="a" name="surprise powder of power">
+			<attribute key="primarytype" value="tools"/>
+			<attribute key="description" value="Contains a random powder of power!"/>
+			<attribute key="weight" value="100"/>
 	</item>
 	<item id="6572" article="a" name="party trumpet">
 		<attribute key="primarytype" value="party items"/>
@@ -26678,9 +26676,10 @@
 		<attribute key="weight" value="300"/>
 	</item>
 	<item id="10290" article="a" name="Loot Pouch Item Seller">
-		<attribute key="primarytype" value="dolls and bears"/>
+<attribute key="primarytype" value="dolls and bears"/>
 		<attribute key="description" value="Use this to sell all items inside your loot pouch."/>
 		<attribute key="weight" value="100"/>
+		<attribute key="allowdistread" value="0"/>
 	</item>
 	<item id="10291" article="a" name="rotten piece of cloth" plural="rotten pieces of cloth">
 		<attribute key="weight" value="60"/>
@@ -29579,8 +29578,9 @@
 		<attribute key="primarytype" value="quest items"/>
 		<attribute key="weight" value="50"/>
 	</item>
-	<item id="12209" name="strange green powder">
-		<attribute key="primarytype" value="rubbish"/>
+	<item id="12209" name="removal of second slot of power">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="description" value="Removes the second slot of power from an equipment."/>
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="12210" name="strange violet powder">
@@ -29593,16 +29593,18 @@
 	</item>
 	<item fromid="12212" toid="12213" article="a" name="stone"/>
 	<item fromid="12214" toid="12225" article="a" name="dark sand"/>
-	<item id="12226" name="strange red powder">
-		<attribute key="primarytype" value="quest items"/>
+	<item id="12226" name="removal of third slot of power">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="description" value="Removes the third slot of power from an equipment."/>
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="12227" name="strange yellow powder">
 		<attribute key="primarytype" value="quest items"/>
 		<attribute key="weight" value="50"/>
 	</item>
-	<item id="12228" name="strange blue powder">
-		<attribute key="primarytype" value="quest items"/>
+	<item id="12228" name="removal of first slot of power">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="description" value="Removes the first slot of power from an equipment."/>
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="12229" name="screaming cherry">
@@ -30687,10 +30689,11 @@
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="12699" article="a" name="magic gold converter">
-		<attribute key="primarytype" value="tools"/>
+<attribute key="primarytype" value="tools"/>
 		<attribute key="showCharges" value="1"/>
 		<attribute key="charges" value="500"/>
 		<attribute key="wrapableto" value="23398"/>
+		<attribute key="allowdistread" value="0"/>
 	</item>
 	<item fromid="12713" toid="12716" name="toad pedestal">
 		<attribute key="primarytype" value="statues"/>
@@ -53172,13 +53175,15 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 	<item fromid="28521" toid="28523" name="unknown item"/>
 	<item id="28524" name="RESERVED SPRITE"/>
 	<item id="28525" article="a" name="magic gold bank">
-		<attribute key="primarytype" value="tools"/>
+<attribute key="primarytype" value="tools"/>
 		<attribute key="description" value="It is actually in the inactive state"/>
 		<attribute key="wrapableto" value="23398"/>
+		<attribute key="allowdistread" value="0"/>
 	</item>
 	<item id="28526" article="a" name="magic gold bank">
-		<attribute key="primarytype" value="tools"/>
+<attribute key="primarytype" value="tools"/>
 		<attribute key="description" value="It is actually in the active state"/>
+		<attribute key="allowdistread" value="0"/>
 	</item>
 	<item fromid="28527" toid="28528" article="a" name="altar of ritual sword"/>
 	<item fromid="28529" toid="28530" article="a" name="altar of exultant ritual figurine"/>
@@ -54875,9 +54880,10 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="weight" value="2000"/>
 	</item>
 	<item id="28897" article="an" name="remote ammo buyer">
-		<attribute key="primarytype" value="dolls and bears"/>
+<attribute key="primarytype" value="dolls and bears"/>
 		<attribute key="description" value="Remotely buy ammo!"/>
 		<attribute key="weight" value="100"/>
+		<attribute key="allowdistread" value="0"/>
 	</item>
 	<item fromid="28898" toid="28903" article="a" name="timber table">
 		<attribute key="primarytype" value="tables"/>
@@ -56463,26 +56469,26 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="primarytype" value="creature products"/>
 		<attribute key="weight" value="580"/>
 	</item>
-	<item id="30187" article="a" name="versicolour fireworks powder">
-		<attribute key="primarytype" value="creature products"/>
-		<attribute key="weight" value="100"/>
-	</item>
-	<item id="30188" article="a" name="red fireworks powder">
-		<attribute key="primarytype" value="party items"/>
-		<attribute key="weight" value="100"/>
-	</item>
+	<item id="30187" article="a" name="awakening powder of power">
+                <attribute key="primarytype" value="tools"/>
+                <attribute key="description" value="Generate a random powder or removal of powder."/>
+                <attribute key="weight" value="100"/>        </item>
+	<item id="30188" article="a" name="third slot powder of power">
+                <attribute key="primarytype" value="tools"/>
+                <attribute key="description" value="Will upgrade the third slot of power."/>
+                <attribute key="weight" value="100"/>        </item>
 	<item id="30189" article="a" name="yellow fireworks powder">
 		<attribute key="primarytype" value="party items"/>
 		<attribute key="weight" value="100"/>
 	</item>
-	<item id="30190" article="a" name="green fireworks powder">
-		<attribute key="primarytype" value="party items"/>
-		<attribute key="weight" value="100"/>
-	</item>
-	<item id="30191" article="a" name="blue fireworks powder">
-		<attribute key="primarytype" value="party items"/>
-		<attribute key="weight" value="100"/>
-	</item>
+	<item id="30190" article="a" name="second slot powder of power">
+                <attribute key="primarytype" value="tools"/>
+                <attribute key="description" value="Will upgrade the second slot of power."/>
+                <attribute key="weight" value="100"/>        </item>
+	<item id="30191" article="a" name="first slot powder of power">
+                <attribute key="primarytype" value="tools"/>
+                <attribute key="description" value="Will upgrade the first slot of power."/>
+                <attribute key="weight" value="100"/>        </item>
 	<item id="30192" article="a" name="percht skull">
 		<attribute key="primarytype" value="creature products"/>
 		<attribute key="weight" value="869"/>
@@ -57932,9 +57938,10 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="weight" value="400"/>
 	</item>
 	<item id="31267" article="a" name="remote runes buyer">
-		<attribute key="primarytype" value="dolls and bears"/>
+<attribute key="primarytype" value="dolls and bears"/>
 		<attribute key="description" value="Remotely buy runes!"/>
 		<attribute key="weight" value="100"/>
+		<attribute key="allowdistread" value="0"/>
 	</item>
 	<item id="31268" article="a" name="jade amulet">
 		<attribute key="primarytype" value="amulets and necklaces"/>

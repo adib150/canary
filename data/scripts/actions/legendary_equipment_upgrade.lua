@@ -1,10 +1,10 @@
 -- Legendary Equipment Upgrade System
--- Use Hammer of Soul (673) + Jewel of Soul (16242) + 100k gold to upgrade equipment tiers
+-- Use Hammer of Soul (673) + Jewel of Soul (30187) + 100k gold to upgrade equipment tiers
 -- Compatible with: Armors, Helmets, Legs, Boots, Weapons
 
 local config = {
     hammerId = 673,
-    jewelId = 16242,
+    jewelId = 30187,
     upgradeCost = 100000,
     maxTier = 9,
     allowedEquipment = {
@@ -27,8 +27,8 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
         return true
     end
 
-    -- Check if hammer was used
-    if item:getId() ~= config.hammerId then
+    -- Check if jewel was used
+    if item:getId() ~= config.jewelId then
         return false
     end
 
@@ -50,8 +50,8 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
     end
 
     -- Check requirements
-    if not player:getItemById(config.jewelId, 1) then
-        player:sendCancelMessage("You need a Jewel of Soul to upgrade.")
+    if not player:getItemById(config.hammerId, 1) then
+        player:sendCancelMessage("You need a Hammer of Power to upgrade.")
         return true
     end
 
@@ -77,5 +77,5 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
     return true
 end
 
-equipmentUpgrade:id(config.hammerId)
+equipmentUpgrade:id(config.jewelId)
 equipmentUpgrade:register()

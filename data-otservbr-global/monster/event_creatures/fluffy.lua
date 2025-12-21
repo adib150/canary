@@ -67,8 +67,6 @@ monster.loot = {
 	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
 	{ id = 3031, chance = 100000, maxCount = 20 }, -- gold coin
 	{ id = 5944, chance = 5555 }, -- soul orb
-	{ id = 6570, chance = 5538, maxCount = 4 }, -- surprise bag
-	{ id = 6571, chance = 1538 }, -- surprise bag
 	{ id = 3582, chance = 50000, maxCount = 8 }, -- ham
 	{ id = 3115, chance = 25000 }, -- bone
 	{ id = 6499, chance = 7200 }, -- demonic essence
