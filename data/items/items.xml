@@ -26694,7 +26694,7 @@
 	<item id="10290" article="a" name="Loot Pouch Item Seller">
 		<attribute key="primarytype" value="dolls and bears"/>
 		<attribute key="description" value="Use this to sell all items inside your loot pouch."/>
-		<attribute key="weight" value="450"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item id="10291" article="a" name="rotten piece of cloth" plural="rotten pieces of cloth">
 		<attribute key="weight" value="60"/>
@@ -54904,10 +54904,10 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="description" value="Souvenir from Thais Museum"/>
 		<attribute key="weight" value="2000"/>
 	</item>
-	<item id="28897" article="an" name="assassin doll">
+	<item id="28897" article="an" name="remote ammo buyer">
 		<attribute key="primarytype" value="dolls and bears"/>
-		<attribute key="description" value="Souvenir from Thais Museum"/>
-		<attribute key="weight" value="2504"/>
+		<attribute key="description" value="Remotely buy ammo!"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item fromid="28898" toid="28903" article="a" name="timber table">
 		<attribute key="primarytype" value="tables"/>
@@ -57961,10 +57961,10 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="maxtextlen" value="99"/>
 		<attribute key="weight" value="400"/>
 	</item>
-	<item id="31267" article="a" name="loremaster doll">
+	<item id="31267" article="a" name="remote runes buyer">
 		<attribute key="primarytype" value="dolls and bears"/>
-		<attribute key="description" value="Souvenir from Thais Museum"/>
-		<attribute key="weight" value="7700"/>
+		<attribute key="description" value="Remotely buy runes!"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item id="31268" article="a" name="jade amulet">
 		<attribute key="primarytype" value="amulets and necklaces"/>

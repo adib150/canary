@@ -390,6 +390,7 @@ canary.old
 
 # VCPKG
 vcpkg_installed
+vcpkg
 
 # DB Backups
 database_backup
