@@ -9,8 +9,8 @@ local config = {
     },
     bonusPerTier = {
         healthPercent = 3,      -- +3% max HP per tier
-        critChance = 0.4,       -- +0.4% crit chance per tier
-        critDamage = 1,         -- +1% crit damage per tier
+        critChance = 40,        -- +0.4% crit chance per tier (100 = 1%)
+        critDamage = 100,       -- +1% crit damage per tier (100 = 1%)
         damagePercent = 0.8     -- +0.8% damage per tier
     }
 }
