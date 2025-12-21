@@ -36,7 +36,7 @@
 	<house name="Park Lane 3a" houseid="2688" entryx="32326" entryy="31767" entryz="7" rent="100000" townid="6" size="36" clientid="20204" beds="2" />
 	<house name="Park Lane 1a" houseid="2689" entryx="32335" entryy="31767" entryz="7" rent="150000" townid="6" size="36" clientid="20201" beds="2" />
 	<house name="Park Lane 4" houseid="2690" entryx="32327" entryy="31768" entryz="7" rent="150000" townid="6" size="27" clientid="20205" beds="2" />
-	<house name="Park Lane 2" houseid="2691" entryx="32335" entryy="31768" entryz="7" rent="150000" townid="6" size="28" clientid="20206" beds="2" />
+	<house name="Park Lane 2" houseid="2691" entryx="32335" entryy="31768" entryz="7" rent="150000" townid="6" size="24" clientid="20206" beds="2" />
 	<house name="Theater Avenue 7, Flat 04" houseid="2692" entryx="32348" entryy="31780" entryz="7" rent="50000" townid="6" size="15" clientid="20319" beds="1" />
 	<house name="Theater Avenue 7, Flat 03" houseid="2693" entryx="32350" entryy="31780" entryz="7" rent="25000" townid="6" size="13" clientid="20318" beds="1" />
 	<house name="Theater Avenue 7, Flat 05" houseid="2694" entryx="32347" entryy="31782" entryz="7" rent="50000" townid="6" size="13" clientid="20320" beds="1" />
