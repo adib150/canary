@@ -153,8 +153,8 @@ local config = {
 			{ from = 4086, to = 4836, itemId = 3044 },
 			{ from = 4837, to = 5447, itemId = 3083 },
 			{ from = 5448, to = 6047, itemId = 5879 },
-			{ from = 6048, to = 6576, itemId = 6570 },
-			{ from = 6577, to = 7094, itemId = 3049 },
+			-- { from = 6048, to = 6576, itemId = 6570 }, -- removed - now store-exclusive surprise removal of slot of power
+			{ from = 6048, to = 7094, itemId = 3049 },
 			{ from = 7095, to = 7559, itemId = 5882 },
 			{ from = 7560, to = 7963, itemId = 12548 },
 			{ from = 7964, to = 8317, itemId = 15698 },

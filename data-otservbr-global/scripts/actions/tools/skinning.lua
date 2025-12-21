@@ -75,8 +75,6 @@ local config = {
 			{ value = 5000, newItem = 6491 }, -- bat decoration
 			{ value = 20000, newItem = 6525 }, -- skeleton decoration
 			{ value = 90000, newItem = 8177, amount = 20 }, -- yummy gummy worm
-			{ value = 10000, newItem = 6571 }, -- surprise bag (red)
-			{ value = 10000, newItem = 6570 }, -- surprise bag (blue)
 			{ value = 50000, newItem = 6574 }, -- bar of chocolate
 			{ value = 60000, newItem = 2977 }, -- pumpkinhead
 			{ value = 45000, newItem = 3594 }, -- pumpkin

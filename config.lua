@@ -300,7 +300,7 @@ enableSupportOutfit = true
 
 -- NOTE: stashMoving = true, stow an container inside your stash
 -- NOTE: stashManageAmount = max items add/remove from stash at once
-stashMoving = false
+stashMoving = true
 stashManageAmount = 100000
 
 -- Teleport summon

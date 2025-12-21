@@ -103,7 +103,7 @@ GameStore.Categories = {
 		icons = { "Category_Consumables.png" },
 		name = "Consumables",
 		rookgaard = true,
-		subclasses = { "Blessings", "Casks", "Exercise Weapons", "Kegs", "Potions", "Runes" },
+		subclasses = { "Blessings", "Casks", "Exercise Weapons", "Kegs", "Potions", "Runes", "Slots of Power" },
 	},
 	-- Consumables ~ Blessings
 	{
@@ -855,6 +855,71 @@ GameStore.Categories = {
 			},
 		},
 	},
+
+	-- Consumables ~ Slots of Power
+	{
+		icons = { "Category_Runes.png" },
+		name = "Slots of Power",
+		parent = "Consumables",
+		rookgaard = true,
+		state = GameStore.States.STATE_NONE,
+		offers = {
+			{
+				icons = { "Hammer_of_Power.png" },
+				name = "Hammer of Power",
+				price = 100,
+				itemtype = 673,
+				count = 1,
+				description = "<i>Add and upgrade slots of power on equipments.</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Hammer_of_Power.png" },
+				name = "Hammer of Power",
+				price = 400,
+				itemtype = 673,
+				count = 5,
+				description = "<i>Add and upgrade slots of power on equipments.</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Surprise_Powder_of_Power.png" },
+				name = "Surprise Powder of Power",
+				price = 100,
+				itemtype = 6571,
+				count = 1,
+				description = "<i>Contains a random powder of power!</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Surprise_Powder_of_Power.png" },
+				name = "Surprise Powder of Power",
+				price = 400,
+				itemtype = 6571,
+				count = 5,
+				description = "<i>Contains a random powder of power!</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Surprise_Removal_of_Slot.png" },
+				name = "Surprise Removal of Slot of Power",
+				price = 100,
+				itemtype = 6570,
+				count = 1,
+				description = "<i>Contains a random removal powder!</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Surprise_Removal_of_Slot.png" },
+				name = "Surprise Removal of Slot of Power",
+				price = 400,
+				itemtype = 6570,
+				count = 5,
+				description = "<i>Contains a random removal powder!</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+		},
+	},
 	-- Consumables ~ Runes
 	{
 		icons = { "Category_Runes.png" },
@@ -1099,6 +1164,7 @@ GameStore.Categories = {
 			},
 		},
 	},
+	
 	-- Cosmetics
 	{
 		icons = { "Category_Cosmetics.png" },
