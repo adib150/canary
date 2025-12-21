@@ -27,6 +27,12 @@ local config = {
     }
 }
 
+-- Timer configuration
+local LOOT_COOLDOWN = 240 * 1000 -- 240 seconds (4 minutes) in milliseconds
+
+-- Storage for tracking cooldowns
+local STORAGE_LOOT_POUCH_SELLER_COOLDOWN = 45821
+
 -- Function to load items from NPC file
 local function loadItemsFromNPC(filePath)
     local items = {}
@@ -128,6 +134,18 @@ local function sellItemsFromContainer(player, container, totalValue, itemsSold)
 end
 
 function itemLootSeller.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+    -- Check cooldown
+    local currentTime = os.time()
+    local lastUseTime = player:getStorageValue(STORAGE_LOOT_POUCH_SELLER_COOLDOWN)
+    
+    if lastUseTime > 0 then
+        local timePassed = (currentTime - lastUseTime) * 1000
+        if timePassed < LOOT_COOLDOWN then
+            local remainingTime = math.ceil((LOOT_COOLDOWN - timePassed) / 1000)
+            player:sendTextMessage(MESSAGE_EVENT_ADVANCE, string.format("You must wait %d seconds before selling items again.", remainingTime))
+            return true
+        end
+    end
     -- Function to recursively search for loot pouch in containers
     local function findLootPouchInContainer(container, maxDepth, currentDepth)
         currentDepth = currentDepth or 0
@@ -198,9 +216,12 @@ function itemLootSeller.onUse(player, item, fromPosition, target, toPosition, is
     
     player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'Selling items from loot pouch...')
     local totalValue, itemsSold = sellItemsFromContainer(player, container, 0, {})
+    
+    if totalValue > 0 then
+        -- Set cooldown
+        player:setStorageValue(STORAGE_LOOT_POUCH_SELLER_COOLDOWN, currentTime)
         
-        if totalValue > 0 then
-            fromPosition:sendMagicEffect(CONST_ME_GIFT_WRAPS)
+        fromPosition:sendMagicEffect(CONST_ME_GIFT_WRAPS)
             
             local message = 'You sold items for ' .. totalValue .. ' gold coins.'
             if config.cash_to_bank then
