@@ -508,8 +508,8 @@ sortLootByChance = false
 -- lowLevelBonusExp works up to level 50
 rateUseStages = false
 lowLevelBonusExp = 50
-rateExp = 500
-rateSkill = 5
+rateExp = 5000
+rateSkill = 5000
 rateLoot = 1
 rateMagic = 1
 rateSpawn = 1
@@ -529,7 +529,7 @@ rateSoulRegenSpeed = 1.0
 rateSpellCooldown = 1.0
 rateAttackSpeed = 1.0
 rateOfflineTrainingSpeed = rateAttackSpeed
-rateExerciseTrainingSpeed = rateAttackSpeed
+rateExerciseTrainingSpeed = rateAttackSpeed*4
 
 -- Monster rates
 rateMonsterHealth = 1.0
