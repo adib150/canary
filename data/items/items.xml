@@ -10086,7 +10086,10 @@
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="30"/>
+			<attribute key="slot" value="armor"/>
+		</attribute>
 	</item>
 	<item id="3398" name="dwarven legs">
 		<attribute key="primarytype" value="legs"/>
@@ -21626,7 +21629,11 @@
 		<attribute key="absorbpercentfire" value="12"/>
 		<attribute key="armor" value="12"/>
 		<attribute key="weight" value="2850"/>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="60"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Sorcerer;true, Master Sorcerer"/>
+		</attribute>
 	</item>
 	<item id="8040" article="a" name="velvet mantle">
 		<attribute key="primarytype" value="armors"/>
@@ -23452,7 +23459,10 @@
 		<attribute key="absorbpercentdeath" value="3"/>
 		<attribute key="armor" value="16"/>
 		<attribute key="weight" value="7000"/>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="80"/>
+			<attribute key="slot" value="armor"/>
+		</attribute>
 	</item>
 	<item id="8863" article="a" name="yalahari leg piece">
 		<attribute key="primarytype" value="legs"/>
@@ -31873,7 +31883,11 @@
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="200"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+		</attribute>
 	</item>
 	<item id="13994" article="a" name="depth lorica">
 		<attribute key="primarytype" value="armors"/>
@@ -44747,7 +44761,11 @@ Awarded by TibiaMisterios.com.br"/>
 		<attribute key="magiclevelpoints" value="4"/>
 		<attribute key="armor" value="15"/>
 		<attribute key="weight" value="5500"/>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="250"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Sorcerer;true, Druid;true, Master Sorcerer, Elder Druid"/>
+		</attribute>
 	</item>
 	<item fromid="22538" toid="22541" name="stone floor">
 		<attribute key="primarytype" value="artificial tiles"/>
@@ -52431,7 +52449,11 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="elemental protection fire" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="270"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Paladin;true, Royal Paladin"/>
+		</attribute>
 	</item>
 	<item id="27649" article="a" name="gnome legs">
 		<attribute key="primarytype" value="legs"/>
@@ -54113,7 +54135,11 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="300"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+		</attribute>
 	</item>
 	<item id="28720" name="falcon greaves">
 		<attribute key="primarytype" value="legs"/>
@@ -64186,7 +64212,11 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="400"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Paladin;true, Royal Paladin"/>
+		</attribute>
 	</item>
 	<item id="34095" article="a" name="soulmantle">
 		<attribute key="primarytype" value="armors"/>
@@ -64203,7 +64233,11 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="400"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Sorcerer;true, Druid;true, Master Sorcerer, Elder Druid"/>
+		</attribute>
 	</item>
 	<item id="34096" article="a" name="soulshroud">
 		<attribute key="primarytype" value="armors"/>
@@ -64219,7 +64253,11 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="400"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Sorcerer;true, Druid;true, Master Sorcerer, Elder Druid"/>
+		</attribute>
 	</item>
 	<item id="34097" name="pair of soulwalkers">
 		<attribute key="absorbpercentphysical" value="7"/>
@@ -64655,7 +64693,11 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="270"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+		</attribute>
 	</item>
 	<item id="34158" article="a" name="lion amulet">
 		<attribute key="primarytype" value="amulets and necklaces"/>
@@ -67419,7 +67461,11 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="200"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+		</attribute>
 	</item>
 	<item id="36664" article="a" name="eldritch bow">
 		<attribute key="primarytype" value="distance weapons"/>
@@ -71254,7 +71300,11 @@ Granted by TibiaGoals.com"/>
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="400"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+		</attribute>
 	</item>
 	<item id="39148" article="a" name="spiritthorn helmet">
 		<attribute key="primarytype" value="helmets"/>
@@ -71615,7 +71665,11 @@ Granted by TibiaGoals.com"/>
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="300"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Sorcerer;true, Master Sorcerer"/>
+		</attribute>
 	</item>
 	<item id="39165" article="a" name="midnight tunic">
 		<attribute key="primarytype" value="armors"/>
@@ -71632,7 +71686,11 @@ Granted by TibiaGoals.com"/>
 			<attribute key="elemental protection energy" value="3"/>
 			<attribute key="elemental protection holy" value="3"/>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="250"/>
+			<attribute key="slot" value="armor"/>
+			<attribute key="vocation" value="Druid;true, Elder Druid"/>
+		</attribute>
 	</item>
 	<item id="39166" article="a" name="dawnfire pantaloons">
 		<attribute key="primarytype" value="legs"/>
@@ -75848,7 +75906,11 @@ Granted by TibiaGoals.com"/>
 				<attribute key="value" value="8" />
 			</attribute>
 		</attribute>
-		
+		<attribute key="script" value="moveevent">
+			<attribute key="level" value="500"/>
+			<attribute key="slot" value="legs"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+		</attribute>
 	</item>
 	<item id="43877" article="a" name="sanguine bow">
 		<attribute key="primarytype" value="distance weapons"/>

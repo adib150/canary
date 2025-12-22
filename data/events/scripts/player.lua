@@ -692,24 +692,25 @@ end
 function Player:onInventoryUpdate(item, slot, equip)
 	-- Socket buff system
 	local allowedSlots = {1, 4, 5, 6, 7, 8} -- HEAD, ARMOR, RIGHT, LEFT, LEGS, FEET
-	local slotAllowed = false
+	local isAllowedSlot = false
 	for _, allowedSlot in ipairs(allowedSlots) do
 		if slot == allowedSlot then
-			slotAllowed = true
+			isAllowedSlot = true
 			break
 		end
 	end
 	
-	if not slotAllowed then
+	if not isAllowedSlot then
 		return
 	end
 	
 	if equip then
-		-- Check classification (must be 3 or 4) - only check on equip
+		-- Check classification (must be 3 or 4)
 		local classification = item:getClassification()
 		if classification ~= 3 and classification ~= 4 then
 			return
 		end
+		
 		-- Apply socket buffs
 		local socket1 = item:getCustomAttribute("socket1") or "empty"
 		local socket2 = item:getCustomAttribute("socket2") or "empty"
@@ -846,7 +847,6 @@ function Player:onInventoryUpdate(item, slot, equip)
 			end
 			
 			self:addCondition(condition)
-			self:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket power surges through you!")
 		end
 	else
 		-- Remove socket buffs
@@ -856,7 +856,5 @@ function Player:onInventoryUpdate(item, slot, equip)
 		if self:getHealth() > maxHealth then
 			self:addHealth(-(self:getHealth() - maxHealth), false)
 		end
-		
-		self:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The socket power fades away.")
 	end
 end
