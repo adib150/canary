@@ -1,10 +1,9 @@
 local SURPRISE_POWDER_ID = 6571
 
 local powderRewards = {
-	{ id = 30191, name = "first slot powder of power" },
-	{ id = 30190, name = "second slot powder of power" },
-	{ id = 30188, name = "third slot powder of power" },
-	{ id = 30187, name = "awakening powder of power" },
+	{ id = 30191, name = "first socket upgrade powder" },
+	{ id = 30190, name = "second socket upgrade powder" },
+	{ id = 30188, name = "third socket upgrade powder" },
 }
 
 local surprisePowder = Action()
