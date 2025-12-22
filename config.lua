@@ -56,8 +56,8 @@ cleanProtectionZones = false
 -- NOTE: allowOldProtocol can allow login on 10x protocol. (11.00)
 -- NOTE: maxPlayers set to 0 means no limit
 -- NOTE: MaxPacketsPerSeconds if you change you will be subject to bugs by WPE, keep the default value of 25,
--- It's recommended to use a range like min 50 in this function, otherwise you will be disconnected after equipping two-handed distance weapons.
-ip = "127.0.0.1"
+-- It's recommended to use a range like min 50 in this function, otherwise you will be disconnected after equipping two-handed distance wheels.
+ip = "72.61.129.125"
 allowOldProtocol = false
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
@@ -65,7 +65,7 @@ gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 0
 serverName = "Insomnia OT"
-serverMotd = "Seja bem Vindo ao Insomnia OT! Onde o vício é opcional... mas bem provável."
+serverMotd = "Seja bem Vindo ao Insomnia OT! Onde o vicio eh opcional... mas bem provavel."
 statusTimeout = 5 * 1000
 replaceKickOnLogin = true
 maxPacketsPerSecond = 25
@@ -566,9 +566,9 @@ defaultPriority = "high"
 startupDatabaseOptimization = true
 
 -- Status server information
-ownerName = "OpenTibiaBR"
-ownerEmail = "opentibiabr@outlook.com"
-url = "http://docs.opentibiabr.com/"
+ownerName = "InsomniaOT"
+ownerEmail = "dont-reply@insomniaot.com.br"
+url = "https://insomniaot.com.br/"
 location = "South America"
 
 -- Sends Discord webhook notifications on startup, raids and shutdown.
