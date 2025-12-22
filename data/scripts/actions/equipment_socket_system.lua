@@ -13,32 +13,32 @@ local config = {
 -- Attribute pools based on equipment slot
 local attributePools = {
     -- Weapons (right/left hand)
-    weapon = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "onslaught"},
+    weapon = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "final damage", "damage reduction"},
     -- Armor
-    armor = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "ruse"},
+    armor = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "damage reduction"},
     -- Helmet
-    helmet = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "momentum"},
+    helmet = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "final damage"},
     -- Legs
-    legs = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "transcendence"},
+    legs = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "final damage"},
     -- Boots
-    boots = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "amplification"},
+    boots = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "damage reduction"},
 }
 
 local function getEquipmentSlotType(item)
     local itemType = ItemType(item:getId())
     local slotPosition = itemType:getSlotPosition()
     
-    -- Check slot position
+    -- Check slot position (order matters - check more specific slots first)
     if bit.band(slotPosition, 1) ~= 0 then -- SLOTP_HEAD
         return "helmet"
     elseif bit.band(slotPosition, 8) ~= 0 then -- SLOTP_ARMOR
         return "armor"
-    elseif bit.band(slotPosition, 16 + 32) ~= 0 then -- SLOTP_RIGHT + SLOTP_LEFT (weapons)
-        return "weapon"
     elseif bit.band(slotPosition, 64) ~= 0 then -- SLOTP_LEGS
         return "legs"
     elseif bit.band(slotPosition, 128) ~= 0 then -- SLOTP_FEET
         return "boots"
+    elseif bit.band(slotPosition, 16) ~= 0 or bit.band(slotPosition, 32) ~= 0 then -- SLOTP_RIGHT or SLOTP_LEFT (weapons/shields)
+        return "weapon"
     end
     
     return nil
@@ -136,6 +136,9 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
         player:sendCancelMessage("Unable to determine equipment type.")
         return true
     end
+    
+    -- DEBUG: Show detected item type
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "[DEBUG] Item: " .. target:getName() .. " | Detected Type: " .. slotType)
     
     local attributePool = attributePools[slotType]
     local randomAttribute = attributePool[math.random(#attributePool)]
