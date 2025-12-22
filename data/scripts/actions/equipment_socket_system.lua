@@ -1,14 +1,15 @@
 -- Equipment Socket System
--- Use Hammer of Power (673) + Awakening Powder of Power (30187) + 100k gold to upgrade equipment sockets
+-- Use Hammer of Power (673) + Awakening Powder of Power (30187) + 3kk gold to upgrade equipment sockets
 -- Socket Removers: 31354 (socket 1), 31356 (socket 2), 31355 (socket 3) + Hammer of Power (673)
 -- Compatible with: All equipment with classification 3 or 4 (Armors, Helmets, Legs, Boots, Weapons)
 
 local config = {
     hammerId = 673,
     jewelId = 30187,
-    upgradeCost = 100000,
+    upgradeCost = 3000000,
     maxTier = 10,
     maxSockets = 3,
+    awakeningSuccessRate = 80, -- 80% chance to successfully add a socket
     socketRemovers = {
         [31354] = 1,  -- Removes socket 1
         [31356] = 2,  -- Removes socket 2
@@ -136,15 +137,20 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
     player:removeItem(config.hammerId, 1)
     player:removeMoneyBank(config.upgradeCost)
 
+    -- Check success rate
+    local successRoll = math.random(100)
+    if successRoll > config.awakeningSuccessRate then
+        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket awakening failed! The power was too unstable.")
+        player:getPosition():sendMagicEffect(CONST_ME_POFF)
+        return true
+    end
+
     -- Get equipment slot type and select random attribute
     local slotType = getEquipmentSlotType(target)
     if not slotType then
         player:sendCancelMessage("Unable to determine equipment type.")
         return true
     end
-    
-    -- DEBUG: Show detected item type
-    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "[DEBUG] Item: " .. target:getName() .. " | Detected Type: " .. slotType)
     
     local attributePool = attributePools[slotType]
     local randomAttribute = attributePool[math.random(#attributePool)]

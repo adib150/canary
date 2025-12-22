@@ -7,6 +7,11 @@
 local config = {
     hammerId = 673,
     maxTier = 10,
+    baseCost = 1000000, -- Base cost for tier 1->2 upgrade (1kk)
+    baseSuccessRate = 80, -- Starting success rate at 80%
+    successRateDecreasePerTier = 10, -- Decrease by 10% per tier
+    minSuccessRate = 20, -- Minimum success rate of 20%
+    downgradeChance = 20, -- 20% chance to downgrade 1 tier (for tier 2+)
     
     socketUpgrades = {
         [30191] = { socket = 1, name = "first" },   -- First socket upgrade powder
@@ -14,6 +19,18 @@ local config = {
         [30188] = { socket = 3, name = "third" }    -- Third socket upgrade powder
     }
 }
+
+-- Fibonacci sequence for tier costs: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+local function getUpgradeCost(currentTier)
+    local fibonacci = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55}
+    return config.baseCost * fibonacci[currentTier]
+end
+
+-- Calculate success rate based on current tier
+local function getSuccessRate(currentTier)
+    local rate = config.baseSuccessRate - (currentTier * config.successRateDecreasePerTier)
+    return math.max(rate, config.minSuccessRate)
+end
 
 local function isEquipment(item)
     if not item then
@@ -51,7 +68,7 @@ function socketUpgrade.onUse(player, item, fromPosition, target, toPosition, isH
         return false
     end
 
-    if not target or not target:isItem() then
+    if not target or not target:getId() then
         player:sendCancelMessage("You can only use this on items.")
         return true
     end
@@ -88,9 +105,59 @@ function socketUpgrade.onUse(player, item, fromPosition, target, toPosition, isH
         return true
     end
 
+    -- Check gold requirement
+    local upgradeCost = getUpgradeCost(currentTier)
+    local totalMoney = player:getMoney() + player:getBankBalance()
+    if totalMoney < upgradeCost then
+        player:sendCancelMessage("You need " .. upgradeCost .. " gold to upgrade to tier " .. (currentTier + 1) .. ".")
+        return true
+    end
+
     -- Consume resources
     player:removeItem(item:getId(), 1)
     player:removeItem(config.hammerId, 1)
+    player:removeMoneyBank(upgradeCost)
+
+    -- Check for downgrade (tier 2+)
+    if currentTier >= 2 then
+        local downgradeRoll = math.random(100)
+        if downgradeRoll <= config.downgradeChance then
+            local newTier = currentTier - 1
+            
+            -- Extract attribute name from current socket value
+            local attributeName = socketValue:match("(.+) tier %d+")
+            if attributeName then
+                target:setCustomAttribute(socketAttr, attributeName .. " tier " .. newTier)
+                
+                -- Update all sockets for description
+                local socket1 = target:getCustomAttribute("socket1") or "empty"
+                local socket2 = target:getCustomAttribute("socket2") or "empty"
+                local socket3 = target:getCustomAttribute("socket3") or "empty"
+                
+                local existingDesc = target:getAttribute(ITEM_ATTRIBUTE_DESCRIPTION) or ""
+                existingDesc = existingDesc:gsub("Power Sockets: %b()", "")
+                existingDesc = existingDesc:gsub("\n+$", "")
+                
+                local newLine = existingDesc ~= "" and "\n" or ""
+                local socketsDescription = existingDesc .. newLine .. "Power Sockets: (" .. socket1 .. ", " .. socket2 .. ", " .. socket3 .. ")"
+                target:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, socketsDescription)
+            end
+            
+            player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The socket destabilized! The " .. upgradeInfo.name .. " socket has been downgraded to tier " .. newTier .. ".")
+            player:getPosition():sendMagicEffect(CONST_ME_EXPLOSIONAREA)
+            return true
+        end
+    end
+
+    -- Check success rate
+    local successRate = getSuccessRate(currentTier)
+    local successRoll = math.random(100)
+    
+    if successRoll > successRate then
+        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Upgrade failed! (Success chance was " .. successRate .. "%) The socket remains at tier " .. currentTier .. ".")
+        player:getPosition():sendMagicEffect(CONST_ME_POFF)
+        return true
+    end
 
     -- Upgrade the socket
     local newTier = currentTier + 1
@@ -111,10 +178,8 @@ function socketUpgrade.onUse(player, item, fromPosition, target, toPosition, isH
 
     -- Get existing description and update it
     local existingDesc = target:getAttribute(ITEM_ATTRIBUTE_DESCRIPTION) or ""
-    
-    -- Remove old sockets line if it exists
-    existingDesc = existingDesc:gsub("Power Sockets: %([^)]+%)\n?", "")
-    existingDesc = existingDesc:gsub("\n$", "")
+    existingDesc = existingDesc:gsub("Power Sockets: %b()", "")
+    existingDesc = existingDesc:gsub("\n+$", "")
     
     -- Add new sockets line
     local newLine = existingDesc ~= "" and "\n" or ""
@@ -122,7 +187,7 @@ function socketUpgrade.onUse(player, item, fromPosition, target, toPosition, isH
     target:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, socketsDescription)
 
     -- Visual feedback
-    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The " .. upgradeInfo.name .. " socket has been upgraded to tier " .. newTier .. "!")
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Success! The " .. upgradeInfo.name .. " socket has been upgraded to tier " .. newTier .. "! (Cost: " .. upgradeCost .. " gold)")
     player:getPosition():sendMagicEffect(CONST_ME_ENERGYAREA)
 
     return true
