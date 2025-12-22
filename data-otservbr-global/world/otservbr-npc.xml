@@ -795,7 +795,7 @@
 	<npc centerx="32193" centery="32297" centerz="6" radius="1">
 		<npc name="Kepar" x="0" y="0" z="6" spawntime="60" />
 	</npc>
-	<npc centerx="32210" centery="32301" centerz="6" radius="1">
+	<npc centerx="32208" centery="32301" centerz="6" radius="1">
 		<npc name="Loot Seller" x="0" y="0" z="6" spawntime="60" />
 	</npc>
 	<npc centerx="32200" centery="32304" centerz="6" radius="1">

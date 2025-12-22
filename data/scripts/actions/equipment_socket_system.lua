@@ -6,9 +6,43 @@ local config = {
     hammerId = 673,
     jewelId = 30187,
     upgradeCost = 100000,
-    maxTier = 9,
+    maxTier = 10,
     maxSockets = 3,
 }
+
+-- Attribute pools based on equipment slot
+local attributePools = {
+    -- Weapons (right/left hand)
+    weapon = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "onslaught"},
+    -- Armor
+    armor = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "ruse"},
+    -- Helmet
+    helmet = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "momentum"},
+    -- Legs
+    legs = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "transcendence"},
+    -- Boots
+    boots = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "amplification"},
+}
+
+local function getEquipmentSlotType(item)
+    local itemType = ItemType(item:getId())
+    local slotPosition = itemType:getSlotPosition()
+    
+    -- Check slot position
+    if bit.band(slotPosition, 1) ~= 0 then -- SLOTP_HEAD
+        return "helmet"
+    elseif bit.band(slotPosition, 8) ~= 0 then -- SLOTP_ARMOR
+        return "armor"
+    elseif bit.band(slotPosition, 16 + 32) ~= 0 then -- SLOTP_RIGHT + SLOTP_LEFT (weapons)
+        return "weapon"
+    elseif bit.band(slotPosition, 64) ~= 0 then -- SLOTP_LEGS
+        return "legs"
+    elseif bit.band(slotPosition, 128) ~= 0 then -- SLOTP_FEET
+        return "boots"
+    end
+    
+    return nil
+end
 
 local function isEquipment(item)
     if not item then
@@ -96,11 +130,22 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
     player:removeItem(config.hammerId, 1)
     player:removeMoneyBank(config.upgradeCost)
 
+    -- Get equipment slot type and select random attribute
+    local slotType = getEquipmentSlotType(target)
+    if not slotType then
+        player:sendCancelMessage("Unable to determine equipment type.")
+        return true
+    end
+    
+    local attributePool = attributePools[slotType]
+    local randomAttribute = attributePool[math.random(#attributePool)]
+    local attributeValue = randomAttribute .. " tier 1"
+    
     -- Apply upgrade
-    target:setCustomAttribute("socket" .. emptySocketIndex, "power tier 1")
+    target:setCustomAttribute("socket" .. emptySocketIndex, attributeValue)
     
     -- Update description to show sockets
-    sockets[emptySocketIndex] = "power tier 1"
+    sockets[emptySocketIndex] = attributeValue
     
     -- Get existing description and update it
     local existingDesc = target:getAttribute(ITEM_ATTRIBUTE_DESCRIPTION) or ""
@@ -115,7 +160,7 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
     target:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, socketsDescription)
 
     -- Visual feedback
-    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket " .. emptySocketIndex .. " has been infused with power! (Tier 1)")
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket " .. emptySocketIndex .. " has been infused with " .. randomAttribute .. "! (Tier 1)")
     player:getPosition():sendMagicEffect(CONST_ME_ORANGE_ENERGY_SPARK)
 
     return true
