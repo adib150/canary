@@ -1,17 +1,36 @@
 -- Legendary Equipment Upgrade System
--- Use Hammer of Soul (673) + Jewel of Soul (30187) + 100k gold to upgrade equipment tiers
--- Compatible with: Armors, Helmets, Legs, Boots, Weapons
+-- Use Hammer of Power (673) + Awakening Powder of Power (30187) + 100k gold to upgrade equipment slots
+-- Compatible with: All equipment (Armors, Helmets, Legs, Boots, Weapons, Shields, etc.)
 
 local config = {
     hammerId = 673,
     jewelId = 30187,
     upgradeCost = 100000,
     maxTier = 9,
-    allowedEquipment = {
-        39147, 34094, 34096, 34095, 28719, 27648, 22537, 36663,
-        3397, 8862, 39165, 39164, 34157, 13993, 8038, 8039, 43876
-    }
+    maxSlots = 3,
 }
+
+local function isEquipment(item)
+    if not item then
+        return false
+    end
+    
+    local itemType = ItemType(item:getId())
+    if not itemType then
+        return false
+    end
+    
+    -- Check if item is equippable (weapons, armor, helmets, legs, boots)
+    local slotPosition = itemType:getSlotPosition()
+    local validSlots = 1 + 8 + 16 + 32 + 64 + 128  -- head, armor, right, left, legs, feet
+    if bit.band(slotPosition, validSlots) == 0 then
+        return false
+    end
+    
+    -- Check if classification is 3 or 4
+    local classification = item:getClassification()
+    return classification == 3 or classification == 4
+end
 
 local equipmentUpgrade = Action()
 
@@ -32,20 +51,31 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
         return false
     end
 
-    -- Check if target is an allowed equipment
-    local targetId = target:getId()
-    if not table.contains(config.allowedEquipment, targetId) then
+    -- Check if target is equipment
+    if not isEquipment(target) then
         player:sendCancelMessage("This item cannot be upgraded with the legendary system.")
         return true
     end
 
-    -- Get current tier
-    local description = target:getAttribute(ITEM_ATTRIBUTE_DESCRIPTION) or ""
-    local currentTier = tonumber(description:match("Legendary Tier %((%d+)%)")) or 0
+    -- Get current slots status using custom attribute
+    local slot1 = target:getCustomAttribute("slot1") or "empty"
+    local slot2 = target:getCustomAttribute("slot2") or "empty"
+    local slot3 = target:getCustomAttribute("slot3") or "empty"
+    
+    local slots = { slot1, slot2, slot3 }
 
-    -- Check if already at max tier
-    if currentTier >= config.maxTier then
-        player:sendCancelMessage("This item is already at maximum legendary power.")
+    -- Find first empty slot
+    local emptySlotIndex = nil
+    for i = 1, config.maxSlots do
+        if slots[i] == "empty" then
+            emptySlotIndex = i
+            break
+        end
+    end
+
+    -- Check if all slots are filled
+    if not emptySlotIndex then
+        player:sendCancelMessage("All slots are already fulfilled.")
         return true
     end
 
@@ -67,11 +97,25 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
     player:removeMoneyBank(config.upgradeCost)
 
     -- Apply upgrade
-    local newTier = currentTier + 1
-    target:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, "Legendary Tier (" .. newTier .. ").")
+    target:setCustomAttribute("slot" .. emptySlotIndex, "legendary tier 1")
+    
+    -- Update description to show slots
+    slots[emptySlotIndex] = "legendary tier 1"
+    
+    -- Get existing description and update it
+    local existingDesc = target:getAttribute(ITEM_ATTRIBUTE_DESCRIPTION) or ""
+    
+    -- Remove old slots line if it exists
+    existingDesc = existingDesc:gsub("Slots of Power: %([^)]+%)\n?", "")
+    existingDesc = existingDesc:gsub("\n$", "") -- Remove trailing newline
+    
+    -- Add new slots line
+    local newLine = existingDesc ~= "" and "\n" or ""
+    local slotsDescription = existingDesc .. newLine .. "Slots of Power: (" .. slots[1] .. ", " .. slots[2] .. ", " .. slots[3] .. ")"
+    target:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, slotsDescription)
 
     -- Visual feedback
-    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The equipment has been upgraded to Legendary Tier " .. newTier .. "!")
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The equipment slot " .. emptySlotIndex .. " has been upgraded to Legendary Tier 1!")
     player:getPosition():sendMagicEffect(CONST_ME_ORANGE_ENERGY_SPARK)
 
     return true
