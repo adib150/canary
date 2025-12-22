@@ -1,5 +1,6 @@
 -- Equipment Socket System
 -- Use Hammer of Power (673) + Awakening Powder of Power (30187) + 100k gold to upgrade equipment sockets
+-- Socket Removers: 31354 (socket 1), 31356 (socket 2), 31355 (socket 3) + Hammer of Power (673)
 -- Compatible with: All equipment with classification 3 or 4 (Armors, Helmets, Legs, Boots, Weapons)
 
 local config = {
@@ -8,6 +9,11 @@ local config = {
     upgradeCost = 100000,
     maxTier = 10,
     maxSockets = 3,
+    socketRemovers = {
+        [31354] = 1,  -- Removes socket 1
+        [31356] = 2,  -- Removes socket 2
+        [31355] = 3,  -- Removes socket 3
+    },
 }
 
 -- Attribute pools based on equipment slot
@@ -171,3 +177,78 @@ end
 
 equipmentUpgrade:id(config.jewelId)
 equipmentUpgrade:register()
+
+-- Socket Removal System
+local socketRemoval = Action()
+
+function socketRemoval.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+    -- Validate player
+    if not player then
+        return false
+    end
+
+    -- Validate target is an item
+    if not target or not target:isItem() then
+        player:sendCancelMessage("You can only use this on items.")
+        return true
+    end
+
+    -- Check if item is a socket remover
+    local socketToRemove = config.socketRemovers[item:getId()]
+    if not socketToRemove then
+        return false
+    end
+
+    -- Check if target is equipment
+    if not isEquipment(target) then
+        player:sendCancelMessage("This item cannot have sockets removed. Only classification 3 or 4 equipment can have sockets.")
+        return true
+    end
+
+    -- Check if player has hammer
+    if not player:getItemById(config.hammerId, 1) then
+        player:sendCancelMessage("You need a Hammer of Power to remove a socket.")
+        return true
+    end
+
+    -- Get current socket status
+    local socketKey = "socket" .. socketToRemove
+    local currentSocket = target:getCustomAttribute(socketKey) or "empty"
+    
+    if currentSocket == "empty" then
+        player:sendCancelMessage("Socket " .. socketToRemove .. " is already empty.")
+        return true
+    end
+
+    -- Consume resources
+    player:removeItem(item:getId(), 1)
+    player:removeItem(config.hammerId, 1)
+
+    -- Remove the socket
+    target:setCustomAttribute(socketKey, "empty")
+    
+    -- Update description
+    local socket1 = target:getCustomAttribute("socket1") or "empty"
+    local socket2 = target:getCustomAttribute("socket2") or "empty"
+    local socket3 = target:getCustomAttribute("socket3") or "empty"
+    
+    local existingDesc = target:getAttribute(ITEM_ATTRIBUTE_DESCRIPTION) or ""
+    existingDesc = existingDesc:gsub("Power Sockets: %([^)]+%)\n?", "")
+    existingDesc = existingDesc:gsub("\n$", "")
+    
+    local newLine = existingDesc ~= "" and "\n" or ""
+    local socketsDescription = existingDesc .. newLine .. "Power Sockets: (" .. socket1 .. ", " .. socket2 .. ", " .. socket3 .. ")"
+    target:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, socketsDescription)
+
+    -- Visual feedback
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket " .. socketToRemove .. " has been emptied!")
+    player:getPosition():sendMagicEffect(CONST_ME_SMOKE)
+
+    return true
+end
+
+-- Register all socket removers
+for itemId, socketNum in pairs(config.socketRemovers) do
+    socketRemoval:id(itemId)
+end
+socketRemoval:register()

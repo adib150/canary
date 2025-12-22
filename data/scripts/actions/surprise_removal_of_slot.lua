@@ -1,9 +1,9 @@
 local SURPRISE_REMOVAL_ID = 6570
 
 local removalRewards = {
-	{ id = 12228, name = "removal of first slot of power" },
-	{ id = 12209, name = "removal of second slot of power" },
-	{ id = 12226, name = "removal of third slot of power" },
+	{ id = 31354, name = "removal of first slot of power" },
+	{ id = 31356, name = "removal of second slot of power" },
+	{ id = 31355, name = "removal of third slot of power" },
 }
 
 local surpriseRemoval = Action()
