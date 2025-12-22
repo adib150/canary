@@ -1,5 +1,6 @@
--- Legendary Equipment Buff System
--- Dynamically registers for all equipment items
+-- Equipment Socket Buff System
+-- Applies stat bonuses based on socketed power tiers
+-- Only works on classification 3 or 4 equipment
 
 local config = {
     bonusPerTier = {
@@ -15,14 +16,14 @@ local function getTotalTier(item)
         return 0
     end
     
-    local slot1 = item:getCustomAttribute("slot1") or "empty"
-    local slot2 = item:getCustomAttribute("slot2") or "empty"
-    local slot3 = item:getCustomAttribute("slot3") or "empty"
+    local socket1 = item:getCustomAttribute("socket1") or "empty"
+    local socket2 = item:getCustomAttribute("socket2") or "empty"
+    local socket3 = item:getCustomAttribute("socket3") or "empty"
     
     local totalTier = 0
-    for _, slotValue in ipairs({slot1, slot2, slot3}) do
-        if slotValue ~= "empty" then
-            local tier = tonumber(slotValue:match("legendary tier (%d+)"))
+    for _, socketValue in ipairs({socket1, socket2, socket3}) do
+        if socketValue ~= "empty" then
+            local tier = tonumber(socketValue:match("power tier (%d+)"))
             if tier then
                 totalTier = totalTier + tier
             end
@@ -49,7 +50,7 @@ for itemId = 1, 50000 do
     end
 end
 
-print(string.format("[Legendary Equipment] Registered %d equipment items", #equipmentIds))
+print(string.format("[Socket System] Registered %d equipment items", #equipmentIds))
 
 -- Register equip event
 local legendaryEquip = MoveEvent()
@@ -85,7 +86,7 @@ function legendaryEquip.onEquip(player, item, slot, isCheck)
     condition:setParameter(CONDITION_PARAM_FORCEUPDATE, true)
 
     player:addCondition(condition)
-    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Legendary power flows through you! (Tier " .. tier .. ")")
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket power surges through you! (" .. tier .. " tier" .. (tier > 1 and "s" or "") .. ")")
 
     return true
 end
@@ -130,7 +131,7 @@ function legendaryDeequip.onDeEquip(player, item, slot, isCheck)
         player:addHealth(maxHealth - currentHealth, false)
     end
 
-    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The legendary power fades away.")
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The socket power fades away.")
 
     return true
 end

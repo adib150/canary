@@ -1,13 +1,13 @@
--- Legendary Equipment Upgrade System
--- Use Hammer of Power (673) + Awakening Powder of Power (30187) + 100k gold to upgrade equipment slots
--- Compatible with: All equipment (Armors, Helmets, Legs, Boots, Weapons, Shields, etc.)
+-- Equipment Socket System
+-- Use Hammer of Power (673) + Awakening Powder of Power (30187) + 100k gold to upgrade equipment sockets
+-- Compatible with: All equipment with classification 3 or 4 (Armors, Helmets, Legs, Boots, Weapons)
 
 local config = {
     hammerId = 673,
     jewelId = 30187,
     upgradeCost = 100000,
     maxTier = 9,
-    maxSlots = 3,
+    maxSockets = 3,
 }
 
 local function isEquipment(item)
@@ -53,29 +53,29 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
 
     -- Check if target is equipment
     if not isEquipment(target) then
-        player:sendCancelMessage("This item cannot be upgraded with the legendary system.")
+        player:sendCancelMessage("This item cannot be socketed. Only classification 3 or 4 equipment can be socketed.")
         return true
     end
 
-    -- Get current slots status using custom attribute
-    local slot1 = target:getCustomAttribute("slot1") or "empty"
-    local slot2 = target:getCustomAttribute("slot2") or "empty"
-    local slot3 = target:getCustomAttribute("slot3") or "empty"
+    -- Get current sockets status using custom attribute
+    local socket1 = target:getCustomAttribute("socket1") or "empty"
+    local socket2 = target:getCustomAttribute("socket2") or "empty"
+    local socket3 = target:getCustomAttribute("socket3") or "empty"
     
-    local slots = { slot1, slot2, slot3 }
+    local sockets = { socket1, socket2, socket3 }
 
-    -- Find first empty slot
-    local emptySlotIndex = nil
-    for i = 1, config.maxSlots do
-        if slots[i] == "empty" then
-            emptySlotIndex = i
+    -- Find first empty socket
+    local emptySocketIndex = nil
+    for i = 1, config.maxSockets do
+        if sockets[i] == "empty" then
+            emptySocketIndex = i
             break
         end
     end
 
-    -- Check if all slots are filled
-    if not emptySlotIndex then
-        player:sendCancelMessage("All slots are already fulfilled.")
+    -- Check if all sockets are filled
+    if not emptySocketIndex then
+        player:sendCancelMessage("All sockets are already filled.")
         return true
     end
 
@@ -97,25 +97,25 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
     player:removeMoneyBank(config.upgradeCost)
 
     -- Apply upgrade
-    target:setCustomAttribute("slot" .. emptySlotIndex, "legendary tier 1")
+    target:setCustomAttribute("socket" .. emptySocketIndex, "power tier 1")
     
-    -- Update description to show slots
-    slots[emptySlotIndex] = "legendary tier 1"
+    -- Update description to show sockets
+    sockets[emptySocketIndex] = "power tier 1"
     
     -- Get existing description and update it
     local existingDesc = target:getAttribute(ITEM_ATTRIBUTE_DESCRIPTION) or ""
     
-    -- Remove old slots line if it exists
-    existingDesc = existingDesc:gsub("Slots of Power: %([^)]+%)\n?", "")
+    -- Remove old sockets line if it exists
+    existingDesc = existingDesc:gsub("Power Sockets: %([^)]+%)\n?", "")
     existingDesc = existingDesc:gsub("\n$", "") -- Remove trailing newline
     
-    -- Add new slots line
+    -- Add new sockets line
     local newLine = existingDesc ~= "" and "\n" or ""
-    local slotsDescription = existingDesc .. newLine .. "Slots of Power: (" .. slots[1] .. ", " .. slots[2] .. ", " .. slots[3] .. ")"
-    target:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, slotsDescription)
+    local socketsDescription = existingDesc .. newLine .. "Power Sockets: (" .. sockets[1] .. ", " .. sockets[2] .. ", " .. sockets[3] .. ")"
+    target:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, socketsDescription)
 
     -- Visual feedback
-    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The equipment slot " .. emptySlotIndex .. " has been upgraded to Legendary Tier 1!")
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket " .. emptySocketIndex .. " has been infused with power! (Tier 1)")
     player:getPosition():sendMagicEffect(CONST_ME_ORANGE_ENERGY_SPARK)
 
     return true
