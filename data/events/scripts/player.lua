@@ -689,4 +689,174 @@ function Player:onChangeZone(zone)
 	return false
 end
 
-function Player:onInventoryUpdate(item, slot, equip) end
+function Player:onInventoryUpdate(item, slot, equip)
+	-- Socket buff system
+	local allowedSlots = {1, 4, 5, 6, 7, 8} -- HEAD, ARMOR, RIGHT, LEFT, LEGS, FEET
+	local slotAllowed = false
+	for _, allowedSlot in ipairs(allowedSlots) do
+		if slot == allowedSlot then
+			slotAllowed = true
+			break
+		end
+	end
+	
+	if not slotAllowed then
+		return
+	end
+	
+	if equip then
+		-- Check classification (must be 3 or 4) - only check on equip
+		local classification = item:getClassification()
+		if classification ~= 3 and classification ~= 4 then
+			return
+		end
+		-- Apply socket buffs
+		local socket1 = item:getCustomAttribute("socket1") or "empty"
+		local socket2 = item:getCustomAttribute("socket2") or "empty"
+		local socket3 = item:getCustomAttribute("socket3") or "empty"
+		
+		local attributes = {}
+		for _, socketValue in ipairs({socket1, socket2, socket3}) do
+			if socketValue ~= "empty" then
+				local attributeName, tier = socketValue:match("(.+) tier (%d+)")
+				if attributeName and tier then
+					tier = tonumber(tier)
+					if not attributes[attributeName] then
+						attributes[attributeName] = 0
+					end
+					attributes[attributeName] = attributes[attributeName] + tier
+				end
+			end
+		end
+		
+		if next(attributes) then
+			local condition = Condition(CONDITION_ATTRIBUTES, slot)
+			condition:setParameter(CONDITION_PARAM_BUFF_SPELL, true)
+			condition:setParameter(CONDITION_PARAM_TICKS, -1)
+			condition:setParameter(CONDITION_PARAM_FORCEUPDATE, true)
+			
+			local hpPercent = 100
+			local manaPercent = 100
+			local damageDealt = 100
+			local damageReceived = 100
+			local critChance = 0
+			local critDamage = 0
+			local magicLevel = 0
+			local axeSkill = 0
+			local swordSkill = 0
+			local clubSkill = 0
+			local distanceSkill = 0
+			local shieldSkill = 0
+			local fistSkill = 0
+			local fishingSkill = 0
+			local lifeLeechChance = 0
+			local lifeLeechAmount = 0
+			local manaLeechChance = 0
+			local manaLeechAmount = 0
+			
+			-- Apply bonuses
+			for attributeName, totalTiers in pairs(attributes) do
+				if attributeName == "critical chance" then
+					critChance = critChance + (40 * totalTiers)
+				elseif attributeName == "critical damage" then
+					critDamage = critDamage + (100 * totalTiers)
+				elseif attributeName == "magic level" then
+					magicLevel = magicLevel + totalTiers
+				elseif attributeName == "distance fight" then
+					distanceSkill = distanceSkill + totalTiers
+				elseif attributeName == "axe fight" then
+					axeSkill = axeSkill + totalTiers
+				elseif attributeName == "sword fight" then
+					swordSkill = swordSkill + totalTiers
+				elseif attributeName == "club fight" then
+					clubSkill = clubSkill + totalTiers
+				elseif attributeName == "shielding" then
+					shieldSkill = shieldSkill + totalTiers
+				elseif attributeName == "fist fight" then
+					fistSkill = fistSkill + totalTiers
+				elseif attributeName == "fishing" then
+					fishingSkill = fishingSkill + totalTiers
+				elseif attributeName == "hp" then
+					hpPercent = hpPercent + (0.5 * totalTiers)
+				elseif attributeName == "mana" then
+					manaPercent = manaPercent + (0.5 * totalTiers)
+				elseif attributeName == "life leech" then
+					lifeLeechChance = 100
+					lifeLeechAmount = lifeLeechAmount + (100 * totalTiers)
+				elseif attributeName == "mana leech" then
+					manaLeechChance = 100
+					manaLeechAmount = manaLeechAmount + (50 * totalTiers)
+				elseif attributeName == "final damage" then
+					damageDealt = damageDealt + totalTiers
+				elseif attributeName == "damage reduction" then
+					damageReceived = damageReceived - totalTiers
+				end
+			end
+			
+			-- Set condition parameters
+			if hpPercent > 100 then
+				condition:setParameter(CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT, hpPercent)
+			end
+			if manaPercent > 100 then
+				condition:setParameter(CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT, manaPercent)
+			end
+			if damageDealt > 100 then
+				condition:setParameter(CONDITION_PARAM_BUFF_DAMAGEDEALT, damageDealt)
+			end
+			if damageReceived < 100 then
+				condition:setParameter(CONDITION_PARAM_BUFF_DAMAGERECEIVED, damageReceived)
+			end
+			if critChance > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_CRITICAL_HIT_CHANCE, critChance)
+			end
+			if critDamage > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_CRITICAL_HIT_DAMAGE, critDamage)
+			end
+			if magicLevel > 0 then
+				condition:setParameter(CONDITION_PARAM_STAT_MAGICPOINTS, magicLevel)
+			end
+			if axeSkill > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_AXE, axeSkill)
+			end
+			if swordSkill > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_SWORD, swordSkill)
+			end
+			if clubSkill > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_CLUB, clubSkill)
+			end
+			if distanceSkill > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_DISTANCE, distanceSkill)
+			end
+			if shieldSkill > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_SHIELD, shieldSkill)
+			end
+			if fistSkill > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_FIST, fistSkill)
+			end
+			if fishingSkill > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_FISHING, fishingSkill)
+			end
+			if lifeLeechChance > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_LIFE_LEECH_CHANCE, lifeLeechChance)
+				condition:setParameter(CONDITION_PARAM_SKILL_LIFE_LEECH_AMOUNT, lifeLeechAmount)
+			end
+			if manaLeechChance > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_MANA_LEECH_CHANCE, manaLeechChance)
+				condition:setParameter(CONDITION_PARAM_SKILL_MANA_LEECH_AMOUNT, manaLeechAmount)
+			end
+			
+			self:addCondition(condition)
+			self:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket power surges through you!")
+		end
+	else
+		-- Remove socket buffs
+		self:removeCondition(CONDITION_ATTRIBUTES, slot)
+		
+		local maxHealth = self:getMaxHealth()
+		if self:getHealth() > maxHealth then
+			self:addHealth(-(self:getHealth() - maxHealth), false)
+		end
+		
+		self:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The socket power fades away.")
+	end
+end
