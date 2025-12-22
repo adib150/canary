@@ -81,9 +81,9 @@ local memoriesWords = {
 }
 
 local memoryShardsItemIdsBitmasks = {
-	[31354] = 1,
-	[31355] = 2,
-	[31356] = 4,
+	[12209] = 1,  -- strange green powder (was 31354 green memory shard)
+	[12208] = 2,  -- strange blue powder (was 31356 blue memory shard)
+	[12210] = 4,  -- strange violet powder (was 31355 violet memory shard)
 }
 
 local memoryShards = Action()
@@ -107,7 +107,7 @@ function memoryShards.onUse(player, item, fromPosition, target, toPosition, isHo
 	return false
 end
 
-memoryShards:id(31354, 31355, 31356) -- Green, blue and purple memory shards
+memoryShards:id(12209, 12208, 12210) -- Strange powder items (green, blue, violet)
 memoryShards:register()
 
 -- Energy fields
@@ -123,7 +123,7 @@ function energyField.onStepIn(creature, item, position, fromPosition)
 
 	local playerShardIds = {}
 
-	local shardIds = { 31354, 31355, 31356 }
+	local shardIds = { 12209, 12208, 12210 }  -- Strange powder items (green, blue, violet)
 	-- Get player owned shards
 	for i = 1, #shardIds do
 		if player:getItemById(shardIds[i], true) then

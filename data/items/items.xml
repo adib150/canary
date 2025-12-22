@@ -29578,9 +29578,8 @@
 		<attribute key="primarytype" value="quest items"/>
 		<attribute key="weight" value="50"/>
 	</item>
-	<item id="12209" name="removal of second power socket">
-		<attribute key="primarytype" value="tools"/>
-		<attribute key="description" value="Removes the second power socket from an equipment."/>
+	<item id="12209" name="strange green powder">
+		<attribute key="primarytype" value="quest items"/>
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="12210" name="strange violet powder">
@@ -29593,18 +29592,16 @@
 	</item>
 	<item fromid="12212" toid="12213" article="a" name="stone"/>
 	<item fromid="12214" toid="12225" article="a" name="dark sand"/>
-	<item id="12226" name="removal of third power socket">
-		<attribute key="primarytype" value="tools"/>
-		<attribute key="description" value="Removes the third power socket from an equipment."/>
+	<item id="12226" name="strange red powder">
+		<attribute key="primarytype" value="quest items"/>
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="12227" name="strange yellow powder">
 		<attribute key="primarytype" value="quest items"/>
 		<attribute key="weight" value="50"/>
 	</item>
-	<item id="12228" name="removal of first power socket">
-		<attribute key="primarytype" value="tools"/>
-		<attribute key="description" value="Removes the first power socket from an equipment."/>
+	<item id="12228" name="strange white powder">
+		<attribute key="primarytype" value="quest items"/>
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="12229" name="screaming cherry">
@@ -58194,17 +58191,23 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 	<item id="31353" article="a" name="white raven">
 		<attribute key="primarytype" value="furniture"/>
 	</item>
-	<item id="31354" article="a" name="blue memory shard">
-		<attribute key="primarytype" value="quest items"/>
-		<attribute key="weight" value="13"/>
+	<item id="31354" name="removal of first power socket">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="description" value="Removes the first power socket from an equipment."/>
+		<attribute key="weight" value="50"/>
+		<attribute key="allowdistread" value="1"/>
 	</item>
-	<item id="31355" article="a" name="violet memory shard">
-		<attribute key="primarytype" value="quest items"/>
-		<attribute key="weight" value="13"/>
+	<item id="31355" name="removal of third power socket">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="description" value="Removes the third power socket from an equipment."/>
+		<attribute key="weight" value="50"/>
+		<attribute key="allowdistread" value="1"/>
 	</item>
-	<item id="31356" article="a" name="green memory shard">
-		<attribute key="primarytype" value="quest items"/>
-		<attribute key="weight" value="13"/>
+	<item id="31356" name="removal of second power socket">
+		<attribute key="primarytype" value="tools"/>
+		<attribute key="description" value="Removes the second power socket from an equipment."/>
+		<attribute key="weight" value="50"/>
+		<attribute key="allowdistread" value="1"/>
 	</item>
 	<item id="31357" article="a" name="memory englitener"/>
 	<item fromid="31358" toid="31360" article="a" name="memory englitener"/>

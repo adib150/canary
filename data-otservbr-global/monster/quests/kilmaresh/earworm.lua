@@ -65,9 +65,9 @@ monster.loot = {
 	{ name = "earth arrow", chance = 65000, maxCount = 21 },
 	{ name = "worm", chance = 61500, maxCount = 3 },
 	{ name = "lump of dirt", chance = 42000 },
-	{ name = "green memory shard", chance = 35000 },
-	{ name = "blue memory shard", chance = 35000 },
-	{ name = "violet memory shard", chance = 32000 },
+	{ name = "strange green powder", chance = 35000 },  -- 12209 (was green memory shard)
+	{ name = "strange blue powder", chance = 35000 },   -- 12208 (was blue memory shard)
+	{ name = "strange violet powder", chance = 32000 }, -- 12210 (was violet memory shard)
 	{ name = "terra amulet", chance = 26000 },
 	{ name = "terra hood", chance = 16500 },
 	{ name = "sacred tree amulet", chance = 12300 },
