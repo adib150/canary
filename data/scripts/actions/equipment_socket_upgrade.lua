@@ -40,7 +40,8 @@ local function getCurrentTier(socketValue)
         return 0
     end
     
-    return tonumber(socketValue:match("power tier (%d+)")) or 0
+    -- Extract tier number from format "<attribute> tier X"
+    return tonumber(socketValue:match("tier (%d+)")) or 0
 end
 
 local socketUpgrade = Action()
@@ -93,21 +94,20 @@ function socketUpgrade.onUse(player, item, fromPosition, target, toPosition, isH
 
     -- Upgrade the socket
     local newTier = currentTier + 1
-    target:setCustomAttribute(socketAttr, "power tier " .. newTier)
+    
+    -- Extract attribute name from current socket value (e.g., "critical chance tier 1" -> "critical chance")
+    local attributeName = socketValue:match("(.+) tier %d+")
+    if not attributeName then
+        player:sendCancelMessage("Invalid socket format.")
+        return true
+    end
+    
+    target:setCustomAttribute(socketAttr, attributeName .. " tier " .. newTier)
 
     -- Update all sockets for description
     local socket1 = target:getCustomAttribute("socket1") or "empty"
     local socket2 = target:getCustomAttribute("socket2") or "empty"
     local socket3 = target:getCustomAttribute("socket3") or "empty"
-    
-    -- Update the specific socket that was upgraded
-    if upgradeInfo.socket == 1 then
-        socket1 = "power tier " .. newTier
-    elseif upgradeInfo.socket == 2 then
-        socket2 = "power tier " .. newTier
-    elseif upgradeInfo.socket == 3 then
-        socket3 = "power tier " .. newTier
-    end
 
     -- Get existing description and update it
     local existingDesc = target:getAttribute(ITEM_ATTRIBUTE_DESCRIPTION) or ""
