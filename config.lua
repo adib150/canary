@@ -288,8 +288,8 @@ toggleTravelsFree = false
 buyAolCommandFee = 0
 buyBlessCommandFee = 0
 teleportPlayerToVocationRoom = true
-toggleReceiveReward = false
-randomMonsterSpawn = false
+toggleReceiveReward = true
+randomMonsterSpawn = true
 lootPouchMaxLimit = 2000
 storeInboxMaxLimit = 2000
 enablePlayerPutItemInAmmoSlot = false
@@ -508,10 +508,10 @@ sortLootByChance = false
 -- lowLevelBonusExp works up to level 50
 rateUseStages = false
 lowLevelBonusExp = 50
-rateExp = 5000
-rateSkill = 5000
+rateExp = 50
+rateSkill = 50
 rateLoot = 1
-rateMagic = 1
+rateMagic = 50
 rateSpawn = 1
 
 -- Killing in the name of Quest
