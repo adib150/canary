@@ -8402,7 +8402,7 @@
 		<attribute key="attack" value="25"/>
 		<attribute key="weight" value="2000"/>
 		<attribute key="script" value="moveevent;weapon">
-			<attribute key="breakChance" value="3"/>
+			<attribute key="breakChance" value="0"/>
 			<attribute key="weaponType" value="missile"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
