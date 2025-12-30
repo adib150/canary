@@ -38871,10 +38871,11 @@
 		<attribute key="primarytype" value="wall hangings"/>
 	</item>
 	<item id="19081" article="a" name="skull"/>
-	<item id="19082" article="a" name="golden raid token">
-		<attribute key="primarytype" value="valuables"/>
-		<attribute key="weight" value="110"/>
-	</item>
+	<item id="19082" article="a" name="roulette coin">
+ 		<attribute key="primarytype" value="valuables"/>
+ 		<attribute key="description" value="A special coin used for roulette games and exclusive purchases."/>
+ 		<attribute key="weight" value="110"/>
+ 	</item>
 	<item id="19083" article="a" name="silver raid token">
 		<attribute key="primarytype" value="valuables"/>
 		<attribute key="weight" value="100"/>

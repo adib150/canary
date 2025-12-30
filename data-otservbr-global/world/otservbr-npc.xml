@@ -795,6 +795,9 @@
 	<npc centerx="32193" centery="32297" centerz="6" radius="1">
 		<npc name="Kepar" x="0" y="0" z="6" spawntime="60" />
 	</npc>
+	<npc centerx="32206" centery="32301" centerz="6" radius="1">
+		<npc name="Asima" x="0" y="0" z="6" spawntime="60" />
+	</npc>
 	<npc centerx="32208" centery="32301" centerz="6" radius="1">
 		<npc name="Loot Seller" x="0" y="0" z="6" spawntime="60" />
 	</npc>
@@ -1695,6 +1698,9 @@
 	<npc centerx="32015" centery="32197" centerz="7" radius="1">
 		<npc name="Loui" x="0" y="0" z="7" spawntime="60" />
 	</npc>
+	<npc centerx="32232" centery="32198" centerz="7" radius="1">
+		<npc name="Asima" x="0" y="0" z="7" spawntime="60" />
+	</npc>
 	<npc centerx="32361" centery="32198" centerz="7" radius="1">
 		<npc name="Sam" x="0" y="0" z="7" spawntime="60" />
 	</npc>
@@ -1715,6 +1721,9 @@
 	</npc>
 	<npc centerx="32109" centery="32204" centerz="7" radius="1">
 		<npc name="Obi" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32224" centery="32205" centerz="7" radius="1">
+		<npc name="Loot Seller" x="0" y="0" z="7" spawntime="60" />
 	</npc>
 	<npc centerx="32050" centery="32206" centerz="7" radius="1">
 		<npc name="Billy" x="0" y="0" z="7" spawntime="60" />

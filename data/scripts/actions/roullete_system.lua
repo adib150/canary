@@ -21,13 +21,17 @@ local config = {
     },
 
     prizePool = {
-        {itemId = 3043, count = {1, 10},   chance = 10000}, -- {itemId = itemid, count = {min, max}, chance = chance/10000} (crystal coins)
-        {itemId = 3392, count = {1, 1},    chance = 7500 }, -- royal helmet
-        {itemId = 19082, count = {1, 3},    chance = 4000 }, -- roulette token
-        {itemId = 3364, count = {1, 1},    chance = 3000 }, -- golden legs
-        {itemId = 3366, count = {1, 1},    chance = 1500 }, -- magic plate armor
-        {itemId = 3555, count = {1, 1},    chance = 500  }, -- golden boots
-        {itemId = 5903, count = {1, 1},    chance = 2500 }  -- ferumbras hat
+        -- Lowered chances for top-tier equipment to make them realistically rare.
+        {itemId = 3043, count = {1, 50},   chance = 8000}, -- crystal coins (common)
+        {itemId = 3392, count = {1, 1},    chance = 500 }, -- royal helmet (uncommon)
+        {itemId = 19082, count = {1, 3},    chance = 3500 }, -- roulette token (common reward)
+        {itemId = 3364, count = {1, 1},    chance = 400 }, -- golden legs (rare)
+        {itemId = 3366, count = {1, 1},    chance = 150 }, -- magic plate armor (very rare)
+        {itemId = 3555, count = {1, 1},    chance = 100  }, -- golden boots (very rare)
+        {itemId = 34109, count = {1, 1},    chance = 700 }, -- bag you desire (rare)
+        {itemId = 43895, count = {1, 1},    chance = 5   }, -- bag you covet (extremely rare)
+        {itemId = 39499, count = {1, 1},    chance = 300 }, -- primal bag (rare)
+        {itemId = 5903, count = {1, 1},    chance = 20  }  -- ferumbras hat (extremely rare)
 
     },
 
@@ -126,7 +130,48 @@ local function clearRoulette(newItemInfo)
 end
 
 local function chanceNewReward()
+    -- Use a weighted random selection based on `chance` values as weights.
+    -- If weights are invalid (sum <= 0), fallback to the original inclusion-roll method.
     local newItemInfo = {itemId = 0, count = 0}
+
+    -- Sum weights
+    local totalWeight = 0
+    for i = 1, #config.prizePool do
+        local w = tonumber(config.prizePool[i].chance) or 0
+        if w > 0 then
+            totalWeight = totalWeight + w
+        end
+    end
+
+    if totalWeight > 0 then
+        -- Pick a random value in [1, totalWeight]
+        local pick = math.random(1, totalWeight)
+        local acc = 0
+        local chosenIndex = nil
+        for i = 1, #config.prizePool do
+            local w = tonumber(config.prizePool[i].chance) or 0
+            if w > 0 then
+                acc = acc + w
+                if pick <= acc then
+                    chosenIndex = i
+                    break
+                end
+            end
+        end
+
+        -- Safety fallback: if nothing chosen, pick last
+        if not chosenIndex then
+            chosenIndex = #config.prizePool
+        end
+
+        local prize = config.prizePool[chosenIndex]
+        newItemInfo.itemId = prize.itemId
+        newItemInfo.count = math.random(prize.count[1], prize.count[2])
+        chancedItems[#chancedItems + 1] = prize.chance
+        return newItemInfo
+    end
+
+    -- Fallback: original inclusion-then-uniform method
     local rewardTable = {}
     while #rewardTable < 1 do
         for i = 1, #config.prizePool do

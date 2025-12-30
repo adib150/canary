@@ -1,9 +1,9 @@
 local effects = {
-    {position = Position(32227, 32200, 7), text = 'TEMPLE', effect = NONE},  
+    {position = Position(32228, 32200, 7), text = 'TEMPLE', effect = NONE},  
     {position = Position(32224, 32201, 7), text = 'EASY 1-200', effect = CONST_ME_GROUNDSHAKER},  
-    {position = Position(32227, 32198, 7), text = 'MEDIUM 100-400', effect = CONST_ME_GROUNDSHAKER}, 
-    {position = Position(32231, 32201, 7), text = 'HARD 300-800', effect = CONST_ME_GROUNDSHAKER}, 
-    {position = Position(32227, 32205, 7), text = 'ENDGAME 800+', effect = CONST_ME_GROUNDSHAKER}, 
+    {position = Position(32228, 32198, 7), text = 'MEDIUM 100-400', effect = CONST_ME_GROUNDSHAKER}, 
+    {position = Position(32232, 32201, 7), text = 'HARD 300-800', effect = CONST_ME_GROUNDSHAKER}, 
+    {position = Position(32228, 32205, 7), text = 'ENDGAME 800+', effect = CONST_ME_GROUNDSHAKER}, 
 }
 
 local animatedText = GlobalEvent("AnimatedText") 
