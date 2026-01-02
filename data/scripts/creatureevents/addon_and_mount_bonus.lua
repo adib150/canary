@@ -3,16 +3,6 @@ local addonBonus = CreatureEvent("AddonBonus")
 OnlinePlayersBonus = {}
 
 -- Configurable uniform bonuses applied per full-outfit (with addons) and per mount.
-local BONUS_CONFIG = {
-	maxHp = 5,                -- +5 max hitpoints
-	mainSkillFactor = 0.2,    -- +0.2 to the main skill (applied via CONDITION_PARAM_SKILL_MELEE mapping)
-	critChance = 0.1,         -- +0.1 critical chance
-	critDamage = 0.2,         -- +0.2 critical damage
-	maxMp = 5,                -- +5 max mana
-	manaLeech = 0.1,          -- +0.1 mana leech amount
-	lifeLeech = 0.1,          -- +0.1 life leech amount
-	shield = 0.1              -- +0.1 shield skill
-}
 
 local function safeGetVocationBase(player)
 	local ok, voc = pcall(function() return player:getVocation():getBaseId() end)
@@ -54,17 +44,6 @@ local function tableShallowCopy(src)
 	return t
 end
 
--- Build default condition map from BONUS_CONFIG
-local DEFAULT_CONDITIONS = {
-	[CONDITION_PARAM_STAT_MAXHITPOINTS] = BONUS_CONFIG.maxHp,
-	[CONDITION_PARAM_SKILL_MELEE] = BONUS_CONFIG.mainSkillFactor,
-	[CONDITION_PARAM_SKILL_CRITICAL_HIT_CHANCE] = BONUS_CONFIG.critChance,
-	[CONDITION_PARAM_SKILL_CRITICAL_HIT_DAMAGE] = BONUS_CONFIG.critDamage,
-	[CONDITION_PARAM_STAT_MAXMANAPOINTS] = BONUS_CONFIG.maxMp,
-	[CONDITION_PARAM_SKILL_MANA_LEECH_AMOUNT] = BONUS_CONFIG.manaLeech,
-	[CONDITION_PARAM_SKILL_LIFE_LEECH_AMOUNT] = BONUS_CONFIG.lifeLeech,
-	[CONDITION_PARAM_SKILL_SHIELD] = BONUS_CONFIG.shield
-}
 
 -- Precompute effective bonuses per looktype and per mount for fast lookup.
 local LOOKTYPE_BONUSES = {}
