@@ -31,12 +31,14 @@ function bonus.onSay(player, words, param)
 		if condition == CONDITION_PARAM_SKILL_FIST then
 			local hasVocSkill = bonus[CONDITION_PARAM_SKILL_MELEE] or bonus[CONDITION_PARAM_SKILL_DISTANCE] or bonus[CONDITION_PARAM_STAT_MAGICPOINTS]
 			if hasVocSkill and value == hasVocSkill then
-				-- skip redundant Fist Skill
 				goto continue
 			end
 		end
 		local conditionName = ConditionParamNames[condition] or ("Param " .. tostring(condition))
-		if math.type and math.type(value) == "float" or (type(value) == "number" and value % 1 ~= 0) then
+		-- Show critical chance/damage as percent
+		if condition == CONDITION_PARAM_SKILL_CRITICAL_HIT_CHANCE or condition == CONDITION_PARAM_SKILL_CRITICAL_HIT_DAMAGE then
+			message = message .. string.format("%s: %.2f%%\n", conditionName, value / 100)
+		elseif math.type and math.type(value) == "float" or (type(value) == "number" and value % 1 ~= 0) then
 			message = message .. string.format("%s: %.2f\n", conditionName, value)
 		else
 			message = message .. string.format("%s: %d\n", conditionName, value)
