@@ -30,7 +30,7 @@ local config = {
         {itemId = 3555, count = {1, 1},    chance = 100  }, -- golden boots (very rare)
         {itemId = 34109, count = {1, 1},    chance = 700 }, -- bag you desire (rare)
         {itemId = 43895, count = {1, 1},    chance = 5   }, -- bag you covet (extremely rare)
-        {itemId = 39499, count = {1, 1},    chance = 300 }, -- primal bag (rare)
+        {itemId = 39546, count = {1, 1},    chance = 300 }, -- primal bag (rare)
         {itemId = 5903, count = {1, 1},    chance = 20  }  -- ferumbras hat (extremely rare)
 
     },

@@ -82733,4 +82733,14 @@ Granted by TibiaGoals.com"/>
 		<attribute key="primarytype" value="doors"/>
 		<attribute key="type" value="door"/>
 	</item>
+	<item id="50343" article="a" name="random outfit or addon doll">
+		<attribute key="primarytype" value="dolls and bears"/>
+		<attribute key="description" value="It gives a random outfit or addon."/>
+		<attribute key="weight" value="590"/>
+	</item>
+	<item id="50344" article="a" name="random mount doll">
+		<attribute key="primarytype" value="dolls and bears"/>
+		<attribute key="description" value="It gives a random mount."/>
+		<attribute key="weight" value="590"/>
+	</item>
 </items>
