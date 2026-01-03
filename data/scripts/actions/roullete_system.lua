@@ -22,16 +22,31 @@ local config = {
 
     prizePool = {
         -- Lowered chances for top-tier equipment to make them realistically rare.
-        {itemId = 3043, count = {1, 50},   chance = 8000}, -- crystal coins (common)
-        {itemId = 3392, count = {1, 1},    chance = 500 }, -- royal helmet (uncommon)
-        {itemId = 19082, count = {1, 3},    chance = 3500 }, -- roulette token (common reward)
-        {itemId = 3364, count = {1, 1},    chance = 400 }, -- golden legs (rare)
-        {itemId = 3366, count = {1, 1},    chance = 150 }, -- magic plate armor (very rare)
-        {itemId = 3555, count = {1, 1},    chance = 100  }, -- golden boots (very rare)
-        {itemId = 34109, count = {1, 1},    chance = 15 }, -- bag you desire (rare)
-        {itemId = 43895, count = {1, 1},    chance = 5   }, -- bag you covet (extremely rare)
-        {itemId = 39546, count = {1, 1},    chance = 10 }, -- primal bag (rare)
-        {itemId = 5903, count = {1, 1},    chance = 20  }  -- ferumbras hat (extremely rare)
+        {itemId = 3043, count = {1, 50},   chance = 4000}, -- crystal coins
+        {itemId = 3392, count = {1, 1},    chance = 1000 }, -- royal helmet
+        {itemId = 3387, count = {1, 1},    chance = 1000 }, -- demon helmet
+        {itemId = 10387, count = {1, 1},    chance = 1000 }, -- zaoan legs
+        {itemId = 3364, count = {1, 1},    chance = 1000 }, -- golden legs
+        {itemId = 3366, count = {1, 1},    chance = 500 }, -- magic plate armor
+        {itemId = 3555, count = {1, 1},    chance = 150  }, -- golden boots
+        --store items
+        {itemId = 19082, count = {1, 2},    chance = 1000 }, -- roulette token
+        {itemId = 22118, count = {1, 100},    chance = 1000  }, -- tibia coins
+        {itemId = 50343, count = {1, 3},    chance = 150  }, -- random outfit
+        {itemId = 50344, count = {1, 3},    chance = 150  }, -- random mount
+         {itemId = 673, count = {1, 5},    chance = 150 }, -- hammer of power
+        {itemId = 30187, count = {1, 3},    chance = 150 }, -- awakening powder
+        {itemId = 30191, count = {1, 3},    chance = 150 }, -- first socket upgrade powder
+        {itemId = 30190, count = {1, 3},    chance = 150 }, -- second socket upgrade powder
+        {itemId = 30188, count = {1, 3},    chance = 150  }, -- third socket upgrade powder
+        {itemId = 31354, count = {1, 3},    chance = 150  }, --first socket reroll
+        {itemId = 31356, count = {1, 3},    chance = 150  }, --second socket reroll
+        {itemId = 31355, count = {1, 3},    chance = 150  }, --third socket reroll
+        -- high-tier bags and rare items
+        {itemId = 34109, count = {1, 1},    chance = 15 }, -- bag you desire
+        {itemId = 43895, count = {1, 1},    chance = 10   }, -- bag you covet
+        {itemId = 39546, count = {1, 1},    chance = 10 }, -- primal bag
+        {itemId = 5903, count = {1, 1},    chance = 5  }  -- ferumbras hat
 
     },
 

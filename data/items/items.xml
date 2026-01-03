@@ -38871,9 +38871,9 @@
 		<attribute key="primarytype" value="wall hangings"/>
 	</item>
 	<item id="19081" article="a" name="skull"/>
-	<item id="19082" article="a" name="roulette coin">
+	<item id="19082" article="a" name="roulette token">
  		<attribute key="primarytype" value="valuables"/>
- 		<attribute key="description" value="A special coin used for roulette games and exclusive purchases."/>
+ 		<attribute key="description" value="A special token used for roulette games and exclusive purchases."/>
  		<attribute key="weight" value="110"/>
  	</item>
 	<item id="19083" article="a" name="silver raid token">
@@ -58218,19 +58218,19 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 	<item id="31353" article="a" name="white raven">
 		<attribute key="primarytype" value="furniture"/>
 	</item>
-	<item id="31354" name="socket reroller (first)">
+	<item id="31354" name="first socket reroller">
 		<attribute key="primarytype" value="tools"/>
 		<attribute key="description" value="Rerolls the first power socket on an equipment, preserving its tier."/>
 		<attribute key="weight" value="50"/>
 		<attribute key="allowdistread" value="1"/>
 	</item>
-	<item id="31355" name="socket reroller (third)">
+	<item id="31355" name="third socket reroller">
 		<attribute key="primarytype" value="tools"/>
 		<attribute key="description" value="Rerolls the third power socket on an equipment, preserving its tier."/>
 		<attribute key="weight" value="50"/>
 		<attribute key="allowdistread" value="1"/>
 	</item>
-	<item id="31356" name="socket reroller (second)">
+	<item id="31356" name="second socket reroller">
 		<attribute key="primarytype" value="tools"/>
 		<attribute key="description" value="Rerolls the second power socket on an equipment, preserving its tier."/>
 		<attribute key="weight" value="50"/>
