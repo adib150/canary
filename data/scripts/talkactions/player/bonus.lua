@@ -30,15 +30,18 @@ ConditionParamNames = {
 }
 
 local function formatBonus(condition, value)
-	-- percent-style params
+	-- Critical hit needs /100 (internal rep is 100x)
 	if condition == CONDITION_PARAM_SKILL_CRITICAL_HIT_CHANCE
-		or condition == CONDITION_PARAM_SKILL_CRITICAL_HIT_DAMAGE
-		or condition == CONDITION_PARAM_ONSLAUGHT_CHANCE
+		or condition == CONDITION_PARAM_SKILL_CRITICAL_HIT_DAMAGE then
+		return string.format("%.2f%%", value / 100)
+	end
+	-- Forge procs (onslaught, momentum, transcendence, amplification, ruse) are already percentage values
+	if condition == CONDITION_PARAM_ONSLAUGHT_CHANCE
 		or condition == CONDITION_PARAM_MOMENTUM_CHANCE
 		or condition == CONDITION_PARAM_TRANSCENDENCE_CHANCE
 		or condition == CONDITION_PARAM_AMPLIFICATION_CHANCE
 		or condition == CONDITION_PARAM_RUSE_CHANCE then
-		return string.format("%.2f%%", value / 100)
+		return string.format("%.2f%%", value)
 	end
 	-- damage dealt / taken are percent whole-number deltas
 	if condition == CONDITION_PARAM_BUFF_DAMAGEDEALT or condition == CONDITION_PARAM_BUFF_DAMAGERECEIVED then
@@ -85,15 +88,15 @@ local function computeSocketBonuses(player)
 		elseif attributeName == "critical damage" then
 			socketBonus[CONDITION_PARAM_SKILL_CRITICAL_HIT_DAMAGE] = (socketBonus[CONDITION_PARAM_SKILL_CRITICAL_HIT_DAMAGE] or 0) + (100 * totalTiers)
 		elseif attributeName == "onslaught chance" then
-			socketBonus[CONDITION_PARAM_ONSLAUGHT_CHANCE] = (socketBonus[CONDITION_PARAM_ONSLAUGHT_CHANCE] or 0) + (0.5 * totalTiers * 100)
+			socketBonus[CONDITION_PARAM_ONSLAUGHT_CHANCE] = (socketBonus[CONDITION_PARAM_ONSLAUGHT_CHANCE] or 0) + (0.5 * totalTiers)
 		elseif attributeName == "momentum chance" then
-			socketBonus[CONDITION_PARAM_MOMENTUM_CHANCE] = (socketBonus[CONDITION_PARAM_MOMENTUM_CHANCE] or 0) + (0.5 * totalTiers * 100)
+			socketBonus[CONDITION_PARAM_MOMENTUM_CHANCE] = (socketBonus[CONDITION_PARAM_MOMENTUM_CHANCE] or 0) + (0.5 * totalTiers)
 		elseif attributeName == "transcendence chance" then
-			socketBonus[CONDITION_PARAM_TRANSCENDENCE_CHANCE] = (socketBonus[CONDITION_PARAM_TRANSCENDENCE_CHANCE] or 0) + (0.5 * totalTiers * 100)
+			socketBonus[CONDITION_PARAM_TRANSCENDENCE_CHANCE] = (socketBonus[CONDITION_PARAM_TRANSCENDENCE_CHANCE] or 0) + (0.5 * totalTiers)
 		elseif attributeName == "amplification chance" then
-			socketBonus[CONDITION_PARAM_AMPLIFICATION_CHANCE] = (socketBonus[CONDITION_PARAM_AMPLIFICATION_CHANCE] or 0) + (0.5 * totalTiers * 100)
+			socketBonus[CONDITION_PARAM_AMPLIFICATION_CHANCE] = (socketBonus[CONDITION_PARAM_AMPLIFICATION_CHANCE] or 0) + (0.5 * totalTiers)
 		elseif attributeName == "ruse chance" then
-			socketBonus[CONDITION_PARAM_RUSE_CHANCE] = (socketBonus[CONDITION_PARAM_RUSE_CHANCE] or 0) + (0.5 * totalTiers * 100)
+			socketBonus[CONDITION_PARAM_RUSE_CHANCE] = (socketBonus[CONDITION_PARAM_RUSE_CHANCE] or 0) + (0.5 * totalTiers)
 		elseif attributeName == "magic level" then
 			socketBonus[CONDITION_PARAM_STAT_MAGICPOINTS] = (socketBonus[CONDITION_PARAM_STAT_MAGICPOINTS] or 0) + totalTiers
 		elseif attributeName == "distance fight" then
@@ -160,7 +163,7 @@ function bonus.onSay(player, words, param)
 			or condition == CONDITION_PARAM_TRANSCENDENCE_CHANCE
 			or condition == CONDITION_PARAM_AMPLIFICATION_CHANCE
 			or condition == CONDITION_PARAM_RUSE_CHANCE then
-			message = message .. string.format("%s: %.2f%%\n", conditionName, value / 100)
+			message = message .. string.format("%s: %s\n", conditionName, formatBonus(condition, value))
 		elseif math.type and math.type(value) == "float" or (type(value) == "number" and value % 1 ~= 0) then
 			message = message .. string.format("%s: %.2f\n", conditionName, value)
 		else
