@@ -573,6 +573,14 @@ public:
 	void setVarSkill(skills_t skill, int32_t modifier);
 	void setFatalChanceModifier(int32_t modifier);
 	int32_t getFatalChanceModifier() const { return varFatalChance; }
+	void setMomentumChanceModifier(int32_t modifier);
+	int32_t getMomentumChanceModifier() const { return varMomentumChance; }
+	void setTranscendenceChanceModifier(int32_t modifier);
+	int32_t getTranscendenceChanceModifier() const { return varTranscendenceChance; }
+	void setAmplificationChanceModifier(int32_t modifier);
+	int32_t getAmplificationChanceModifier() const { return varAmplificationChance; }
+	void setRuseChanceModifier(int32_t modifier);
+	int32_t getRuseChanceModifier() const { return varRuseChance; }
 
 	void setVarStats(stats_t stat, int32_t modifier);
 	int32_t getDefaultStats(stats_t stat) const;
@@ -1575,6 +1583,10 @@ private:
 	int32_t varSkills[SKILL_LAST + 1] = {};
 	int32_t varStats[STAT_LAST + 1] = {};
 	int32_t varFatalChance = 0; // additive onslaught/fatal chance in percentage points
+	int32_t varMomentumChance = 0; // additive momentum chance in percentage points
+	int32_t varTranscendenceChance = 0; // additive transcendence chance in percentage points
+	int32_t varAmplificationChance = 0; // additive amplification chance in percentage points
+	int32_t varRuseChance = 0; // additive ruse/dodge chance in percentage points
 	int32_t shopCallback = -1;
 	int32_t MessageBufferCount = 0;
 	int32_t bloodHitCount = 0;

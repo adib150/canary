@@ -540,6 +540,10 @@ void ConditionAttributes::addCondition(std::shared_ptr<Creature> creature, const
 		std::ranges::copy(std::span(conditionAttrs->buffs), buffs);
 		std::ranges::copy(std::span(conditionAttrs->buffsPercent), buffsPercent);
 		fatalChance = conditionAttrs->fatalChance;
+		momentumChance = conditionAttrs->momentumChance;
+		transcendenceChance = conditionAttrs->transcendenceChance;
+		amplificationChance = conditionAttrs->amplificationChance;
+		ruseChance = conditionAttrs->ruseChance;
 
 		absorbs = conditionAttrs->absorbs;
 		absorbsPercent = conditionAttrs->absorbsPercent;
@@ -606,6 +610,14 @@ bool ConditionAttributes::unserializeProp(ConditionAttr_t attr, PropStream &prop
 		return propStream.read<int8_t>(charmChanceModifier);
 	} else if (attr == CONDITIONATTR_FATAL_CHANCE) {
 		return propStream.read<int32_t>(fatalChance);
+	} else if (attr == CONDITIONATTR_MOMENTUM_CHANCE) {
+		return propStream.read<int32_t>(momentumChance);
+	} else if (attr == CONDITIONATTR_TRANSCENDENCE_CHANCE) {
+		return propStream.read<int32_t>(transcendenceChance);
+	} else if (attr == CONDITIONATTR_AMPLIFICATION_CHANCE) {
+		return propStream.read<int32_t>(amplificationChance);
+	} else if (attr == CONDITIONATTR_RUSE_CHANCE) {
+		return propStream.read<int32_t>(ruseChance);
 	}
 	return Condition::unserializeProp(attr, propStream);
 }
@@ -653,6 +665,16 @@ void ConditionAttributes::serialize(PropWriteStream &propWriteStream) {
 	// Save fatal chance bonus
 	propWriteStream.write<uint8_t>(CONDITIONATTR_FATAL_CHANCE);
 	propWriteStream.write<int32_t>(fatalChance);
+
+	// Save forge proc modifiers
+	propWriteStream.write<uint8_t>(CONDITIONATTR_MOMENTUM_CHANCE);
+	propWriteStream.write<int32_t>(momentumChance);
+	propWriteStream.write<uint8_t>(CONDITIONATTR_TRANSCENDENCE_CHANCE);
+	propWriteStream.write<int32_t>(transcendenceChance);
+	propWriteStream.write<uint8_t>(CONDITIONATTR_AMPLIFICATION_CHANCE);
+	propWriteStream.write<int32_t>(amplificationChance);
+	propWriteStream.write<uint8_t>(CONDITIONATTR_RUSE_CHANCE);
+	propWriteStream.write<int32_t>(ruseChance);
 }
 
 ConditionAttributes::ConditionAttributes(ConditionId_t initId, ConditionType_t initType, int32_t initTicks, bool initBuff, uint32_t initSubId) :
@@ -678,6 +700,10 @@ bool ConditionAttributes::startCondition(std::shared_ptr<Creature> creature) {
 		updatePercentStats(player);
 		updateStats(player);
 		player->setFatalChanceModifier(fatalChance);
+		player->setMomentumChanceModifier(momentumChance);
+		player->setTranscendenceChanceModifier(transcendenceChance);
+		player->setAmplificationChanceModifier(amplificationChance);
+		player->setRuseChanceModifier(ruseChance);
 	}
 
 	return true;
@@ -844,9 +870,21 @@ void ConditionAttributes::endCondition(std::shared_ptr<Creature> creature) {
 			}
 		}
 
-				if (fatalChance != 0) {
-					player->setFatalChanceModifier(-fatalChance);
-				}
+		if (fatalChance != 0) {
+			player->setFatalChanceModifier(-fatalChance);
+		}
+		if (momentumChance != 0) {
+			player->setMomentumChanceModifier(-momentumChance);
+		}
+		if (transcendenceChance != 0) {
+			player->setTranscendenceChanceModifier(-transcendenceChance);
+		}
+		if (amplificationChance != 0) {
+			player->setAmplificationChanceModifier(-amplificationChance);
+		}
+		if (ruseChance != 0) {
+			player->setRuseChanceModifier(-ruseChance);
+		}
 
 		player->setCharmChanceModifier(player->getCharmChanceModifier() - charmChanceModifier);
 
@@ -982,6 +1020,26 @@ bool ConditionAttributes::setParam(ConditionParam_t param, int32_t value) {
 
 		case CONDITION_PARAM_ONSLAUGHT_CHANCE: {
 			fatalChance = value;
+			return true;
+		}
+
+		case CONDITION_PARAM_MOMENTUM_CHANCE: {
+			momentumChance = value;
+			return true;
+		}
+
+		case CONDITION_PARAM_TRANSCENDENCE_CHANCE: {
+			transcendenceChance = value;
+			return true;
+		}
+
+		case CONDITION_PARAM_AMPLIFICATION_CHANCE: {
+			amplificationChance = value;
+			return true;
+		}
+
+		case CONDITION_PARAM_RUSE_CHANCE: {
+			ruseChance = value;
 			return true;
 		}
 

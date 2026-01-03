@@ -290,6 +290,22 @@ void Player::setFatalChanceModifier(int32_t modifier) {
 	varFatalChance += modifier;
 }
 
+void Player::setMomentumChanceModifier(int32_t modifier) {
+	varMomentumChance += modifier;
+}
+
+void Player::setTranscendenceChanceModifier(int32_t modifier) {
+	varTranscendenceChance += modifier;
+}
+
+void Player::setAmplificationChanceModifier(int32_t modifier) {
+	varAmplificationChance += modifier;
+}
+
+void Player::setRuseChanceModifier(int32_t modifier) {
+	varRuseChance += modifier;
+}
+
 bool Player::isSuppress(ConditionType_t conditionType, bool attackerPlayer) const {
 	auto minDelay = g_configManager().getNumber(MIN_DELAY_BETWEEN_CONDITIONS);
 	if (IsConditionSuppressible(conditionType) && checkLastConditionTimeWithin(conditionType, minDelay)) {
@@ -9577,21 +9593,23 @@ bool Player::isDead() const {
 
 void Player::triggerMomentum() {
 	const auto &item = getInventoryItem(CONST_SLOT_HEAD);
-	if (!item) {
-		return;
+	// Base chance from helmet tier (if present), plus condition/other modifiers even when no helm
+	double_t baseChance = 0.0;
+	if (item && item->getTier() > 0) {
+		baseChance = item->getMomentumChance();
 	}
 
-	if (!item->getTier()) {
-		return;
-	}
-
-	double_t chance = item->getMomentumChance();
+	double amplification = static_cast<double>(getAmplificationChanceModifier());
 	const auto &playerBoots = getInventoryItem(CONST_SLOT_FEET);
 	if (playerBoots && playerBoots->getTier()) {
-		double_t amplificationChange = playerBoots->getAmplificationChance() / 100;
-		chance *= 1 + amplificationChange;
+		amplification += playerBoots->getAmplificationChance();
+	}
+	if (amplification > 0 && baseChance > 0) {
+		baseChance *= 1 + (amplification / 100);
 	}
 
+	double_t chance = baseChance;
+	chance += static_cast<double>(getMomentumChanceModifier());
 	chance += m_wheelPlayer.getBonusData().momentum;
 	double_t randomChance = uniform_random(0, 10000) / 100.;
 	if (getZoneType() != ZONE_PROTECTION && hasCondition(CONDITION_INFIGHT) && ((OTSYS_TIME() / 1000) % 2) == 0 && chance > 0 && randomChance < chance) {
@@ -9646,20 +9664,24 @@ void Player::triggerTranscendence() {
 	}
 
 	const auto &item = getInventoryItem(CONST_SLOT_LEGS);
-	if (item == nullptr) {
-		return;
+
+	// Base chance from legs if present/tiered, plus condition/other modifiers even when no legs item
+	double_t baseChance = 0.0;
+	if (item && item->getTier() > 0) {
+		baseChance = item->getTranscendenceChance();
 	}
 
-	if (!item->getTier()) {
-		return;
-	}
-
-	double_t chance = item->getTranscendenceChance();
+	double amplification = static_cast<double>(getAmplificationChanceModifier());
 	const auto &playerBoots = getInventoryItem(CONST_SLOT_FEET);
 	if (playerBoots && playerBoots->getTier()) {
-		double_t amplificationChange = playerBoots->getAmplificationChance() / 100;
-		chance *= 1 + amplificationChange;
+		amplification += playerBoots->getAmplificationChance();
 	}
+	if (amplification > 0 && baseChance > 0) {
+		baseChance *= 1 + (amplification / 100);
+	}
+
+	double_t chance = baseChance;
+	chance += static_cast<double>(getTranscendenceChanceModifier());
 
 	const double_t randomChance = uniform_random(0, 10000) / 100.;
 	if (getZoneType() != ZONE_PROTECTION && checkLastAggressiveActionWithin(2000) && ((OTSYS_TIME() / 1000) % 2) == 0 && chance > 0 && randomChance < chance) {
@@ -11223,21 +11245,26 @@ bool Player::hasPermittedConditionInPZ() const {
 uint16_t Player::getDodgeChance() const {
 	const auto &playerArmor = getInventoryItem(CONST_SLOT_ARMOR);
 	const auto wheelDodge = m_wheelPlayer.getStat(WheelStat_t::DODGE);
-	if (!playerArmor || playerArmor->getTier() == 0) {
-		return wheelDodge;
+
+	double chance = 0.0;
+	if (playerArmor && playerArmor->getTier() > 0) {
+		chance = playerArmor->getDodgeChance() * 100.0;
 	}
 
-	auto chance = static_cast<uint16_t>(playerArmor->getDodgeChance() * 100);
+	chance += static_cast<double>(getRuseChanceModifier());
+
+	double amplification = static_cast<double>(getAmplificationChanceModifier());
 	const auto &playerBoots = getInventoryItem(CONST_SLOT_FEET);
 	if (playerBoots && playerBoots->getTier() > 0) {
-		double amplificationChance = playerBoots->getAmplificationChance() / 100.0;
-		double_t amplValue = chance * amplificationChance;
-		chance += static_cast<uint16_t>(amplValue);
+		amplification += playerBoots->getAmplificationChance();
+	}
+	if (amplification > 0 && (chance > 0 || getRuseChanceModifier() != 0)) {
+		chance += chance * (amplification / 100.0);
 	}
 
-	chance += wheelDodge;
+	chance += static_cast<double>(wheelDodge);
 
-	return chance;
+	return static_cast<uint16_t>(chance);
 }
 
 uint8_t Player::isRandomMounted() const {

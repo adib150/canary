@@ -755,6 +755,10 @@ function Player:onInventoryUpdate(item, slot, equip)
 			local manaLeechChance = 0
 			local manaLeechAmount = 0
 			local onslaughtChance = 0
+			local momentumChance = 0
+			local transcendenceChance = 0
+			local amplificationChance = 0
+			local ruseChance = 0
 			
 			-- Apply bonuses
 			for attributeName, totalTiers in pairs(attributes) do
@@ -764,6 +768,14 @@ function Player:onInventoryUpdate(item, slot, equip)
 					critDamage = critDamage + (100 * totalTiers)
 				elseif attributeName == "onslaught chance" then
 					onslaughtChance = onslaughtChance + (0.5 * totalTiers)
+				elseif attributeName == "momentum chance" then
+					momentumChance = momentumChance + (0.5 * totalTiers)
+				elseif attributeName == "transcendence chance" then
+					transcendenceChance = transcendenceChance + (0.5 * totalTiers)
+				elseif attributeName == "amplification chance" then
+					amplificationChance = amplificationChance + (0.5 * totalTiers)
+				elseif attributeName == "ruse chance" then
+					ruseChance = ruseChance + (0.5 * totalTiers)
 				elseif attributeName == "magic level" then
 					magicLevel = magicLevel + totalTiers
 				elseif attributeName == "distance fight" then
@@ -819,6 +831,18 @@ function Player:onInventoryUpdate(item, slot, equip)
 			if onslaughtChance > 0 then
 				condition:setParameter(CONDITION_PARAM_ONSLAUGHT_CHANCE, onslaughtChance)
 			end
+			if momentumChance > 0 then
+				condition:setParameter(CONDITION_PARAM_MOMENTUM_CHANCE, momentumChance)
+			end
+			if transcendenceChance > 0 then
+				condition:setParameter(CONDITION_PARAM_TRANSCENDENCE_CHANCE, transcendenceChance)
+			end
+			if amplificationChance > 0 then
+				condition:setParameter(CONDITION_PARAM_AMPLIFICATION_CHANCE, amplificationChance)
+			end
+			if ruseChance > 0 then
+				condition:setParameter(CONDITION_PARAM_RUSE_CHANCE, ruseChance)
+			end
 			if magicLevel > 0 then
 				condition:setParameter(CONDITION_PARAM_STAT_MAGICPOINTS, magicLevel)
 			end
@@ -850,9 +874,6 @@ function Player:onInventoryUpdate(item, slot, equip)
 			if manaLeechChance > 0 then
 				condition:setParameter(CONDITION_PARAM_SKILL_MANA_LEECH_CHANCE, manaLeechChance)
 				condition:setParameter(CONDITION_PARAM_SKILL_MANA_LEECH_AMOUNT, manaLeechAmount)
-			end
-			if onslaughtChance > 0 then
-				condition:setParameter(CONDITION_PARAM_SKILL_ONSLAUGHT_CHANCE, onslaughtChance)
 			end
 			self:addCondition(condition)
 		end

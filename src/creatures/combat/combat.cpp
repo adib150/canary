@@ -2319,19 +2319,23 @@ void Combat::applyExtensions(const std::shared_ptr<Creature> &caster, const std:
 		canApplyCritical = (baseChance != 0 && uniform_random(1, 10000) <= baseChance);
 
 		bool canApplyFatal = false;
+		double fatalChance = 0.0;
 		// Check weapon in either hand (right-hand usually main weapon, left-hand for two-handers or alternate setups)
 		const auto &playerWeapon = player->getInventoryItem(CONST_SLOT_RIGHT) ? player->getInventoryItem(CONST_SLOT_RIGHT) : player->getInventoryItem(CONST_SLOT_LEFT);
-		if (playerWeapon) {
-			double fatalChance = 0.0;
-			if (playerWeapon->getTier() > 0) {
-				fatalChance = playerWeapon->getFatalChance();
-				if (const auto &playerBoots = player->getInventoryItem(CONST_SLOT_FEET); playerBoots && playerBoots->getTier()) {
-					fatalChance *= 1 + (playerBoots->getAmplificationChance() / 100);
-				}
-			}
-			fatalChance += static_cast<double>(player->getFatalChanceModifier());
-			canApplyFatal = (fatalChance > 0 && uniform_random(0, 10000) / 100.0 < fatalChance);
+		if (playerWeapon && playerWeapon->getTier() > 0) {
+			fatalChance = playerWeapon->getFatalChance();
 		}
+
+		double amplification = static_cast<double>(player->getAmplificationChanceModifier());
+		if (const auto &playerBoots = player->getInventoryItem(CONST_SLOT_FEET); playerBoots && playerBoots->getTier()) {
+			amplification += playerBoots->getAmplificationChance();
+		}
+		if (amplification > 0 && fatalChance > 0) {
+			fatalChance *= 1 + (amplification / 100);
+		}
+
+		fatalChance += static_cast<double>(player->getFatalChanceModifier());
+		canApplyFatal = (fatalChance > 0 && uniform_random(0, 10000) / 100.0 < fatalChance);
 
 		if (!canApplyCritical && lowBlowRaceid != 0) {
 			const auto &charm = g_iobestiary().getBestiaryCharm(CHARM_LOW);

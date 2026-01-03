@@ -22,13 +22,13 @@ local attributePools = {
     -- Weapons (right/left hand)
     weapon = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "final damage", "damage reduction", "onslaught chance"},
     -- Armor
-    armor = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "damage reduction"},
+    armor = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "damage reduction", "ruse chance"},
     -- Helmet
-    helmet = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "final damage"},
+    helmet = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "final damage", "momentum chance"},
     -- Legs
-    legs = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "final damage"},
+    legs = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "final damage", "transcendence chance"},
     -- Boots
-    boots = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "damage reduction"},
+    boots = {"critical chance", "critical damage", "magic level", "distance fight", "axe fight", "sword fight", "club fight", "fist fight", "shielding", "fishing", "hp", "mana", "life leech", "mana leech", "damage reduction", "amplification chance"},
 }
 
 local function getEquipmentSlotType(item)

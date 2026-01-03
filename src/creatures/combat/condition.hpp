@@ -122,6 +122,10 @@ private:
 	int32_t buffsPercent[BUFF_LAST + 1] = {};
 	int32_t buffs[BUFF_LAST + 1] = {};
 	int32_t fatalChance = 0; // extra onslaught/fatal chance in percentage points
+	int32_t momentumChance = 0; // extra momentum chance in percentage points
+	int32_t transcendenceChance = 0; // extra transcendence chance in percentage points
+	int32_t amplificationChance = 0; // extra amplification chance in percentage points
+	int32_t ruseChance = 0; // extra ruse/dodge chance in percentage points
 
 	int32_t currentSkill = 0;
 	int32_t currentStat = 0;
