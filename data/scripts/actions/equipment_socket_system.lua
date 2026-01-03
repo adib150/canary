@@ -7,7 +7,7 @@ local config = {
     hammerId = 673,
     jewelId = 30187,
     upgradeCost = 3000000,
-    maxTier = 10,
+    maxTier = 15,
     maxSockets = 3,
     awakeningSuccessRate = 80, -- 80% chance to successfully add a socket
     socketRemovers = {
@@ -71,6 +71,51 @@ local function isEquipment(item)
     -- Check if classification is 3 or 4
     local classification = item:getClassification()
     return classification == 3 or classification == 4
+end
+
+local function getCurrentTier(socketValue)
+    if not socketValue or socketValue == "empty" then
+        return 0
+    end
+    return tonumber(socketValue:match("tier (%d+)") or "0")
+end
+
+local function stripTier(value)
+    if not value then return nil end
+    return tostring(value):gsub("%s*tier%s*%d+%s*$", "")
+end
+
+local function pickUniqueAttribute(attributePool, existingSockets, avoidIndex)
+    -- Build set of existing base attribute names (exclude 'empty' and the socket at avoidIndex)
+    local existing = {}
+    for i = 1, #existingSockets do
+        if avoidIndex and i == avoidIndex then
+            -- skip the slot we're rerolling
+        else
+            local v = existingSockets[i]
+            if v and v ~= "empty" then
+                local base = stripTier(v)
+                if base and base ~= "" then
+                    existing[base] = true
+                end
+            end
+        end
+    end
+
+    -- Try to pick an attribute not already present
+    local candidates = {}
+    for _, attr in ipairs(attributePool) do
+        if not existing[attr] then
+            table.insert(candidates, attr)
+        end
+    end
+
+    if #candidates == 0 then
+        -- All attributes already present; fall back to full pool (allow repeats)
+        return attributePool[math.random(#attributePool)]
+    end
+
+    return candidates[math.random(#candidates)]
 end
 
 local equipmentUpgrade = Action()
@@ -153,9 +198,9 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
     end
     
     local attributePool = attributePools[slotType]
-    local randomAttribute = attributePool[math.random(#attributePool)]
-    local attributeValue = randomAttribute .. " tier 1"
-    
+    local attributeValueBase = pickUniqueAttribute(attributePool, sockets, nil)
+    local attributeValue = attributeValueBase .. " tier 1"
+
     -- Apply upgrade
     target:setCustomAttribute("socket" .. emptySocketIndex, attributeValue)
     
@@ -217,38 +262,53 @@ function socketRemoval.onUse(player, item, fromPosition, target, toPosition, isH
         return true
     end
 
-    -- Get current socket status
+    -- Get current socket status and tier
     local socketKey = "socket" .. socketToRemove
     local currentSocket = target:getCustomAttribute(socketKey) or "empty"
-    
     if currentSocket == "empty" then
         player:sendCancelMessage("Socket " .. socketToRemove .. " is already empty.")
         return true
+    end
+
+    local currentTier = getCurrentTier(currentSocket)
+    if currentTier <= 0 then
+        currentTier = 1
     end
 
     -- Consume resources
     player:removeItem(item:getId(), 1)
     player:removeItem(config.hammerId, 1)
 
-    -- Remove the socket
-    target:setCustomAttribute(socketKey, "empty")
-    
+    -- Reroll the socket attribute but keep its tier
+    local slotType = getEquipmentSlotType(target)
+    if not slotType then
+        player:sendCancelMessage("Unable to determine equipment type.")
+        return true
+    end
+    local attributePool = attributePools[slotType]
+    -- Build current sockets table to pass for uniqueness check
+    local socket1 = target:getCustomAttribute("socket1") or "empty"
+    local socket2 = target:getCustomAttribute("socket2") or "empty"
+    local socket3 = target:getCustomAttribute("socket3") or "empty"
+    local existingSockets = { socket1, socket2, socket3 }
+    local newAttribute = pickUniqueAttribute(attributePool, existingSockets, socketToRemove)
+    local newValue = newAttribute .. " tier " .. currentTier
+    target:setCustomAttribute(socketKey, newValue)
+
     -- Update description
     local socket1 = target:getCustomAttribute("socket1") or "empty"
     local socket2 = target:getCustomAttribute("socket2") or "empty"
     local socket3 = target:getCustomAttribute("socket3") or "empty"
-    
     local existingDesc = target:getAttribute(ITEM_ATTRIBUTE_DESCRIPTION) or ""
     existingDesc = existingDesc:gsub("Power Sockets: %([^)]+%)\n?", "")
     existingDesc = existingDesc:gsub("\n$", "")
-    
     local newLine = existingDesc ~= "" and "\n" or ""
     local socketsDescription = existingDesc .. newLine .. "Power Sockets: (" .. socket1 .. ", " .. socket2 .. ", " .. socket3 .. ")"
     target:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, socketsDescription)
 
     -- Visual feedback
-    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket " .. socketToRemove .. " has been emptied!")
-    player:getPosition():sendMagicEffect(CONST_ME_SMOKE)
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket " .. socketToRemove .. " has been rerolled to " .. newAttribute .. " (Tier " .. currentTier .. ")!")
+    player:getPosition():sendMagicEffect(CONST_ME_ORANGE_ENERGY_SPARK)
 
     return true
 end

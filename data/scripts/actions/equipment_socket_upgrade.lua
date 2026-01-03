@@ -6,12 +6,12 @@
 
 local config = {
     hammerId = 673,
-    maxTier = 10,
+    maxTier = 15,
     baseCost = 1000000, -- Base cost for tier 1->2 upgrade (1kk)
     baseSuccessRate = 80, -- Starting success rate at 80%
     successRateDecreasePerTier = 10, -- Decrease by 10% per tier
-    minSuccessRate = 20, -- Minimum success rate of 20%
-    downgradeChance = 20, -- 20% chance to downgrade 1 tier (for tier 2+)
+    minSuccessRate = 15, -- Minimum success rate of 15%
+    downgradeChance = 5, -- 5% chance to downgrade 1 tier (for tier 2+)
     
     socketUpgrades = {
         [30191] = { socket = 1, name = "first" },   -- First socket upgrade powder
@@ -20,9 +20,10 @@ local config = {
     }
 }
 
--- Fibonacci sequence for tier costs: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+
+-- Fibonacci sequence for tier costs up to 15: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610
 local function getUpgradeCost(currentTier)
-    local fibonacci = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55}
+    local fibonacci = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610}
     return config.baseCost * fibonacci[currentTier]
 end
 

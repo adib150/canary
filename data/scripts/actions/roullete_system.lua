@@ -28,9 +28,9 @@ local config = {
         {itemId = 3364, count = {1, 1},    chance = 400 }, -- golden legs (rare)
         {itemId = 3366, count = {1, 1},    chance = 150 }, -- magic plate armor (very rare)
         {itemId = 3555, count = {1, 1},    chance = 100  }, -- golden boots (very rare)
-        {itemId = 34109, count = {1, 1},    chance = 700 }, -- bag you desire (rare)
+        {itemId = 34109, count = {1, 1},    chance = 15 }, -- bag you desire (rare)
         {itemId = 43895, count = {1, 1},    chance = 5   }, -- bag you covet (extremely rare)
-        {itemId = 39546, count = {1, 1},    chance = 300 }, -- primal bag (rare)
+        {itemId = 39546, count = {1, 1},    chance = 10 }, -- primal bag (rare)
         {itemId = 5903, count = {1, 1},    chance = 20  }  -- ferumbras hat (extremely rare)
 
     },
