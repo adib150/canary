@@ -18120,14 +18120,14 @@
 		<attribute key="primarytype" value="food"/>
 		<attribute key="weight" value="5"/>
 	</item>
-	<item id="6570" article="a" name="surprise removal of power socket">
+	<item id="6570" article="a" name="surprise socket reroller">
 		<attribute key="primarytype" value="tools"/>
-		<attribute key="description" value="Contains a random removal powder!"/>
+		<attribute key="description" value="Contains a random socket reroller!"/>
 		<attribute key="weight" value="100"/>
 	</item>
-	<item id="6571" article="a" name="surprise upgrade powder">
+	<item id="6571" article="a" name="surprise socket upgrade">
 			<attribute key="primarytype" value="tools"/>
-			<attribute key="description" value="Contains a random awakening powder!"/>
+			<attribute key="description" value="Contains a random socket upgrade for items tier 3 and 4!"/>
 			<attribute key="weight" value="100"/>
 	</item>
 	<item id="6572" article="a" name="party trumpet">
