@@ -539,6 +539,7 @@ void ConditionAttributes::addCondition(std::shared_ptr<Creature> creature, const
 		std::ranges::copy(std::span(conditionAttrs->statsPercent), statsPercent);
 		std::ranges::copy(std::span(conditionAttrs->buffs), buffs);
 		std::ranges::copy(std::span(conditionAttrs->buffsPercent), buffsPercent);
+		fatalChance = conditionAttrs->fatalChance;
 
 		absorbs = conditionAttrs->absorbs;
 		absorbsPercent = conditionAttrs->absorbsPercent;
@@ -553,6 +554,9 @@ void ConditionAttributes::addCondition(std::shared_ptr<Creature> creature, const
 		updatePercentIncreases(creature);
 		updateIncreases(creature);
 		updateCharmChanceModifier(creature);
+		if (const auto &player = creature->getPlayer()) {
+			player->setFatalChanceModifier(fatalChance);
+		}
 		disableDefense = conditionAttrs->disableDefense;
 
 		if (const auto &player = creature->getPlayer()) {
@@ -600,6 +604,8 @@ bool ConditionAttributes::unserializeProp(ConditionAttr_t attr, PropStream &prop
 		return true;
 	} else if (attr == CONDITIONATTR_CHARM_CHANCE_MODIFIER) {
 		return propStream.read<int8_t>(charmChanceModifier);
+	} else if (attr == CONDITIONATTR_FATAL_CHANCE) {
+		return propStream.read<int32_t>(fatalChance);
 	}
 	return Condition::unserializeProp(attr, propStream);
 }
@@ -643,6 +649,10 @@ void ConditionAttributes::serialize(PropWriteStream &propWriteStream) {
 	// Save charm percent
 	propWriteStream.write<uint8_t>(CONDITIONATTR_CHARM_CHANCE_MODIFIER);
 	propWriteStream.write<int8_t>(charmChanceModifier);
+
+	// Save fatal chance bonus
+	propWriteStream.write<uint8_t>(CONDITIONATTR_FATAL_CHANCE);
+	propWriteStream.write<int32_t>(fatalChance);
 }
 
 ConditionAttributes::ConditionAttributes(ConditionId_t initId, ConditionType_t initType, int32_t initTicks, bool initBuff, uint32_t initSubId) :
@@ -667,6 +677,7 @@ bool ConditionAttributes::startCondition(std::shared_ptr<Creature> creature) {
 		updateSkills(player);
 		updatePercentStats(player);
 		updateStats(player);
+		player->setFatalChanceModifier(fatalChance);
 	}
 
 	return true;
@@ -833,6 +844,10 @@ void ConditionAttributes::endCondition(std::shared_ptr<Creature> creature) {
 			}
 		}
 
+				if (fatalChance != 0) {
+					player->setFatalChanceModifier(-fatalChance);
+				}
+
 		player->setCharmChanceModifier(player->getCharmChanceModifier() - charmChanceModifier);
 
 		if (needUpdate) {
@@ -962,6 +977,11 @@ bool ConditionAttributes::setParam(ConditionParam_t param, int32_t value) {
 
 		case CONDITION_PARAM_SKILL_CRITICAL_HIT_DAMAGE: {
 			skills[SKILL_CRITICAL_HIT_DAMAGE] = value;
+			return true;
+		}
+
+		case CONDITION_PARAM_ONSLAUGHT_CHANCE: {
+			fatalChance = value;
 			return true;
 		}
 

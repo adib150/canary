@@ -286,6 +286,10 @@ void Player::setVarSkill(skills_t skill, int32_t modifier) {
 	varSkills[skill] += modifier;
 }
 
+void Player::setFatalChanceModifier(int32_t modifier) {
+	varFatalChance += modifier;
+}
+
 bool Player::isSuppress(ConditionType_t conditionType, bool attackerPlayer) const {
 	auto minDelay = g_configManager().getNumber(MIN_DELAY_BETWEEN_CONDITIONS);
 	if (IsConditionSuppressible(conditionType) && checkLastConditionTimeWithin(conditionType, minDelay)) {

@@ -2319,11 +2319,17 @@ void Combat::applyExtensions(const std::shared_ptr<Creature> &caster, const std:
 		canApplyCritical = (baseChance != 0 && uniform_random(1, 10000) <= baseChance);
 
 		bool canApplyFatal = false;
-		if (const auto &playerWeapon = player->getInventoryItem(CONST_SLOT_LEFT); playerWeapon && playerWeapon->getTier() > 0) {
-			double fatalChance = playerWeapon->getFatalChance();
-			if (const auto &playerBoots = player->getInventoryItem(CONST_SLOT_FEET); playerBoots && playerBoots->getTier()) {
-				fatalChance *= 1 + (playerBoots->getAmplificationChance() / 100);
+		// Check weapon in either hand (right-hand usually main weapon, left-hand for two-handers or alternate setups)
+		const auto &playerWeapon = player->getInventoryItem(CONST_SLOT_RIGHT) ? player->getInventoryItem(CONST_SLOT_RIGHT) : player->getInventoryItem(CONST_SLOT_LEFT);
+		if (playerWeapon) {
+			double fatalChance = 0.0;
+			if (playerWeapon->getTier() > 0) {
+				fatalChance = playerWeapon->getFatalChance();
+				if (const auto &playerBoots = player->getInventoryItem(CONST_SLOT_FEET); playerBoots && playerBoots->getTier()) {
+					fatalChance *= 1 + (playerBoots->getAmplificationChance() / 100);
+				}
 			}
+			fatalChance += static_cast<double>(player->getFatalChanceModifier());
 			canApplyFatal = (fatalChance > 0 && uniform_random(0, 10000) / 100.0 < fatalChance);
 		}
 

@@ -571,6 +571,8 @@ public:
 	void setItemAbility(Slots_t slot, bool enabled);
 
 	void setVarSkill(skills_t skill, int32_t modifier);
+	void setFatalChanceModifier(int32_t modifier);
+	int32_t getFatalChanceModifier() const { return varFatalChance; }
 
 	void setVarStats(stats_t stat, int32_t modifier);
 	int32_t getDefaultStats(stats_t stat) const;
@@ -1572,6 +1574,7 @@ private:
 	uint32_t manaMax = 0;
 	int32_t varSkills[SKILL_LAST + 1] = {};
 	int32_t varStats[STAT_LAST + 1] = {};
+	int32_t varFatalChance = 0; // additive onslaught/fatal chance in percentage points
 	int32_t shopCallback = -1;
 	int32_t MessageBufferCount = 0;
 	int32_t bloodHitCount = 0;

@@ -754,6 +754,7 @@ function Player:onInventoryUpdate(item, slot, equip)
 			local lifeLeechAmount = 0
 			local manaLeechChance = 0
 			local manaLeechAmount = 0
+			local onslaughtChance = 0
 			
 			-- Apply bonuses
 			for attributeName, totalTiers in pairs(attributes) do
@@ -761,6 +762,8 @@ function Player:onInventoryUpdate(item, slot, equip)
 					critChance = critChance + (40 * totalTiers)
 				elseif attributeName == "critical damage" then
 					critDamage = critDamage + (100 * totalTiers)
+				elseif attributeName == "onslaught chance" then
+					onslaughtChance = onslaughtChance + (0.5 * totalTiers)
 				elseif attributeName == "magic level" then
 					magicLevel = magicLevel + totalTiers
 				elseif attributeName == "distance fight" then
@@ -813,6 +816,9 @@ function Player:onInventoryUpdate(item, slot, equip)
 			if critDamage > 0 then
 				condition:setParameter(CONDITION_PARAM_SKILL_CRITICAL_HIT_DAMAGE, critDamage)
 			end
+			if onslaughtChance > 0 then
+				condition:setParameter(CONDITION_PARAM_ONSLAUGHT_CHANCE, onslaughtChance)
+			end
 			if magicLevel > 0 then
 				condition:setParameter(CONDITION_PARAM_STAT_MAGICPOINTS, magicLevel)
 			end
@@ -845,7 +851,9 @@ function Player:onInventoryUpdate(item, slot, equip)
 				condition:setParameter(CONDITION_PARAM_SKILL_MANA_LEECH_CHANCE, manaLeechChance)
 				condition:setParameter(CONDITION_PARAM_SKILL_MANA_LEECH_AMOUNT, manaLeechAmount)
 			end
-			
+			if onslaughtChance > 0 then
+				condition:setParameter(CONDITION_PARAM_SKILL_ONSLAUGHT_CHANCE, onslaughtChance)
+			end
 			self:addCondition(condition)
 		end
 	else

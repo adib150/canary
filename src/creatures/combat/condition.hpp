@@ -121,6 +121,7 @@ private:
 	int32_t statsPercent[STAT_LAST + 1] = {};
 	int32_t buffsPercent[BUFF_LAST + 1] = {};
 	int32_t buffs[BUFF_LAST + 1] = {};
+	int32_t fatalChance = 0; // extra onslaught/fatal chance in percentage points
 
 	int32_t currentSkill = 0;
 	int32_t currentStat = 0;
