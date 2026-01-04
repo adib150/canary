@@ -82743,4 +82743,181 @@ Granted by TibiaGoals.com"/>
 		<attribute key="description" value="It gives a random mount."/>
 		<attribute key="weight" value="590"/>
 	</item>
+	<item id="50354" name="knowledge for mortal soul">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="description" value="strengthens your mortal soul"/>
+		<attribute key="weight" value="440"/>
+	</item>
+	<item id="50345" article="a" name="empty mortal soul">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50346" article="a" name="mortal soul filled with water">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50347" article="a" name="mortal soul with some milk">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50348" article="a" name="mortal soul filled with milk">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50349" article="a" name="empty angel soul">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50355" name="knowledge for angel soul">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="description" value="strengthens your angel soul"/>
+		<attribute key="weight" value="440"/>
+	</item>
+	<item id="50350" article="a" name="angel soul filled with water">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50351" article="a" name="angel soul filled with souls">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50357" article="a" name="empty celestial soul">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50367" name="knowledge for celestial soul">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="description" value="strengthens your celestial soul"/>
+		<attribute key="weight" value="440"/>
+	</item>
+	<item id="50358" article="a" name="celestial soul with some power">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50359" article="a" name="celestial soul filled with power">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50360" article="a" name="celestial soul overflowing with power">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50361" article="a" name="ascendant soul with first domain">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50356" name="knowledge for ascendant soul">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="description" value="strengthens your celestial soul"/>
+		<attribute key="weight" value="440"/>
+	</item>
+	<item id="50362" article="a" name="ascendant soul with second domain">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50363" article="a" name="ascendant soul with third domain">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50364" article="a" name="ascendant soul with fourth domain">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50365" article="a" name="ascendant soul with all domains">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50353" article="a" name="godhood soul filled with life">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50368" name="knowledge for godhood soul">
+		<attribute key="primarytype" value="creature products"/>
+		<attribute key="description" value="strengthens your celestial soul"/>
+		<attribute key="weight" value="440"/>
+	</item>
+	<item id="50352" article="a" name="godhood soul with some knowledge">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
+	<item id="50366" article="a" name="godhood soul with all knowledge">
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentlifedrain" value="5"/>
+		<attribute key="weight" value="3800"/>
+		<attribute key="script" value="moveevent">
+			<attribute key="slot" value="ammo"/>
+		</attribute>
+	</item>
 </items>
