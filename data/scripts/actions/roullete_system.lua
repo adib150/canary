@@ -268,7 +268,20 @@ local function rewardPlayer(playerId, leverPosition)
     player:sendTextMessage(MESSAGE_STATUS, "Congratulations! You have won " .. item:getName() .. ". The item has been sent to your " .. inboxType .. ".")
     player:kv():set(config.rouletteOptions.rouletteStorage, -1)
     player:setMoveLocked(false)
-    Game.broadcastMessage("[ROULETTE WINNER] The player " .. player:getName() .. " has won " .. item:getName() .. " from the roulette!", MESSAGE_LOOT)
+    
+    -- Find the chance of the won item
+    local wonItemChance = nil
+    for i = 1, #config.prizePool do
+        if config.prizePool[i].itemId == itemId then
+            wonItemChance = config.prizePool[i].chance
+            break
+        end
+    end
+    
+    -- Broadcast if item has chance lower than 100
+    if wonItemChance and wonItemChance < 200 then
+        Game.broadcastMessage("[RARE ROULETTE WIN] Congratulations to " .. player:getName() .. " for winning " .. item:getName() .. " from the roulette!", MESSAGE_EVENT_ADVANCE)
+    end
 end
 
 local function roulette(playerId, leverPosition, spinTimeRemaining, spinDelay)
@@ -291,6 +304,133 @@ local function roulette(playerId, leverPosition, spinTimeRemaining, spinDelay)
     rewardPlayer(playerId, leverPosition)
 end
 
+local roulettePackages = {
+    {spins = 1, cost = 1, discount = 0},
+    {spins = 11, cost = 10, discount = 9}, -- 1 free spin
+    {spins = 120, cost = 100, discount = 17} -- 20 free spins (17% discount)
+}
+
+local function executeRouletteSpin(playerId, leverPosition, spinsRemaining)
+    local player = Player(playerId)
+    if not player then
+        resetLever(leverPosition)
+        return
+    end
+
+    if spinsRemaining <= 0 then
+        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "All roulette spins completed!")
+        player:kv():set(config.rouletteOptions.rouletteStorage, -1)
+        player:setMoveLocked(false)
+        resetLever(leverPosition)
+        return
+    end
+
+    clearRoulette()
+    chancedItems = {}
+
+    local spinTimeRemaining = math.random((config.rouletteOptions.spinTime.min * 1000), (config.rouletteOptions.spinTime.max * 1000))
+    
+    -- Callback after single spin finishes
+    local function onSpinComplete()
+        addEvent(function()
+            executeRouletteSpin(playerId, leverPosition, spinsRemaining - 1)
+        end, 1000) -- 1 second delay between spins
+    end
+
+    -- Modified roulette function for batch processing
+    local function batchRoulette(pId, levPos, spinTime, spinDel)
+        local p = Player(pId)
+        if not p then
+            resetLever(levPos)
+            return
+        end
+
+        local newItemInfo = chanceNewReward()
+        updateRoulette(newItemInfo)
+
+        if spinTime > 0 then
+            spinDel = spinDel + config.rouletteOptions.spinSlowdownRamping
+            addEvent(batchRoulette, spinDel, pId, levPos, spinTime - (spinDel - config.rouletteOptions.spinSlowdownRamping), spinDel)
+            return
+        end
+
+        initiateReward(levPos, 0)
+        rewardPlayer(pId, levPos)
+        onSpinComplete()
+    end
+
+    batchRoulette(playerId, leverPosition, spinTimeRemaining, 100)
+end
+
+local function showRoulettePackageModal(player, leverPosition)
+    local tokenCount = player:getItemCount(config.playItem.itemId)
+    local itemName = ItemType(config.playItem.itemId):getName()
+    
+    local message = string.format("You have: %d %s(s)\n\nSelect your package:", tokenCount, itemName)
+    
+    local modal = ModalWindow({
+        title = "Roulette Packages",
+        message = message,
+    })
+    
+    -- Add choices for each package
+    for i, package in ipairs(roulettePackages) do
+        local savings = ""
+        if package.discount > 0 then
+            savings = string.format(" (Save %d%%!)", package.discount)
+        end
+        local choiceText = string.format("%d Spins = %d %s(s)%s", package.spins, package.cost, itemName, savings)
+        modal:addChoice(choiceText)
+    end
+    
+    -- Add OK button with the main logic
+    modal:addButton("OK", function(player, button, choice)
+        if not choice or choice.id < 1 or choice.id > #roulettePackages then
+            player:sendTextMessage(MESSAGE_FAILURE, "Please select a package.")
+            return true
+        end
+        
+        local selectedPackage = roulettePackages[choice.id]
+        local currentTokens = player:getItemCount(config.playItem.itemId)
+        
+        if currentTokens < selectedPackage.cost then
+            player:sendTextMessage(MESSAGE_FAILURE, string.format("You need %d %s(s) but only have %d.", selectedPackage.cost, itemName, currentTokens))
+            return true
+        end
+        
+        -- Get lever and transform it
+        local lever = Tile(leverPosition):getItemById(config.lever.left)
+        if not lever then
+            player:sendTextMessage(MESSAGE_FAILURE, "Error: Lever not found.")
+            return true
+        end
+        
+        -- Deduct tokens and start roulette
+        player:removeItem(config.playItem.itemId, selectedPackage.cost)
+        player:kv():set(config.rouletteOptions.rouletteStorage, 1)
+        player:setMoveLocked(true)
+        
+        lever:transform(config.lever.right)
+        
+        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, string.format("Starting %d roulette spin(s)!", selectedPackage.spins))
+        
+        executeRouletteSpin(player:getId(), leverPosition, selectedPackage.spins)
+        
+        return true
+    end)
+    
+    modal:addButton("Cancel", function(player, button, choice)
+        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Roulette cancelled.")
+        return true
+    end)
+    
+    modal:setDefaultEnterButton(1) -- OK
+    modal:setDefaultEscapeButton(2) -- Cancel
+    
+    modal:sendToPlayer(player)
+    return true
+end
+
 local casinoRoulette = Action()
 
 function casinoRoulette.onUse(player, item, fromPosition, target, toPosition, isHotkey)
@@ -299,24 +439,12 @@ function casinoRoulette.onUse(player, item, fromPosition, target, toPosition, is
         return true
     end
 
-    if player:getItemCount(config.playItem.itemId) < config.playItem.count then
-        if player:kv():get(config.rouletteOptions.rouletteStorage) < 1 then
-            local itemName = ItemType(config.playItem.itemId):getName()
-            player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You don't have enough " .. itemName .. "s to use the Casino Roulette. You need " .. config.playItem.count .. " " .. itemName .. "(s).")
-            return true
-        end
+    if player:kv():get(config.rouletteOptions.rouletteStorage) == 1 then
+        player:sendTextMessage(MESSAGE_FAILURE, "You already have an active roulette session.")
+        return true
     end
 
-    item:transform(config.lever.right)
-    clearRoulette()
-    chancedItems = {}
-
-    player:removeItem(config.playItem.itemId, config.playItem.count)
-    player:kv():set(config.rouletteOptions.rouletteStorage, 1)
-    player:setMoveLocked(true)
-
-    local spinTimeRemaining = math.random((config.rouletteOptions.spinTime.min * 1000), (config.rouletteOptions.spinTime.max * 1000))
-    roulette(player:getId(), toPosition, spinTimeRemaining, 100)
+    showRoulettePackageModal(player, toPosition)
     return true
 end
 
