@@ -53,6 +53,183 @@ end
 -- }
 
 GameStore.Categories = {
+	--Bests
+	{
+		icons = { "Category_PremiumTime.png" },
+		name = "Best Sellers",
+		rookgaard = true,
+		subclasses = { "Power Sockets", "Roulettes", "Exclusives" },
+	},
+	-- Bests ~ Power Sockets
+	{
+		icons = { "Category_UsefulThings.png" },
+		name = "Power Sockets",
+		parent = "Best Sellers",
+		rookgaard = true,
+		state = GameStore.States.STATE_NONE,
+		offers = {
+			{
+				icons = { "Hammer_of_Power.png" },
+				name = "Hammer of Power",
+				price = 55,
+				itemtype = 673,
+				count = 1,
+				description = "<i>Add and upgrade power sockets on equipments class 3 and 4.</i>\n\n<i>Adiciona e melhora os soquetes de poder em equipamentos classe 3 e 4.</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Hammer_of_Power.png" },
+				name = "Hammer of Power",
+				price = 500,
+				itemtype = 673,
+				count = 10,
+				description = "<i>Add and upgrade power sockets on equipments class 3 and 4.</i>\n\n<i>Adiciona e melhora os soquetes de poder em equipamentos classe 3 e 4.</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Awakening_Powder.png" },
+				name = "Awakening Powder",
+				price = 55,
+				itemtype = 30187,
+				count = 1,
+				movable = true,
+				description = "<i>Used to add power sockets to equipments class 3 and 4.</i>\n\n<i>Usado para adicionar soquetes de poder em equipamentos classe 3 e 4.</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Awakening_Powder.png" },
+				name = "Awakening Powder",
+				price = 500,
+				itemtype = 30187,
+				count = 10,
+				movable = true,
+				description = "<i>Used to add power sockets to equipments class 3 and 4.</i>\n\n<i>Usado para adicionar soquetes de poder em equipamentos classe 3 e 4.</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Surprise_Socket_Upgrade.png" },
+				name = "Surprise Upgrade Socket",
+				price = 1100,
+				itemtype = 6571,
+				count = 10,
+				movable = true,
+				description = "<i>Contains a random socket upgrade for items tier 3 and 4!</i>\n\n<i>Contem um item de upgrade de soquete aleatorio para equipamentos classe 3 e 4!</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Surprise_Socket_Upgrade.png" },
+				name = "Surprise Upgrade Socket",
+				price = 10000,
+				itemtype = 6571,
+				count = 100,
+				movable = true,
+				description = "<i>Contains a random socket upgrade for items tier 3 and 4!</i>\n\n<i>Contem um item de upgrade de soquete aleatorio para equipamentos classe 3 e 4!</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Surprise_Socket_Reroller.png" },
+				name = "Surprise Socket Rerroller",
+				price = 1100,
+				itemtype = 6570,
+				count = 10,
+				movable = true,
+				description = "<i>Contains a random socket reroller!</i>\n\n<i>Contem um item de remocao de soquete aleatorio!</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Surprise_Socket_Rerroller.png" },
+				name = "Surprise Socket Rerroller",
+				price = 10000,
+				itemtype = 6570,
+				count = 100,
+				movable = true,
+				description = "<i>Contains a random socket rerroller!</i>\n\n<i>Contem um item de remocao de soquete aleatorio!</i>\n\n{character}\n{storeinbox}\n{capacity}",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+		},
+	},
+	--Roulletes
+	{
+		icons = { "Category_Boosts.png" },
+		name = "Roulettes",
+		parent = "Best Sellers",
+		rookgaard = true,
+		state = GameStore.States.STATE_NONE,
+		offers = {
+			{
+				icons = { "Roulette_Token.png" },
+				name = "Roulette Token",
+				price = 110,
+				itemtype = 19082,
+				count = 1,
+				movable = true,
+				description = "<i>A special coin used for roulette games and exclusive purchases.</i>",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Roulette_Token.png" },
+				name = "Roulette Token",
+				price = 100,
+				itemtype = 19082,
+				count = 10,
+				movable = true,
+				description = "<i>A special coin used for roulette games and exclusive purchases.</i>",
+				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+		},
+	},
+	-- Exclusives
+	{
+		icons = { "Category_Bundles.png" },
+		name = "Exclusives",
+		parent = "Best Sellers",
+		rookgaard = true,
+		state = GameStore.States.STATE_NONE,
+		offers = {
+			{
+				icons = { "Gold_Pouch.png" },
+				name = "Loot Pouch",
+				price = 900,
+				itemtype = 23721,
+				count = 1,
+				description = "<i>Carries all items your capacity allows.</i>\n\n<i>Carregue todos os items que sua capacidade permitir.</i>\n\n{character}\n{storeinbox}\n{once}\n{useicon} use para abrir\n{info} sempre colocado na primeira posicao da sua Store inbox",
+				type = GameStore.OfferTypes.OFFER_TYPE_ITEM_UNIQUE,
+			},
+			{
+				icons = { "Magic_Gold_Converter.png" },
+				name = "Magic Gold Bank",
+				price = 900,
+				itemtype = 28525,
+				count = 1,
+				description = "<i>Automatically sends gold, platinum or crystal coins to your bank whenever it is activated!</i>\n\n<i>Automatiamente envia ouro, platina ou cristais para o seu banco sempre que estiver ativado!</i>\n\n{character}\n{storeinbox}\n{once}\n{useicon} use para abrir\n{info} sempre colocado na primeira posicao da sua Store inbox",
+				type = GameStore.OfferTypes.OFFER_TYPE_ITEM_UNIQUE,
+			},
+			{
+				name = "Loot Pouch Item Seller",
+				price = 900,
+				itemtype = 10290,
+				count = 1,
+				description = "<i>Sell all loot inside loot pouchs in your inventory with a single click!</i>\n\n<i>Venda todos os items dentro da loot pouch com um unico clique!</i>\n\n{character}\n{storeinbox}\n{once}\n{useicon} use para abrir\n{info} sempre colocado na primeira posicao da sua Store inbox",
+				type = GameStore.OfferTypes.OFFER_TYPE_ITEM_UNIQUE,
+			},
+			{
+				name = "Remote Runes Buyer",
+				price = 900,
+				itemtype = 31267,
+				count = 1,
+				description = "<i>Remotely buy runes!</i>\n\n<i>Compre runas remotamente!</i>\n\n{character}\n{storeinbox}\n{once}\n{useicon} use para abrir\n{info} sempre colocado na primeira posicao da sua Store inbox",
+				type = GameStore.OfferTypes.OFFER_TYPE_ITEM_UNIQUE,
+			},
+			{
+				name = "Remote Ammo Buyer",
+				price = 900,
+				itemtype = 28897,
+				count = 1,
+				description = "<i>Remotely buy ammo!</i>\n\n<i>Compre municao remotamente!</i>\n\n{character}\n{storeinbox}\n{once}\n{useicon} use para abrir\n{info} sempre colocado na primeira posicao da sua Store inbox",
+				type = GameStore.OfferTypes.OFFER_TYPE_ITEM_UNIQUE,
+			},
+		},
+	},
 	-- Premium Time
 	{
 		icons = { "Category_PremiumTime.png" },
@@ -851,95 +1028,6 @@ GameStore.Categories = {
 				itemtype = 23374,
 				count = 250,
 				description = "<i>Restores your character's hit points and mana.</i>\n\n{character}\n{vocationlevelcheck}\n{storeinbox}\n{battlesign}\n{capacity}",
-				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-			},
-		},
-	},
-
-	-- Consumables ~ Power Sockets
-	{
-		icons = { "Category_Runes.png" },
-		name = "Power Sockets",
-		parent = "Consumables",
-		rookgaard = true,
-		state = GameStore.States.STATE_NONE,
-		offers = {
-			{
-				icons = { "Hammer_of_Power.png" },
-				name = "Hammer of Power",
-				price = 55,
-				itemtype = 673,
-				count = 1,
-				description = "<i>Add and upgrade power sockets on equipments class 3 and 4.</i>\n\n<i>Adiciona e melhora os soquetes de poder em equipamentos classe 3 e 4.</i>\n\n{character}\n{storeinbox}\n{capacity}",
-				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-			},
-			{
-				icons = { "Hammer_of_Power.png" },
-				name = "Hammer of Power",
-				price = 500,
-				itemtype = 673,
-				count = 10,
-				description = "<i>Add and upgrade power sockets on equipments class 3 and 4.</i>\n\n<i>Adiciona e melhora os soquetes de poder em equipamentos classe 3 e 4.</i>\n\n{character}\n{storeinbox}\n{capacity}",
-				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-			},
-			{
-				icons = { "Awakening_Powder.png" },
-				name = "Awakening Powder",
-				price = 55,
-				itemtype = 30187,
-				count = 1,
-				movable = true,
-				description = "<i>Used to add power sockets to equipments class 3 and 4.</i>\n\n<i>Usado para adicionar soquetes de poder em equipamentos classe 3 e 4.</i>\n\n{character}\n{storeinbox}\n{capacity}",
-				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-			},
-			{
-				icons = { "Awakening_Powder.png" },
-				name = "Awakening Powder",
-				price = 500,
-				itemtype = 30187,
-				count = 10,
-				movable = true,
-				description = "<i>Used to add power sockets to equipments class 3 and 4.</i>\n\n<i>Usado para adicionar soquetes de poder em equipamentos classe 3 e 4.</i>\n\n{character}\n{storeinbox}\n{capacity}",
-				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-			},
-			{
-				icons = { "Surprise_Socket_Upgrade.png" },
-				name = "Surprise Upgrade Socket",
-				price = 1100,
-				itemtype = 6571,
-				count = 10,
-				movable = true,
-				description = "<i>Contains a random socket upgrade for items tier 3 and 4!</i>\n\n<i>Contem um item de upgrade de soquete aleatorio para equipamentos classe 3 e 4!</i>\n\n{character}\n{storeinbox}\n{capacity}",
-				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-			},
-			{
-				icons = { "Surprise_Socket_Upgrade.png" },
-				name = "Surprise Upgrade Socket",
-				price = 10000,
-				itemtype = 6571,
-				count = 100,
-				movable = true,
-				description = "<i>Contains a random socket upgrade for items tier 3 and 4!</i>\n\n<i>Contem um item de upgrade de soquete aleatorio para equipamentos classe 3 e 4!</i>\n\n{character}\n{storeinbox}\n{capacity}",
-				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-			},
-			{
-				icons = { "Surprise_Socket_Reroller.png" },
-				name = "Surprise Socket Rerroller",
-				price = 1100,
-				itemtype = 6570,
-				count = 10,
-				movable = true,
-				description = "<i>Contains a random socket reroller!</i>\n\n<i>Contem um item de remocao de soquete aleatorio!</i>\n\n{character}\n{storeinbox}\n{capacity}",
-				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
-			},
-			{
-				icons = { "Surprise_Socket_Rerroller.png" },
-				name = "Surprise Socket Rerroller",
-				price = 10000,
-				itemtype = 6570,
-				count = 100,
-				movable = true,
-				description = "<i>Contains a random socket rerroller!</i>\n\n<i>Contem um item de remocao de soquete aleatorio!</i>\n\n{character}\n{storeinbox}\n{capacity}",
 				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
 			},
 		},
@@ -6810,15 +6898,6 @@ GameStore.Categories = {
 				type = GameStore.OfferTypes.OFFER_TYPE_HUNTINGSLOT,
 			},
 			{
-				icons = { "Gold_Converter.png" },
-				name = "Gold Converter",
-				price = 5,
-				itemtype = 23722,
-				charges = 500,
-				description = "<i>Changes either a stack of 100 gold pieces into 1 platinum coin, or a stack of 100 platinum coins into 1 crystal coin!</i>\n\n{character}\n{storeinbox}\n{useicon} use it on a stack of 100 to change it to the superior currency\n{info} usable 500 times a piece",
-				type = GameStore.OfferTypes.OFFER_TYPE_CHARGES,
-			},
-			{
 				icons = { "Gold_Pouch.png" },
 				name = "Loot Pouch",
 				price = 900,
@@ -7179,6 +7258,21 @@ GameStore.Categories = {
 	},
 }
 
+-- Ensure key categories stay at the top in the order we define, regardless of later iterations that might scramble insertion order.
+local function moveCategoryToFront(categoryName)
+	for idx, cat in ipairs(GameStore.Categories) do
+		if cat.name == categoryName then
+			table.remove(GameStore.Categories, idx)
+			table.insert(GameStore.Categories, 1, cat)
+			return
+		end
+	end
+end
+
+-- Keep Premium/VIP first, then Best Sellers second.
+moveCategoryToFront("Best Sellers")
+moveCategoryToFront(premiumCategoryName)
+
 -- Each outfit must be uniquely identified to distinguish between addons.
 -- Here we dynamically assign ids for outfits. These ids must be unique.
 local runningId = 45000
@@ -7204,4 +7298,6 @@ for k, category in ipairs(GameStore.Categories) do
 			end
 		end
 	end
+	-- Preserve original declaration order for downstream consumers
+	category.order = k
 end
