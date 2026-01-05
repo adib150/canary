@@ -245,7 +245,7 @@ GameStore.Categories = {
 				itemtype = 50345,
 				count = 1,
 				movable = true,
-				description = "<i>Your Mortal Soul, where you can equip on extra slot and upgrade it to divine power.</i>",
+				description = "<i>Your Mortal Soul, where you can equip on extra slot and upgrade it to divine power.\n\n Grants: +1% crit chance, +2% crit damage, +1% final damage, -1% damage taken. Upgrade with Knowledge for Mortal Soul.</i>",
 				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
 			},
 			{
