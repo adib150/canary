@@ -82745,11 +82745,12 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50354" name="knowledge for mortal soul">
 		<attribute key="primarytype" value="creature products"/>
-		<attribute key="description" value="strengthens your mortal soul"/>
+		<attribute key="description" value="Use on a Mortal Soul to upgrade it one stage. Grants progressive combat bonuses when the soul is equipped in the extra ammo slot."/>
 		<attribute key="weight" value="440"/>
 	</item>
 	<item id="50345" article="a" name="empty mortal soul">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +1% crit chance, +2% crit damage, +1% final damage, -1% damage taken. Upgrade with Knowledge for Mortal Soul."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82758,6 +82759,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50346" article="a" name="mortal soul filled with water">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +2% crit chance, +4% crit damage, +2% final damage, -1% damage taken, +1% HP. Upgrade with Knowledge for Mortal Soul."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82766,6 +82768,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50347" article="a" name="mortal soul with some milk">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +3% crit chance, +6% crit damage, +3% final damage, -1% damage taken, +2% HP, +1% mana, 50% chance of life leech, 1% life leech. Upgrade with Knowledge for Mortal Soul."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82774,6 +82777,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50348" article="a" name="mortal soul filled with milk">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +4% crit chance, +8% crit damage, +4% final damage, -1% damage taken, +3% HP, +2% mana, 60% chance of life leech, 1% life leech, +1% onslaught. Upgrade with Knowledge for Mortal Soul."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82782,6 +82786,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50349" article="a" name="empty angel soul">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +5% crit chance, +10% crit damage, +5% final damage, -2% damage taken, +4% HP, +4% mana, 70% chance of life leech, 2% life leech, +1% onslaught, +1% transcendence. Upgrade with Knowledge for Angel Soul."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82790,11 +82795,12 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50355" name="knowledge for angel soul">
 		<attribute key="primarytype" value="creature products"/>
-		<attribute key="description" value="strengthens your angel soul"/>
+		<attribute key="description" value="Use on an Angel Soul to upgrade it one stage. Continues the progressive bonus path toward Celestial Souls."/>
 		<attribute key="weight" value="440"/>
 	</item>
 	<item id="50350" article="a" name="angel soul filled with water">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +6% crit chance, +12% crit damage, +6% final damage, -2% damage taken, +6% HP, +6% mana, 80% chance of life leech, 2% life leech, +2% onslaught, +1% transcendence."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82803,6 +82809,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50351" article="a" name="angel soul filled with souls">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +7% crit chance, +14% crit damage, +7% final damage, -2% damage taken, +8% HP, +8% mana, 85% chance of life leech, 2% life leech, +2% onslaught, +2% transcendence."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82811,6 +82818,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50357" article="a" name="empty celestial soul">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +8% crit chance, +16% crit damage, +8% final damage, -3% damage taken, +10% HP, +10% mana, 90% chance of life leech, 3% life leech, +2% onslaught, +2% transcendence, +1% amplification. Upgrade with Knowledge for Celestial Soul."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82819,11 +82827,12 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50367" name="knowledge for celestial soul">
 		<attribute key="primarytype" value="creature products"/>
-		<attribute key="description" value="strengthens your celestial soul"/>
+		<attribute key="description" value="Use on a Celestial Soul to upgrade it one stage. Grants bigger stat increases and new abilities as the soul advances."/>
 		<attribute key="weight" value="440"/>
 	</item>
 	<item id="50358" article="a" name="celestial soul with some power">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +8% crit chance, +17% crit damage, +9% final damage, -3% damage taken, +11% HP, +11% mana, 92% chance of life leech, 3% life leech, +2% onslaught, +2% transcendence, +1% amplification."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82832,6 +82841,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50359" article="a" name="celestial soul filled with power">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +9% crit chance, +18% crit damage, +10% final damage, -3% damage taken, +12% HP, +12% mana, 94% chance of life leech, 3% life leech, +3% onslaught, +2% transcendence, +2% amplification."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82840,6 +82850,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50360" article="a" name="celestial soul overflowing with power">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +9% crit chance, +19% crit damage, +10% final damage, -3% damage taken, +13% HP, +13% mana, 95% chance of life leech, 3% life leech, +3% onslaught, +2% transcendence, +2% amplification."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82848,6 +82859,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50361" article="a" name="ascendant soul with first domain">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +10% crit chance, +20% crit damage, +10% final damage, -3% damage taken, +14% HP, +14% mana, 96% chance of life leech, 4% life leech, +3% onslaught, +2% transcendence, +3% amplification. Upgrade with Knowledge for Ascendant Soul."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82856,11 +82868,12 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50356" name="knowledge for ascendant soul">
 		<attribute key="primarytype" value="creature products"/>
-		<attribute key="description" value="strengthens your celestial soul"/>
+		<attribute key="description" value="Use on an Ascendant Soul to upgrade it one stage. Progresses toward Godhood Soul with major bonuses."/>
 		<attribute key="weight" value="440"/>
 	</item>
 	<item id="50362" article="a" name="ascendant soul with second domain">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +11% crit chance, +21% crit damage, +11% final damage, -4% damage taken, +15% HP, +15% mana, 97% chance of life leech, 4% life leech, +3% onslaught, +3% transcendence, +3% amplification, +1% ruse, +2 to main skill."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82869,6 +82882,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50363" article="a" name="ascendant soul with third domain">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +11% crit chance, +22% crit damage, +12% final damage, -4% damage taken, +15% HP, +15% mana, 98% chance of life leech, 4% life leech, +3% onslaught, +3% transcendence, +4% amplification, +1% ruse, +4 to main skill."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82877,6 +82891,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50364" article="a" name="ascendant soul with fourth domain">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +12% crit chance, +23% crit damage, +13% final damage, -4% damage taken, +15% HP, +15% mana, 99% chance of life leech, 4% life leech, +4% onslaught, +3% transcendence, +4% amplification, +2% ruse, +6 to main skill."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82885,6 +82900,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50365" article="a" name="ascendant soul with all domains">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +12% crit chance, +24% crit damage, +13% final damage, -4% damage taken, +15% HP, +15% mana, 100% chance of life leech, 4% life leech, +4% onslaught, +3% transcendence, +4% amplification, +3% ruse, +8 to main skill."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82893,6 +82909,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50353" article="a" name="godhood soul filled with life">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +13% crit chance, +25% crit damage, +13% final damage, -5% damage taken, +15% HP, +15% mana, 100% chance of life leech, 5% life leech, +4% onslaught, +4% transcendence, +5% amplification, +4% ruse, +1 base ML, +10 to main skill."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82901,11 +82918,12 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50368" name="knowledge for godhood soul">
 		<attribute key="primarytype" value="creature products"/>
-		<attribute key="description" value="strengthens your celestial soul"/>
+		<attribute key="description" value="Use on a Godhood Soul to upgrade it one stage toward full Godhood. Final stages give the largest possible bonuses."/>
 		<attribute key="weight" value="440"/>
 	</item>
 	<item id="50352" article="a" name="godhood soul with some knowledge">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +14% crit chance, +26% crit damage, +14% final damage, -5% damage taken, +15% HP, +15% mana, 100% chance of life leech, 5% life leech, +5% onslaught, +4% transcendence, +5% amplification, +5% ruse, +3 base ML, +15 to main skill."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">
@@ -82914,6 +82932,7 @@ Granted by TibiaGoals.com"/>
 	</item>
 	<item id="50366" article="a" name="godhood soul with all knowledge">
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="description" value="Equip in extra ammo slot. Grants: +15% crit chance, +30% crit damage, +15% final damage, -5% damage taken, +20% HP, +20% mana, 100% chance of life leech, 5% life leech, +5% onslaught, +5% transcendence, +5% amplification, +5% ruse, +5 base ML, +20 to main skill."/>
 		<attribute key="absorbpercentlifedrain" value="5"/>
 		<attribute key="weight" value="3800"/>
 		<attribute key="script" value="moveevent">

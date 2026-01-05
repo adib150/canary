@@ -691,7 +691,7 @@ end
 
 function Player:onInventoryUpdate(item, slot, equip)
 	-- Socket buff system
-	local allowedSlots = {1, 4, 5, 6, 7, 8} -- HEAD, ARMOR, RIGHT, LEFT, LEGS, FEET
+	local allowedSlots = {1, 4, 5, 6, 7, 8, CONST_SLOT_AMMO} -- HEAD, ARMOR, RIGHT, LEFT, LEGS, FEET, AMMO
 	local isAllowedSlot = false
 	for _, allowedSlot in ipairs(allowedSlots) do
 		if slot == allowedSlot then
@@ -705,12 +705,121 @@ function Player:onInventoryUpdate(item, slot, equip)
 	end
 	
 	if equip then
+		-- Special handling for soul items equipped in the ammo slot
+		if slot == CONST_SLOT_AMMO then
+			local soulBonuses = {
+				-- Mortal soul progression
+				[50345] = { critChance = 1, critDamage = 2, finalDamage = 101, damageReceived = 99 },
+				[50346] = { critChance = 2, critDamage = 4, finalDamage = 102, damageReceived = 99, hpPercent = 101 },
+				[50347] = { critChance = 3, critDamage = 6, finalDamage = 103, damageReceived = 99, hpPercent = 102, manaPercent = 101, lifeLeechChance = 50, lifeLeechAmount = 100 },
+				[50348] = { critChance = 4, critDamage = 8, finalDamage = 104, damageReceived = 99, hpPercent = 103, manaPercent = 102, lifeLeechChance = 60, lifeLeechAmount = 100, onslaught = 1 },
+				-- Angel soul progression
+				[50349] = { critChance = 5, critDamage = 10, finalDamage = 105, damageReceived = 98, hpPercent = 104, manaPercent = 104, lifeLeechChance = 70, lifeLeechAmount = 200, onslaught = 1, transcendence = 1 },
+				[50350] = { critChance = 6, critDamage = 12, finalDamage = 106, damageReceived = 98, hpPercent = 106, manaPercent = 106, lifeLeechChance = 80, lifeLeechAmount = 200, onslaught = 2, transcendence = 1 },
+				[50351] = { critChance = 7, critDamage = 14, finalDamage = 107, damageReceived = 98, hpPercent = 108, manaPercent = 108, lifeLeechChance = 85, lifeLeechAmount = 200, onslaught = 2, transcendence = 2 },
+				-- Celestial progression
+				[50357] = { critChance = 8, critDamage = 16, finalDamage = 108, damageReceived = 97, hpPercent = 110, manaPercent = 110, lifeLeechChance = 90, lifeLeechAmount = 300, onslaught = 2, transcendence = 2, amplification = 1 },
+				[50358] = { critChance = 8, critDamage = 17, finalDamage = 109, damageReceived = 97, hpPercent = 111, manaPercent = 111, lifeLeechChance = 92, lifeLeechAmount = 300, onslaught = 2, transcendence = 2, amplification = 1 },
+				[50359] = { critChance = 9, critDamage = 18, finalDamage = 110, damageReceived = 97, hpPercent = 112, manaPercent = 112, lifeLeechChance = 94, lifeLeechAmount = 300, onslaught = 3, transcendence = 2, amplification = 2 },
+				[50360] = { critChance = 9, critDamage = 19, finalDamage = 110, damageReceived = 97, hpPercent = 113, manaPercent = 113, lifeLeechChance = 95, lifeLeechAmount = 300, onslaught = 3, transcendence = 2, amplification = 2 },
+				[50361] = { critChance = 10, critDamage = 20, finalDamage = 110, damageReceived = 97, hpPercent = 114, manaPercent = 114, lifeLeechChance = 96, lifeLeechAmount = 300, onslaught = 3, transcendence = 2, amplification = 3 },
+				-- Ascendant -> Godhood progression
+				[50362] = { critChance = 11, critDamage = 21, finalDamage = 111, damageReceived = 96, hpPercent = 115, manaPercent = 115, lifeLeechChance = 97, lifeLeechAmount = 400, onslaught = 3, transcendence = 3, amplification = 3, ruse = 1, vocationBonus = 2 },
+				[50363] = { critChance = 11, critDamage = 22, finalDamage = 112, damageReceived = 96, hpPercent = 115, manaPercent = 115, lifeLeechChance = 98, lifeLeechAmount = 400, onslaught = 3, transcendence = 3, amplification = 4, ruse = 1, vocationBonus = 4 },
+				[50364] = { critChance = 12, critDamage = 23, finalDamage = 113, damageReceived = 96, hpPercent = 115, manaPercent = 115, lifeLeechChance = 99, lifeLeechAmount = 400, onslaught = 4, transcendence = 3, amplification = 4, ruse = 2, vocationBonus = 6 },
+				[50365] = { critChance = 12, critDamage = 24, finalDamage = 113, damageReceived = 96, hpPercent = 115, manaPercent = 115, lifeLeechChance = 100, lifeLeechAmount = 400, onslaught = 4, transcendence = 3, amplification = 4, ruse = 3, vocationBonus = 8 },
+				-- Godhood final stages
+				[50353] = { critChance = 13, critDamage = 25, finalDamage = 113, damageReceived = 95, hpPercent = 115, manaPercent = 115, lifeLeechChance = 100, lifeLeechAmount = 500, onslaught = 4, transcendence = 4, amplification = 5, ruse = 4, baseMagicLevel = 1, vocationBonus = 10 },
+				[50352] = { critChance = 14, critDamage = 26, finalDamage = 114, damageReceived = 95, hpPercent = 115, manaPercent = 115, lifeLeechChance = 100, lifeLeechAmount = 500, onslaught = 5, transcendence = 4, amplification = 5, ruse = 5, baseMagicLevel = 3, vocationBonus = 15 },
+				[50366] = { critChance = 15, critDamage = 30, finalDamage = 115, damageReceived = 95, hpPercent = 120, manaPercent = 120, lifeLeechChance = 100, lifeLeechAmount = 500, onslaught = 5, transcendence = 5, amplification = 5, ruse = 5, baseMagicLevel = 5, vocationBonus = 20 },
+			}
+
+			local bonuses = soulBonuses[item.itemid]
+			if bonuses then
+				-- Get player vocation to determine skill bonus type
+				local vocation = self:getVocation()
+				local vocationId = vocation:getId()
+				local condition = Condition(CONDITION_ATTRIBUTES, slot)
+				condition:setParameter(CONDITION_PARAM_BUFF_SPELL, true)
+				condition:setParameter(CONDITION_PARAM_TICKS, -1)
+				condition:setParameter(CONDITION_PARAM_FORCEUPDATE, true)
+
+				if bonuses.hpPercent then
+					condition:setParameter(CONDITION_PARAM_STAT_MAXHITPOINTSPERCENT, bonuses.hpPercent)
+				end
+				if bonuses.manaPercent then
+					condition:setParameter(CONDITION_PARAM_STAT_MAXMANAPOINTSPERCENT, bonuses.manaPercent)
+				end
+				if bonuses.finalDamage then
+					condition:setParameter(CONDITION_PARAM_BUFF_DAMAGEDEALT, bonuses.finalDamage)
+				end
+				if bonuses.damageReceived then
+					condition:setParameter(CONDITION_PARAM_BUFF_DAMAGERECEIVED, bonuses.damageReceived)
+				end
+				if bonuses.critChance then
+					condition:setParameter(CONDITION_PARAM_SKILL_CRITICAL_HIT_CHANCE, bonuses.critChance)
+				end
+				if bonuses.critDamage then
+					condition:setParameter(CONDITION_PARAM_SKILL_CRITICAL_HIT_DAMAGE, bonuses.critDamage)
+				end
+				if bonuses.onslaught then
+					condition:setParameter(CONDITION_PARAM_ONSLAUGHT_CHANCE, bonuses.onslaught)
+				end
+				if bonuses.momentum then
+					condition:setParameter(CONDITION_PARAM_MOMENTUM_CHANCE, bonuses.momentum)
+				end
+				if bonuses.transcendence then
+					condition:setParameter(CONDITION_PARAM_TRANSCENDENCE_CHANCE, bonuses.transcendence)
+				end
+				if bonuses.amplification then
+					condition:setParameter(CONDITION_PARAM_AMPLIFICATION_CHANCE, bonuses.amplification)
+				end
+				if bonuses.ruse then
+					condition:setParameter(CONDITION_PARAM_RUSE_CHANCE, bonuses.ruse)
+				end
+				
+				-- Apply base magic level if defined
+				if bonuses.baseMagicLevel then
+					condition:setParameter(CONDITION_PARAM_STAT_MAGICPOINTS, bonuses.baseMagicLevel)
+				end
+				
+				-- Apply vocation-specific bonus
+				if bonuses.vocationBonus then
+					-- Sorcerer (1) and Druid (2) get additional magic level bonus
+					if vocationId == 1 or vocationId == 2 or vocationId == 5 or vocationId == 6 then
+						local totalMagicLevel = (bonuses.baseMagicLevel or 0) + bonuses.vocationBonus
+						condition:setParameter(CONDITION_PARAM_STAT_MAGICPOINTS, totalMagicLevel)
+					-- Paladin (3) gets distance skill bonus
+					elseif vocationId == 3 or vocationId == 7 then
+						condition:setParameter(CONDITION_PARAM_SKILL_DISTANCE, bonuses.vocationBonus)
+					-- Knight (4) gets melee skill bonus
+					elseif vocationId == 4 or vocationId == 8 then
+						condition:setParameter(CONDITION_PARAM_SKILL_AXE, bonuses.vocationBonus)
+						condition:setParameter(CONDITION_PARAM_SKILL_SWORD, bonuses.vocationBonus)
+						condition:setParameter(CONDITION_PARAM_SKILL_CLUB, bonuses.vocationBonus)
+					end
+				end
+				
+				if bonuses.lifeLeechChance then
+					condition:setParameter(CONDITION_PARAM_SKILL_LIFE_LEECH_CHANCE, bonuses.lifeLeechChance)
+					condition:setParameter(CONDITION_PARAM_SKILL_LIFE_LEECH_AMOUNT, bonuses.lifeLeechAmount or 0)
+				end
+				if bonuses.manaLeechChance then
+					condition:setParameter(CONDITION_PARAM_SKILL_MANA_LEECH_CHANCE, bonuses.manaLeechChance)
+					condition:setParameter(CONDITION_PARAM_SKILL_MANA_LEECH_AMOUNT, bonuses.manaLeechAmount or 0)
+				end
+
+				self:addCondition(condition)
+				return
+			end
+		end
+
 		-- Check classification (must be 3 or 4)
 		local classification = item:getClassification()
 		if classification ~= 3 and classification ~= 4 then
 			return
 		end
-		
+
 		-- Apply socket buffs
 		local socket1 = item:getCustomAttribute("socket1") or "empty"
 		local socket2 = item:getCustomAttribute("socket2") or "empty"
