@@ -8291,12 +8291,12 @@ void ProtocolGame::AddPlayerSkills(NetworkMessage &msg) {
 	msg.addDouble(player->getSkillLevel(SKILL_MANA_LEECH_AMOUNT) / 10000.); // Mana Leech
 	msg.addDouble(player->getSkillLevel(SKILL_CRITICAL_HIT_CHANCE) / 10000.); // Crit Chance
 	msg.addDouble(player->getSkillLevel(SKILL_CRITICAL_HIT_DAMAGE) / 10000.); // Crit Extra Damage
-	msg.addDouble(getForgeSkillStat(CONST_SLOT_LEFT)); // Onslaught
+	msg.addDouble(getForgeSkillStat(CONST_SLOT_LEFT) + (player->getFatalChanceModifier() / 100.0)); // Onslaught
 
 	msg.add<uint16_t>(player->getDefense(true));
 	msg.add<uint16_t>(player->getArmor());
 	msg.addDouble(player->getMitigation() / 100.); // Mitigation
-	msg.addDouble(getForgeSkillStat(CONST_SLOT_ARMOR)); // Dodge (Ruse)
+	msg.addDouble(getForgeSkillStat(CONST_SLOT_ARMOR) + (player->getRuseChanceModifier() / 100.0)); // Dodge (Ruse)
 	msg.add<uint16_t>(static_cast<uint16_t>(player->getReflectFlat(COMBAT_PHYSICALDAMAGE))); // Damage Reflection
 
 	// Store the "combats" to increase in absorb values function and send to client later
@@ -8313,10 +8313,10 @@ void ProtocolGame::AddPlayerSkills(NetworkMessage &msg) {
 	msg.addByte(combats);
 	msg.setBufferPosition(endCombats);
 
-	// Forge Bonus
-	msg.addDouble(getForgeSkillStat(CONST_SLOT_HEAD)); // Momentum
-	msg.addDouble(getForgeSkillStat(CONST_SLOT_LEGS)); // Transcedence
-	msg.addDouble(getForgeSkillStat(CONST_SLOT_FEET, false)); // Amplification
+	// Forge Bonus (include player modifiers so condition-based chances appear)
+	msg.addDouble(getForgeSkillStat(CONST_SLOT_HEAD) + (player->getMomentumChanceModifier() / 100.0)); // Momentum
+	msg.addDouble(getForgeSkillStat(CONST_SLOT_LEGS) + (player->getTranscendenceChanceModifier() / 100.0)); // Transcedence
+	msg.addDouble(getForgeSkillStat(CONST_SLOT_FEET, false) + (player->getAmplificationChanceModifier() / 100.0)); // Amplification
 }
 
 void ProtocolGame::AddOutfit(NetworkMessage &msg, const Outfit_t &outfit, bool addMount /* = true*/) {
