@@ -39370,8 +39370,8 @@
 		<monster name="Crazed Summer Rearguard" x="4" y="-7" z="7" spawntime="60" direction="3" />
 		<monster name="Crazed Summer Vanguard" x="5" y="-7" z="7" spawntime="60" direction="3" />
 		<monster name="Insane Siren" x="6" y="-7" z="7" spawntime="60" direction="3" />
-		<monster name="Thanatursus" x="5" y="-6" z="7" spawntime="60" direction="3" />
-		<monster name="Arachnophobica" x="6" y="-6" z="7" spawntime="60" direction="3" />
+		<monster name="Arachnophobica" x="5" y="-6" z="7" spawntime="60" direction="3" />
+		<monster name="Thanatursus" x="6" y="-6" z="7" spawntime="60" direction="3" />
 		<monster name="Feral Werecrocodile" x="-5" y="-5" z="7" spawntime="60" direction="1" />
 		<monster name="Werecrocodile" x="-4" y="-5" z="7" spawntime="60" direction="1" />
 		<monster name="Werepanther" x="-3" y="-5" z="7" spawntime="60" direction="1" />
@@ -39933,16 +39933,24 @@
 		<monster name="Barbarian Brutetamer" x="9" y="6" z="7" spawntime="60" />
 		<monster name="Ice Witch" x="10" y="6" z="7" spawntime="60" />
 	</monster>
-	<monster centerx="32252" centery="32201" centerz="7" radius="10">
-		<monster name="Dark Torturer" x="-10" y="-6" z="7" spawntime="60" direction="2" />
-		<monster name="Nightmare" x="-9" y="-6" z="7" spawntime="60" direction="2" />
+	<monster centerx="32252" centery="32201" centerz="7" radius="11">
 		<monster name="Betrayed Wraith" x="-10" y="-5" z="7" spawntime="60" direction="2" />
 		<monster name="Lost Soul" x="-9" y="-5" z="7" spawntime="60" direction="2" />
 		<monster name="Cobra Vizier" x="-7" y="-5" z="7" spawntime="60" direction="2" />
+		<monster name="Nightmare" x="-10" y="-4" z="7" spawntime="60" direction="2" />
 		<monster name="Plaguesmith" x="-9" y="-4" z="7" spawntime="60" direction="2" />
 		<monster name="Cobra Scout" x="-7" y="-4" z="7" spawntime="60" direction="2" />
+		<monster name="Falcon Paladin" x="-5" y="-4" z="7" spawntime="60" direction="2" />
+		<monster name="Dark Torturer" x="-10" y="-3" z="7" spawntime="60" direction="2" />
 		<monster name="Demon Outcast" x="-9" y="-3" z="7" spawntime="60" direction="2" />
 		<monster name="Cobra Assassin" x="-7" y="-3" z="7" spawntime="60" direction="2" />
+		<monster name="Falcon Knight" x="-5" y="-3" z="7" spawntime="60" direction="2" />
+		<monster name="Sopping Carcass" x="-11" y="4" z="7" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-10" y="4" z="7" spawntime="60" />
+		<monster name="Bloated Man-Maggot" x="-9" y="4" z="7" spawntime="60" />
+		<monster name="Sopping Corpus" x="-11" y="5" z="7" spawntime="60" />
+		<monster name="Oozing Carcass" x="-10" y="5" z="7" spawntime="60" />
+		<monster name="Oozing Corpus" x="-9" y="5" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="32675" centery="32202" centerz="7" radius="1">
 		<monster name="Bandit" x="1" y="0" z="7" spawntime="90" />
@@ -74076,7 +74084,6 @@
 	<monster centerx="33282" centery="32728" centerz="8" radius="2">
 		<monster name="Larva" x="-1" y="-1" z="8" spawntime="90" />
 	</monster>
-	<monster centerx="33351" centery="32728" centerz="8" radius="3" />
 	<monster centerx="31206" centery="32729" centerz="8" radius="3">
 		<monster name="Execowtioner" x="-1" y="-2" z="8" spawntime="90" />
 		<monster name="Moohtant" x="1" y="0" z="8" spawntime="90" />
@@ -74785,7 +74792,6 @@
 	<monster centerx="33049" centery="32749" centerz="8" radius="2">
 		<monster name="Larva" x="0" y="-1" z="8" spawntime="90" />
 	</monster>
-	<monster centerx="33351" centery="32749" centerz="8" radius="3" />
 	<monster centerx="32240" centery="32750" centerz="8" radius="2">
 		<monster name="Rotworm" x="0" y="-1" z="8" spawntime="90" />
 		<monster name="Rotworm" x="-1" y="1" z="8" spawntime="90" />
@@ -74907,7 +74913,6 @@
 		<monster name="Larva" x="1" y="-1" z="8" spawntime="90" />
 		<monster name="Larva" x="-1" y="1" z="8" spawntime="90" />
 	</monster>
-	<monster centerx="33351" centery="32756" centerz="8" radius="3" />
 	<monster centerx="33605" centery="32756" centerz="8" radius="1">
 		<monster name="Makara" x="0" y="0" z="8" spawntime="60" />
 	</monster>
@@ -76172,7 +76177,6 @@
 		<monster name="Stone Golem" x="-2" y="0" z="8" spawntime="90" />
 		<monster name="Stone Golem" x="0" y="1" z="8" spawntime="90" />
 	</monster>
-	<monster centerx="33358" centery="32826" centerz="8" radius="3" />
 	<monster centerx="32099" centery="32827" centerz="8" radius="1">
 		<monster name="Bonelord" x="0" y="0" z="8" spawntime="90" />
 	</monster>
@@ -81742,6 +81746,10 @@
 		<monster name="Gargoyle" x="0" y="-3" z="9" spawntime="90" />
 		<monster name="Stone Golem" x="2" y="1" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33311" centery="31271" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="33585" centery="31271" centerz="9" radius="1">
 		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
 	</monster>
@@ -81749,12 +81757,36 @@
 		<monster name="Sea Serpent" x="0" y="-3" z="9" spawntime="90" />
 		<monster name="Young Sea Serpent" x="-1" y="2" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33305" centery="31272" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33307" centery="31272" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="33316" centery="31272" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="-1" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="2" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-3" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-2" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="3" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-3" y="0" z="9" spawntime="60" />
 		<monster name="Falcon Paladin" x="-2" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33323" centery="31272" centerz="9" radius="3">
 		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="1" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="3" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="3" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="3" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="2" y="3" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32511" centery="31273" centerz="9" radius="3">
 		<monster name="Tortoise" x="0" y="-2" z="9" spawntime="90" />
@@ -81765,6 +81797,10 @@
 	</monster>
 	<monster centerx="33163" centery="31273" centerz="9" radius="1">
 		<monster name="Lizard Dragon Priest" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33310" centery="31273" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32423" centery="31274" centerz="9" radius="5">
 		<monster name="Frost Giantess" x="3" y="-3" z="9" spawntime="90" />
@@ -81785,6 +81821,10 @@
 	<monster centerx="33165" centery="31275" centerz="9" radius="1">
 		<monster name="Dragon Hatchling" x="1" y="0" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33304" centery="31275" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="32156" centery="31276" centerz="9" radius="4">
 		<monster name="Gargoyle" x="2" y="1" z="9" spawntime="90" />
 		<monster name="Gargoyle" x="-2" y="2" z="9" spawntime="90" />
@@ -81797,6 +81837,11 @@
 	</monster>
 	<monster centerx="33155" centery="31276" centerz="9" radius="1">
 		<monster name="Lizard Legionnaire" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33324" centery="31276" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33594" centery="31276" centerz="9" radius="1">
 		<monster name="Floor Blob" x="1" y="0" z="9" spawntime="90" />
@@ -81821,6 +81866,12 @@
 		<monster name="Lizard Dragon Priest" x="0" y="0" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33326" centery="31277" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33328" centery="31277" centerz="9" radius="1">
 		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32173" centery="31278" centerz="9" radius="5">
@@ -81853,10 +81904,40 @@
 		<monster name="Lizard Legionnaire" x="0" y="0" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33302" centery="31279" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-2" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-3" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="2" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="1" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="3" y="2" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33309" centery="31279" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="-2" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-3" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-3" y="3" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="0" y="3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33325" centery="31279" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33327" centery="31279" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33329" centery="31279" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33298" centery="31280" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32131" centery="31281" centerz="9" radius="4">
 		<monster name="Novice of the Cult" x="1" y="-3" z="9" spawntime="90" />
@@ -81874,11 +81955,33 @@
 		<monster name="Crocodile" x="-1" y="0" z="9" spawntime="90" />
 		<monster name="Tortoise" x="-1" y="3" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33296" centery="31281" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33313" centery="31281" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="32558" centery="31282" centerz="9" radius="2">
 		<monster name="Tortoise" x="1" y="-1" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33149" centery="31282" centerz="9" radius="1">
 		<monster name="Dragon Hatchling" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33298" centery="31282" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33318" centery="31282" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33330" centery="31282" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32092" centery="31283" centerz="9" radius="3">
 		<monster name="Ice Golem" x="1" y="1" z="9" spawntime="90" />
@@ -81889,10 +81992,27 @@
 	<monster centerx="32854" centery="31283" centerz="9" radius="2">
 		<monster name="Worker Golem" x="1" y="2" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33313" centery="31283" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33315" centery="31283" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="33154" centery="31284" centerz="9" radius="1">
 		<monster name="Lizard Dragon Priest" x="0" y="0" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33325" centery="31284" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33328" centery="31284" centerz="9" radius="1">
 		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32902" centery="31285" centerz="9" radius="4">
@@ -81904,6 +82024,9 @@
 	</monster>
 	<monster centerx="33183" centery="31285" centerz="9" radius="1">
 		<monster name="Lizard High Guard" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33318" centery="31285" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="31909" centery="31286" centerz="9" radius="3">
 		<monster name="Sea Serpent" x="2" y="2" z="9" spawntime="90" />
@@ -81921,16 +82044,47 @@
 	<monster centerx="33161" centery="31286" centerz="9" radius="1">
 		<monster name="Dragon Hatchling" x="0" y="0" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33291" centery="31286" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="33295" centery="31286" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="-2" y="-3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="-3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="-3" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="-3" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-2" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-2" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-2" y="1" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="-2" y="2" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33302" centery="31286" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="-1" y="-3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="-3" z="9" spawntime="60" />
 		<monster name="Falcon Paladin" x="-3" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="-2" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="-3" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33320" centery="31286" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33327" centery="31286" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33170" centery="31287" centerz="9" radius="1">
 		<monster name="Lizard Legionnaire" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33288" centery="31287" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33312" centery="31287" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32543" centery="31288" centerz="9" radius="1">
 		<monster name="Crocodile" x="0" y="1" z="9" spawntime="90" />
@@ -81938,17 +82092,66 @@
 	<monster centerx="32561" centery="31288" centerz="9" radius="2">
 		<monster name="Tortoise" x="0" y="-1" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33290" centery="31288" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33308" centery="31288" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33318" centery="31288" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33324" centery="31288" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33328" centery="31288" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33285" centery="31289" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33287" centery="31289" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33315" centery="31289" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="32842" centery="31290" centerz="9" radius="2">
 		<monster name="Worker Golem" x="1" y="0" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33159" centery="31290" centerz="9" radius="1">
 		<monster name="Lizard Legionnaire" x="0" y="0" z="9" spawntime="90" />
 	</monster>
-	<monster centerx="33313" centery="31290" centerz="9" radius="1">
+	<monster centerx="33302" centery="31290" centerz="9" radius="1">
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33313" centery="31290" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33322" centery="31290" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33324" centery="31290" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33326" centery="31290" centerz="9" radius="1">
 		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32213" centery="31291" centerz="9" radius="4">
 		<monster name="Novice of the Cult" x="0" y="-3" z="9" spawntime="90" />
@@ -81965,8 +82168,35 @@
 	<monster centerx="32856" centery="31291" centerz="9" radius="2">
 		<monster name="Frost Dragon Hatchling" x="0" y="0" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33284" centery="31291" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33292" centery="31291" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33303" centery="31292" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33314" centery="31292" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="33322" centery="31292" centerz="9" radius="1">
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33325" centery="31292" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33327" centery="31292" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32544" centery="31293" centerz="9" radius="1">
 		<monster name="Tortoise" x="1" y="1" z="9" spawntime="90" />
@@ -81983,12 +82213,38 @@
 	<monster centerx="32875" centery="31293" centerz="9" radius="3">
 		<monster name="Damaged Worker Golem" x="3" y="1" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33284" centery="31293" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="33288" centery="31293" centerz="9" radius="3">
+		<monster name="Falcon Knight" x="-1" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-2" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-2" y="3" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="-1" y="3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="3" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="3" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33292" centery="31293" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33294" centery="31293" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33309" centery="31293" centerz="9" radius="3">
 		<monster name="Falcon Paladin" x="-3" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-2" y="3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="3" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="3" z="9" spawntime="31232" />
 		<monster name="Falcon Paladin" x="2" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33329" centery="31293" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32077" centery="31294" centerz="9" radius="3">
 		<monster name="Ice Golem" x="-1" y="1" z="9" spawntime="90" />
@@ -81999,15 +82255,52 @@
 	<monster centerx="32562" centery="31294" centerz="9" radius="1">
 		<monster name="Tortoise" x="1" y="0" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33316" centery="31294" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="32513" centery="31295" centerz="9" radius="1">
 		<monster name="Crocodile" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33284" centery="31295" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33318" centery="31295" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33329" centery="31295" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32132" centery="31296" centerz="9" radius="4">
 		<monster name="Novice of the Cult" x="0" y="-2" z="9" spawntime="90" />
 		<monster name="Novice of the Cult" x="1" y="2" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33293" centery="31296" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="32546" centery="31297" centerz="9" radius="1">
 		<monster name="Tortoise" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33284" centery="31297" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33309" centery="31297" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33312" centery="31297" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33323" centery="31297" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32174" centery="31298" centerz="9" radius="4">
 		<monster name="Novice of the Cult" x="-2" y="-3" z="9" spawntime="90" />
@@ -82016,6 +82309,14 @@
 	</monster>
 	<monster centerx="33158" centery="31298" centerz="9" radius="1">
 		<monster name="Lizard Legionnaire" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33286" centery="31298" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33288" centery="31298" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32365" centery="31299" centerz="9" radius="6">
 		<monster name="Frost Giantess" x="3" y="-4" z="9" spawntime="90" />
@@ -82027,16 +82328,49 @@
 		<monster name="Frost Giant" x="-2" y="1" z="9" spawntime="90" />
 		<monster name="Frost Giant" x="3" y="4" z="9" spawntime="90" />
 	</monster>
-	<monster centerx="33326" centery="31299" centerz="9" radius="1">
+	<monster centerx="33322" centery="31299" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="0" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33324" centery="31299" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33326" centery="31299" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33329" centery="31299" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="31923" centery="31300" centerz="9" radius="3">
 		<monster name="Sea Serpent" x="3" y="-1" z="9" spawntime="90" />
 	</monster>
-	<monster centerx="33302" centery="31300" centerz="9" radius="3">
-		<monster name="Falcon Paladin" x="1" y="-2" z="9" spawntime="60" />
+	<monster centerx="33298" centery="31300" centerz="9" radius="1">
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33302" centery="31300" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="0" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-2" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-3" y="2" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="-2" y="2" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="-2" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33331" centery="31300" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32563" centery="31301" centerz="9" radius="1">
 		<monster name="Tortoise" x="1" y="0" z="9" spawntime="90" />
@@ -82044,11 +82378,46 @@
 	<monster centerx="33152" centery="31301" centerz="9" radius="1">
 		<monster name="Lizard Dragon Priest" x="0" y="0" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33320" centery="31301" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33322" centery="31301" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="31232" />
+	</monster>
 	<monster centerx="32529" centery="31302" centerz="9" radius="1">
 		<monster name="Tortoise" x="1" y="-1" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33297" centery="31302" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33314" centery="31302" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33330" centery="31302" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="33332" centery="31302" centerz="9" radius="1">
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33294" centery="31303" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33324" centery="31303" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33334" centery="31303" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32412" centery="31304" centerz="9" radius="7">
 		<monster name="Frost Giant" x="-5" y="-7" z="9" spawntime="90" />
@@ -82062,14 +82431,38 @@
 	<monster centerx="32517" centery="31304" centerz="9" radius="1">
 		<monster name="Tortoise" x="-1" y="0" z="9" spawntime="90" />
 	</monster>
-	<monster centerx="33318" centery="31304" centerz="9" radius="1">
+	<monster centerx="33316" centery="31304" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="-1" z="9" spawntime="31232" />
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33318" centery="31304" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="1" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33329" centery="31304" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33331" centery="31304" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33333" centery="31305" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32549" centery="31306" centerz="9" radius="2">
 		<monster name="Tortoise" x="1" y="0" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32558" centery="31306" centerz="9" radius="1">
 		<monster name="Tortoise" x="-1" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33317" centery="31306" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="31232" />
 	</monster>
 	<monster centerx="31930" centery="31307" centerz="9" radius="3">
 		<monster name="Young Sea Serpent" x="-3" y="1" z="9" spawntime="90" />
@@ -82094,25 +82487,57 @@
 		<monster name="Worker Golem" x="0" y="1" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33295" centery="31307" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="1" y="-3" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="-2" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="-2" z="9" spawntime="31232" />
 		<monster name="Falcon Knight" x="0" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-2" y="0" z="9" spawntime="60" weight="25" />
+		<monster name="Falcon Knight" x="-2" y="0" z="9" spawntime="60" weight="25" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-2" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-2" y="2" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-3" y="3" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-2" y="3" z="9" spawntime="31232" />
 		<monster name="Falcon Paladin" x="-1" y="3" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33302" centery="31307" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="-3" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-2" y="-2" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-2" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-1" y="-1" z="9" spawntime="31232" />
 		<monster name="Falcon Knight" x="-1" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="3" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="1" y="3" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33309" centery="31307" centerz="9" radius="3">
 		<monster name="Falcon Knight" x="2" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="2" z="9" spawntime="60" />
 		<monster name="Falcon Paladin" x="0" y="3" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="3" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="2" y="3" z="9" spawntime="31232" />
 		<monster name="Falcon Knight" x="3" y="3" z="9" spawntime="60" />
 	</monster>
+	<monster centerx="33319" centery="31307" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="31232" />
+	</monster>
 	<monster centerx="33333" centery="31307" centerz="9" radius="1">
-		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" weight="25" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" weight="25" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32567" centery="31308" centerz="9" radius="1">
 		<monster name="Tortoise" x="0" y="-1" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="32923" centery="31309" centerz="9" radius="2">
 		<monster name="Worker Golem" x="2" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33319" centery="31309" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32434" centery="31310" centerz="9" radius="4">
 		<monster name="Frost Giantess" x="3" y="-2" z="9" spawntime="90" />
@@ -82122,8 +82547,40 @@
 	<monster centerx="32522" centery="31310" centerz="9" radius="1">
 		<monster name="Tortoise" x="-1" y="0" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33289" centery="31310" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33291" centery="31310" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33332" centery="31310" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="32540" centery="31311" centerz="9" radius="2">
 		<monster name="Tortoise" x="1" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33302" centery="31311" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33304" centery="31311" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33308" centery="31311" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33312" centery="31311" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33330" centery="31311" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32367" centery="31312" centerz="9" radius="5">
 		<monster name="Frost Giant" x="-1" y="-4" z="9" spawntime="90" />
@@ -82135,13 +82592,37 @@
 		<monster name="Crocodile" x="-1" y="-1" z="9" spawntime="90" />
 		<monster name="Tortoise" x="1" y="1" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33310" centery="31312" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="31232" />
+	</monster>
 	<monster centerx="33332" centery="31312" centerz="9" radius="1">
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32496" centery="31313" centerz="9" radius="4">
 		<monster name="Tortoise" x="-3" y="-2" z="9" spawntime="90" />
 		<monster name="Crocodile" x="-1" y="1" z="9" spawntime="90" />
 		<monster name="Tortoise" x="3" y="1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33299" centery="31313" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33303" centery="31313" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="-1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33328" centery="31313" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33330" centery="31313" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32889" centery="31314" centerz="9" radius="3">
 		<monster name="Mad Scientist" x="3" y="0" z="9" spawntime="90" />
@@ -82152,13 +82633,52 @@
 		<monster name="Mad Scientist" x="-1" y="3" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33288" centery="31314" centerz="9" radius="3">
-		<monster name="Falcon Knight" x="3" y="-3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="2" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="2" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="3" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="2" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="3" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="3" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="3" y="3" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33295" centery="31314" centerz="9" radius="3">
+		<monster name="Falcon Knight" x="0" y="-3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-3" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-2" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-3" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-3" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="-2" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="3" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="-3" y="2" z="9" spawntime="60" />
 		<monster name="Falcon Paladin" x="-2" y="2" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33305" centery="31314" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33312" centery="31314" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="-1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33318" centery="31314" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="31924" centery="31315" centerz="9" radius="1">
 		<monster name="Sea Serpent" x="0" y="0" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33303" centery="31315" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33301" centery="31316" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="31921" centery="31317" centerz="9" radius="1">
 		<monster name="Sea Serpent" x="0" y="0" z="9" spawntime="90" />
@@ -82167,12 +82687,30 @@
 		<monster name="Tortoise" x="-1" y="-1" z="9" spawntime="90" />
 		<monster name="Tortoise" x="2" y="1" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33328" centery="31317" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="33333" centery="31317" centerz="9" radius="3">
+		<monster name="Falcon Knight" x="-2" y="-2" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="-3" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-3" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="2" y="2" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="2" y="3" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33315" centery="31318" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="0" z="9" spawntime="60" />
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33317" centery="31318" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="31232" />
 	</monster>
 	<monster centerx="32506" centery="31319" centerz="9" radius="2">
 		<monster name="Tortoise" x="0" y="-1" z="9" spawntime="90" />
@@ -82180,6 +82718,14 @@
 	</monster>
 	<monster centerx="32915" centery="31319" centerz="9" radius="2">
 		<monster name="Worker Golem" x="-1" y="-1" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33314" centery="31320" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33318" centery="31320" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="31930" centery="31321" centerz="9" radius="3">
 		<monster name="Young Sea Serpent" x="-2" y="-1" z="9" spawntime="90" />
@@ -82195,14 +82741,52 @@
 		<monster name="Worker Golem" x="1" y="-1" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33288" centery="31321" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="0" y="-3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="-3" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="3" y="-3" z="9" spawntime="31232" />
 		<monster name="Falcon Knight" x="-1" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="-2" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="2" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-1" y="2" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="2" y="2" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="3" y="2" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-2" y="3" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-1" y="3" z="9" spawntime="31232" />
 	</monster>
 	<monster centerx="33295" centery="31321" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="2" y="-3" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="-2" z="9" spawntime="31232" />
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
 		<monster name="Falcon Paladin" x="3" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="3" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="3" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="3" y="3" z="9" spawntime="31232" />
 	</monster>
 	<monster centerx="33309" centery="31321" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="0" y="-3" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="1" y="-3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="-2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="-1" z="9" spawntime="60" />
 		<monster name="Falcon Paladin" x="-2" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="2" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="-2" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="2" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="2" y="2" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="3" y="2" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="-1" y="3" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33335" centery="31321" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33315" centery="31322" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="1" y="-1" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="-1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32495" centery="31323" centerz="9" radius="3">
 		<monster name="Crocodile" x="1" y="-1" z="9" spawntime="90" />
@@ -82211,15 +82795,61 @@
 	<monster centerx="33317" centery="31323" centerz="9" radius="1">
 		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
 	</monster>
+	<monster centerx="33336" centery="31323" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="32514" centery="31324" centerz="9" radius="3">
 		<monster name="Tortoise" x="-2" y="-1" z="9" spawntime="90" />
 		<monster name="Tortoise" x="-1" y="2" z="9" spawntime="90" />
 	</monster>
 	<monster centerx="33314" centery="31324" centerz="9" radius="1">
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33334" centery="31324" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33294" centery="31325" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33301" centery="31325" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="-1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33304" centery="31325" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="31232" />
 	</monster>
 	<monster centerx="33310" centery="31325" centerz="9" radius="1">
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33316" centery="31325" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33299" centery="31326" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33307" centery="31326" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33312" centery="31326" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33318" centery="31326" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="-1" y="1" z="9" spawntime="31232" />
 	</monster>
 	<monster centerx="32544" centery="31327" centerz="9" radius="2">
 		<monster name="Tortoise" x="0" y="2" z="9" spawntime="90" />
@@ -82228,20 +82858,51 @@
 		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33288" centery="31328" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="-2" y="-3" z="9" spawntime="60" />
 		<monster name="Falcon Paladin" x="2" y="-2" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33296" centery="31328" centerz="9" radius="1">
 		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33311" centery="31328" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33317" centery="31328" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="31232" />
+		<monster name="Falcon Knight" x="1" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="33330" centery="31328" centerz="9" radius="3">
+		<monster name="Falcon Paladin" x="1" y="-1" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="60" />
 		<monster name="Falcon Knight" x="3" y="2" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="-1" y="3" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="3" y="3" z="9" spawntime="60" />
+	</monster>
+	<monster centerx="33335" centery="31328" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Knight" x="0" y="1" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32560" centery="31329" centerz="9" radius="2">
 		<monster name="Tortoise" x="1" y="-1" z="9" spawntime="90" />
 	</monster>
+	<monster centerx="33293" centery="31329" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
+		<monster name="Falcon Paladin" x="0" y="1" z="9" spawntime="31232" />
+		<monster name="Falcon Paladin" x="1" y="1" z="9" spawntime="31232" />
+	</monster>
+	<monster centerx="33313" centery="31329" centerz="9" radius="1">
+		<monster name="Falcon Knight" x="0" y="0" z="9" spawntime="60" />
+	</monster>
 	<monster centerx="32537" centery="31330" centerz="9" radius="2">
 		<monster name="Crocodile" x="2" y="-1" z="9" spawntime="90" />
 		<monster name="Tortoise" x="1" y="2" z="9" spawntime="90" />
+	</monster>
+	<monster centerx="33296" centery="31330" centerz="9" radius="1">
+		<monster name="Falcon Paladin" x="0" y="0" z="9" spawntime="60" />
 	</monster>
 	<monster centerx="32493" centery="31333" centerz="9" radius="3">
 		<monster name="Crocodile" x="2" y="-1" z="9" spawntime="90" />
@@ -170271,6 +170932,12 @@
 	<monster centerx="33561" centery="31657" centerz="14" radius="3">
 		<monster name="Sea Serpent" x="2" y="-1" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33878" centery="31657" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="0" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="32767" centery="31658" centerz="14" radius="1">
 		<monster name="Bonelord" x="1" y="0" z="14" spawntime="90" />
 		<monster name="Skeleton" x="0" y="1" z="14" spawntime="90" />
@@ -170284,6 +170951,13 @@
 	<monster centerx="33195" centery="31658" centerz="14" radius="1">
 		<monster name="Stalker" x="0" y="1" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33874" centery="31658" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33876" centery="31658" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="32741" centery="31659" centerz="14" radius="1">
 		<monster name="Demon Skeleton" x="1" y="0" z="14" spawntime="90" />
 	</monster>
@@ -170296,6 +170970,14 @@
 	<monster centerx="33189" centery="31659" centerz="14" radius="1">
 		<monster name="Stalker" x="0" y="-1" z="14" spawntime="90" />
 		<monster name="Dark Apprentice" x="0" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33883" centery="31659" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33885" centery="31659" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="32497" centery="31660" centerz="14" radius="2">
 		<monster name="Elf Arcanist" x="2" y="-1" z="14" spawntime="90" />
@@ -170317,6 +170999,11 @@
 	</monster>
 	<monster centerx="33881" centery="31660" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33904" centery="31660" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="32458" centery="31661" centerz="14" radius="2">
 		<monster name="Elf Arcanist" x="1" y="0" z="14" spawntime="90" />
@@ -170344,10 +171031,20 @@
 		<monster name="Demon Skeleton" x="1" y="0" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33874" centery="31661" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33895" centery="31661" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33898" centery="31661" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34017" centery="31661" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -170367,13 +171064,24 @@
 	<monster centerx="33192" centery="31662" centerz="14" radius="1">
 		<monster name="Monk" x="0" y="-1" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33837" centery="31662" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33852" centery="31662" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33887" centery="31662" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33892" centery="31662" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34014" centery="31662" centerz="14" radius="1">
@@ -170395,20 +171103,51 @@
 		<monster name="Skeleton" x="1" y="0" z="14" spawntime="90" />
 		<monster name="Skeleton" x="1" y="1" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33839" centery="31663" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33843" centery="31663" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33848" centery="31663" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33863" centery="31663" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33869" centery="31663" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33898" centery="31663" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33901" centery="31663" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33909" centery="31663" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33914" centery="31663" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33918" centery="31663" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="32491" centery="31664" centerz="14" radius="2">
 		<monster name="Elf Arcanist" x="1" y="1" z="14" spawntime="90" />
@@ -170428,9 +171167,22 @@
 	</monster>
 	<monster centerx="33822" centery="31664" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33831" centery="31664" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="33905" centery="31664" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="-1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33911" centery="31664" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34009" centery="31664" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -170454,11 +171206,26 @@
 	<monster centerx="33262" centery="31665" centerz="14" radius="1">
 		<monster name="Behemoth" x="-1" y="0" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33844" centery="31665" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="33856" centery="31665" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33874" centery="31665" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="-1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33915" centery="31665" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="32733" centery="31666" centerz="14" radius="1">
 		<monster name="Demon Skeleton" x="1" y="0" z="14" spawntime="90" />
@@ -170468,6 +171235,26 @@
 	</monster>
 	<monster centerx="33841" centery="31666" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33860" centery="31666" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33900" centery="31666" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33919" centery="31666" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34014" centery="31666" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -170490,14 +171277,31 @@
 	<monster centerx="33192" centery="31667" centerz="14" radius="1">
 		<monster name="Witch" x="0" y="-1" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33824" centery="31667" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="-1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33827" centery="31667" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33832" centery="31667" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="1" y="-1" z="14" spawntime="31488" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33837" centery="31667" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33922" centery="31667" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="-1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34008" centery="31667" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -170509,10 +171313,14 @@
 		<monster name="Bonelord" x="1" y="0" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33877" centery="31668" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="-1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33907" centery="31668" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="32479" centery="31669" centerz="14" radius="3">
 		<monster name="Warlock" x="0" y="-2" z="14" spawntime="90" />
@@ -170528,13 +171336,22 @@
 		<monster name="Cyclops Smith" x="1" y="-1" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33821" centery="31669" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33825" centery="31669" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33854" centery="31669" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33926" centery="31669" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34030" centery="31669" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -170553,13 +171370,29 @@
 		<monster name="Hero" x="0" y="1" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33811" centery="31670" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="-1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="0" z="14" spawntime="31488" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33840" centery="31670" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33913" centery="31670" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33916" centery="31670" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33919" centery="31670" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="-1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34012" centery="31670" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -170595,8 +171428,22 @@
 		<monster name="Young Sea Serpent" x="-2" y="0" z="14" spawntime="60" />
 		<monster name="Sea Serpent" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33823" centery="31671" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33901" centery="31671" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33909" centery="31671" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33930" centery="31671" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="-1" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="-1" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34039" centery="31671" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -170608,6 +171455,12 @@
 	</monster>
 	<monster centerx="33820" centery="31672" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33924" centery="31672" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="-1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34042" centery="31673" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -170640,6 +171493,12 @@
 	</monster>
 	<monster centerx="33342" centery="31674" centerz="14" radius="1">
 		<monster name="Cyclops Drone" x="0" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33809" centery="31674" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="-1" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34011" centery="31674" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -170676,19 +171535,31 @@
 		<monster name="Dark Apprentice" x="-2" y="0" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33812" centery="31675" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33843" centery="31675" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33851" centery="31675" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33898" centery="31675" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="-1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33928" centery="31675" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33930" centery="31675" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="32715" centery="31676" centerz="14" radius="1">
 		<monster name="Ghoul" x="1" y="0" z="14" spawntime="90" />
@@ -170734,14 +171605,22 @@
 	<monster centerx="33345" centery="31678" centerz="14" radius="1">
 		<monster name="Behemoth" x="-1" y="1" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33804" centery="31678" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33808" centery="31678" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33844" centery="31678" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33895" centery="31678" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34010" centery="31678" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -170759,7 +171638,9 @@
 		<monster name="Demon Skeleton" x="1" y="0" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33932" centery="31679" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34065" centery="31679" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -170770,6 +171651,8 @@
 	</monster>
 	<monster centerx="33812" centery="31680" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33926" centery="31680" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
@@ -170781,7 +171664,14 @@
 		<monster name="Ghoul" x="1" y="0" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33804" centery="31681" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33922" centery="31681" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34074" centery="31681" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -170805,7 +171695,13 @@
 		<monster name="Behemoth" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33809" centery="31682" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33846" centery="31682" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33849" centery="31682" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
@@ -170825,6 +171721,10 @@
 	<monster centerx="33894" centery="31683" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33921" centery="31683" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="-1" y="1" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="34011" centery="31683" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
@@ -170836,6 +171736,16 @@
 	</monster>
 	<monster centerx="32788" centery="31684" centerz="14" radius="1">
 		<monster name="Bonelord" x="1" y="0" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33806" centery="31684" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33811" centery="31684" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33813" centery="31684" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34063" centery="31684" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -170857,6 +171767,18 @@
 		<monster name="Sea Serpent" x="-2" y="-1" z="14" spawntime="60" />
 		<monster name="Young Sea Serpent" x="0" y="-1" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33808" centery="31685" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="-1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33917" centery="31685" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="-1" y="1" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33919" centery="31685" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="33931" centery="31685" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
@@ -170865,9 +171787,16 @@
 	</monster>
 	<monster centerx="33892" centery="31686" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33924" centery="31686" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33934" centery="31686" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34093" centery="31686" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -170879,7 +171808,17 @@
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33806" centery="31687" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="-1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33914" centery="31687" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="-1" y="1" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33920" centery="31687" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34059" centery="31687" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -170894,31 +171833,54 @@
 		<monster name="Bonelord" x="1" y="0" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33811" centery="31688" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33816" centery="31688" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33874" centery="31688" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33889" centery="31688" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33912" centery="31688" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="33916" centery="31688" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33935" centery="31688" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34101" centery="31688" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33823" centery="31689" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33857" centery="31689" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33932" centery="31689" centerz="14" radius="1">
 		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33937" centery="31689" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34012" centery="31689" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -170932,6 +171894,10 @@
 	<monster centerx="33918" centery="31690" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33939" centery="31690" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="34009" centery="31690" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
@@ -170942,10 +171908,19 @@
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33806" centery="31691" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33810" centery="31691" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="33886" centery="31691" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33561" centery="31692" centerz="14" radius="3">
 		<monster name="Sea Serpent" x="1" y="0" z="14" spawntime="60" />
@@ -170955,21 +171930,39 @@
 	</monster>
 	<monster centerx="33876" centery="31692" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33904" centery="31692" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33935" centery="31692" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33939" centery="31692" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34103" centery="31692" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33809" centery="31693" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="-1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="33824" centery="31693" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33858" centery="31693" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33882" centery="31693" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33912" centery="31693" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
@@ -170986,11 +171979,24 @@
 	<monster centerx="32735" centery="31694" centerz="14" radius="1">
 		<monster name="Bonelord" x="1" y="0" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33827" centery="31694" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33907" centery="31694" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33939" centery="31694" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="33831" centery="31695" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="-1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33878" centery="31695" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="32734" centery="31696" centerz="14" radius="1">
 		<monster name="Skeleton" x="1" y="0" z="14" spawntime="90" />
@@ -170999,11 +172005,20 @@
 		<monster name="Cyclops Drone" x="2" y="0" z="14" spawntime="90" />
 		<monster name="Cyclops Drone" x="-2" y="1" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33805" centery="31696" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33905" centery="31696" centerz="14" radius="1">
 		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33935" centery="31696" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33837" centery="31697" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="-1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34112" centery="31697" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171042,13 +172057,19 @@
 		<monster name="Fire Elemental" x="1" y="0" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33867" centery="31700" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33933" centery="31700" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33937" centery="31700" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34003" centery="31700" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171058,6 +172079,12 @@
 	</monster>
 	<monster centerx="33839" centery="31701" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33861" centery="31701" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34013" centery="31701" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171097,10 +172124,25 @@
 		<monster name="Cyclops Smith" x="0" y="3" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33842" centery="31704" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="-1" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33860" centery="31704" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33935" centery="31704" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33938" centery="31704" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34011" centery="31704" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -171132,7 +172174,15 @@
 		<monster name="Shark" x="-2" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33845" centery="31706" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33938" centery="31706" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34046" centery="31706" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171151,8 +172201,10 @@
 	</monster>
 	<monster centerx="33848" centery="31707" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33874" centery="31707" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34041" centery="31707" centerz="14" radius="1">
@@ -171166,9 +172218,18 @@
 	</monster>
 	<monster centerx="33804" centery="31708" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33862" centery="31708" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33869" centery="31708" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="-1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33894" centery="31708" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
@@ -171176,11 +172237,24 @@
 	<monster centerx="33934" centery="31708" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33939" centery="31708" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="34079" centery="31708" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33842" centery="31709" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33877" centery="31709" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33889" centery="31709" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
@@ -171196,24 +172270,38 @@
 	</monster>
 	<monster centerx="33882" centery="31710" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33897" centery="31710" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33940" centery="31710" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34110" centery="31710" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33808" centery="31711" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="-1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33863" centery="31711" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33865" centery="31711" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33870" centery="31711" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33903" centery="31711" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
@@ -171227,17 +172315,42 @@
 	<monster centerx="34085" centery="31711" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33805" centery="31712" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33811" centery="31712" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33934" centery="31712" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33937" centery="31712" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33941" centery="31712" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="-1" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="33414" centery="31713" centerz="14" radius="3">
 		<monster name="Sea Serpent" x="1" y="2" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33802" centery="31713" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33837" centery="31713" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="-1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34010" centery="31713" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -171251,8 +172364,28 @@
 	<monster centerx="33349" centery="31714" centerz="14" radius="1">
 		<monster name="Behemoth" x="0" y="1" z="14" spawntime="60" />
 	</monster>
-	<monster centerx="33828" centery="31714" centerz="14" radius="1">
+	<monster centerx="33808" centery="31714" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33828" centery="31714" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33904" centery="31714" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33906" centery="31714" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33940" centery="31714" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="-1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="-1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34091" centery="31714" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171261,16 +172394,41 @@
 		<monster name="Cyclops Smith" x="1" y="1" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33832" centery="31715" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33932" centery="31715" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="-1" y="-1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33936" centery="31715" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33938" centery="31715" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34088" centery="31715" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33255" centery="31716" centerz="14" radius="1">
 		<monster name="Behemoth" x="1" y="1" z="14" spawntime="90" />
+	</monster>
+	<monster centerx="33907" centery="31716" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33909" centery="31716" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="33915" centery="31716" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
@@ -171279,7 +172437,11 @@
 		<monster name="Behemoth" x="1" y="1" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33809" centery="31717" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Oozing Carcass" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33917" centery="31717" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
@@ -171287,8 +172449,16 @@
 	<monster centerx="34082" centery="31717" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33828" centery="31718" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33923" centery="31719" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33930" centery="31719" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
@@ -171312,7 +172482,12 @@
 		<monster name="Sea Serpent" x="-3" y="2" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33821" centery="31720" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33858" centery="31720" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
@@ -171321,19 +172496,42 @@
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33809" centery="31721" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33812" centery="31721" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33818" centery="31721" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33824" centery="31721" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33877" centery="31721" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33927" centery="31721" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34013" centery="31722" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33815" centery="31723" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34076" centery="31723" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -171350,11 +172548,19 @@
 	<monster centerx="33261" centery="31724" centerz="14" radius="1">
 		<monster name="Behemoth" x="1" y="0" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33805" centery="31724" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33856" centery="31724" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33877" centery="31725" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33931" centery="31725" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34104" centery="31725" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -171363,7 +172569,11 @@
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33812" centery="31726" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="0" z="14" spawntime="31488" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33872" centery="31726" centerz="14" radius="1">
 		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
@@ -171386,8 +172596,30 @@
 		<monster name="Sea Serpent" x="1" y="2" z="14" spawntime="60" />
 		<monster name="Sea Serpent" x="0" y="3" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33933" centery="31727" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="33935" centery="31727" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33938" centery="31727" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="-1" y="-1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="-1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="-1" y="0" z="14" spawntime="31488" />
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="-1" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="33852" centery="31728" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
@@ -171411,10 +172643,18 @@
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33812" centery="31730" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="-1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="-1" y="0" z="14" spawntime="31488" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33933" centery="31730" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34095" centery="31730" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171441,7 +172681,9 @@
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33836" centery="31733" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="-1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34015" centery="31733" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171451,7 +172693,12 @@
 		<monster name="Sea Serpent" x="2" y="3" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33934" centery="31734" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="-1" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31488" />
 	</monster>
 	<monster centerx="34063" centery="31734" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -171469,6 +172716,7 @@
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33831" centery="31735" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33847" centery="31735" centerz="14" radius="1">
@@ -171483,11 +172731,25 @@
 	<monster centerx="34059" centery="31735" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33826" centery="31736" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33883" centery="31736" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33931" centery="31736" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="34025" centery="31736" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33821" centery="31737" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33913" centery="31737" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
@@ -171498,14 +172760,23 @@
 	<monster centerx="34043" centery="31737" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33813" centery="31738" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="-1" y="-1" z="14" spawntime="31488" />
+		<monster name="Sopping Corpus" x="-1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="33847" centery="31738" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33922" centery="31738" centerz="14" radius="1">
 		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33927" centery="31738" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34015" centery="31738" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171524,10 +172795,17 @@
 		<monster name="Bog Raider" x="1" y="-1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33815" centery="31739" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33827" centery="31739" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="-1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="31488" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33932" centery="31739" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
@@ -171535,8 +172813,15 @@
 	<monster centerx="34027" centery="31739" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33813" centery="31740" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="31488" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="31488" />
+	</monster>
 	<monster centerx="33821" centery="31740" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="1" y="-1" z="14" spawntime="31488" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33884" centery="31740" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
@@ -171556,14 +172841,29 @@
 	<monster centerx="33568" centery="31741" centerz="14" radius="3">
 		<monster name="Sea Serpent" x="-1" y="-1" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33812" centery="31742" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31488" />
+	</monster>
+	<monster centerx="33824" centery="31742" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33864" centery="31742" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33888" centery="31742" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33926" centery="31742" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="-1" y="-1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="0" y="-1" z="14" spawntime="31488" />
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34103" centery="31742" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171571,13 +172871,29 @@
 	<monster centerx="33297" centery="31743" centerz="14" radius="1">
 		<monster name="Cyclops Drone" x="1" y="1" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33815" centery="31743" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="-1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="-1" y="1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="34018" centery="31743" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33818" centery="31744" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="1" y="-1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33821" centery="31744" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="-1" z="14" spawntime="31488" />
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="31488" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33919" centery="31744" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34022" centery="31744" centerz="14" radius="1">
@@ -171586,13 +172902,21 @@
 	<monster centerx="34101" centery="31744" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33811" centery="31745" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="31744" />
+	</monster>
 	<monster centerx="33813" centery="31745" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33845" centery="31745" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33865" centery="31745" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33302" centery="31746" centerz="14" radius="1">
@@ -171602,7 +172926,19 @@
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33923" centery="31746" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33926" centery="31746" centerz="14" radius="1">
+		<monster name="Sopping Carcass" x="-1" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Carcass" x="0" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Carcass" x="1" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Carcass" x="-1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Carcass" x="1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Carcass" x="-1" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Carcass" x="0" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Carcass" x="1" y="1" z="14" spawntime="31744" />
 	</monster>
 	<monster centerx="34097" centery="31746" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -171610,8 +172946,13 @@
 	<monster centerx="33294" centery="31747" centerz="14" radius="1">
 		<monster name="Behemoth" x="0" y="1" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33810" centery="31747" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33822" centery="31747" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34023" centery="31747" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -171631,6 +172972,11 @@
 		<monster name="Sea Serpent" x="3" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33826" centery="31748" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33863" centery="31748" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34094" centery="31748" centerz="14" radius="1">
@@ -171640,7 +172986,21 @@
 		<monster name="Cyclops Drone" x="0" y="1" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33814" centery="31749" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33913" centery="31749" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="-1" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="-1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="31744" />
 	</monster>
 	<monster centerx="34028" centery="31749" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171649,9 +173009,15 @@
 		<monster name="Cyclops Drone" x="-1" y="0" z="14" spawntime="90" />
 	</monster>
 	<monster centerx="33818" centery="31750" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33917" centery="31750" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33921" centery="31750" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34065" centery="31750" centerz="14" radius="1">
@@ -171664,6 +173030,7 @@
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33866" centery="31751" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33895" centery="31751" centerz="14" radius="1">
@@ -171674,21 +173041,48 @@
 	</monster>
 	<monster centerx="33927" centery="31751" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34087" centery="31751" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33815" centery="31752" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="-1" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="-1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="31744" />
+	</monster>
 	<monster centerx="33822" centery="31752" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33829" centery="31752" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="31744" />
 	</monster>
 	<monster centerx="34032" centery="31752" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33817" centery="31753" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31744" />
+	</monster>
+	<monster centerx="33819" centery="31753" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33898" centery="31753" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="31744" />
 	</monster>
 	<monster centerx="33901" centery="31753" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="31744" />
 	</monster>
 	<monster centerx="33906" centery="31753" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
@@ -171696,8 +173090,21 @@
 	<monster centerx="33298" centery="31754" centerz="14" radius="1">
 		<monster name="Behemoth" x="1" y="-1" z="14" spawntime="90" />
 	</monster>
+	<monster centerx="33829" centery="31754" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="31744" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="31744" />
+	</monster>
+	<monster centerx="33840" centery="31754" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="-1" y="0" z="14" spawntime="31744" />
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="31744" />
+		<monster name="Mycobiontic Beetle" x="1" y="0" z="14" spawntime="31744" />
+	</monster>
+	<monster centerx="33842" centery="31754" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33915" centery="31754" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34036" centery="31754" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171720,10 +173127,12 @@
 		<monster name="Young Sea Serpent" x="-3" y="3" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33825" centery="31755" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33836" centery="31755" centerz="14" radius="1">
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34061" centery="31755" centerz="14" radius="1">
 		<monster name="Meandering Mushroom" x="0" y="0" z="14" spawntime="60" />
@@ -171736,15 +173145,24 @@
 	</monster>
 	<monster centerx="33843" centery="31756" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33893" centery="31756" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33904" centery="31756" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33919" centery="31756" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34057" centery="31756" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33864" centery="31757" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="31744" />
 	</monster>
 	<monster centerx="34087" centery="31757" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
@@ -171752,20 +173170,60 @@
 	<monster centerx="33868" centery="31758" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33872" centery="31758" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33898" centery="31758" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="31744" />
+	</monster>
 	<monster centerx="33909" centery="31758" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="34042" centery="31758" centerz="14" radius="1">
 		<monster name="Sopping Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33835" centery="31759" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31744" />
+	</monster>
+	<monster centerx="33864" centery="31759" centerz="14" radius="1">
+		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="31744" />
+		<monster name="Mycobiontic Beetle" x="0" y="1" z="14" spawntime="31744" />
+	</monster>
 	<monster centerx="34050" centery="31759" centerz="14" radius="1">
 		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33837" centery="31760" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33841" centery="31760" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="0" y="-1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="31744" />
+	</monster>
+	<monster centerx="33872" centery="31760" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33884" centery="31760" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33888" centery="31760" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="-1" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33905" centery="31760" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
@@ -171779,14 +173237,24 @@
 	<monster centerx="33830" centery="31761" centerz="14" radius="1">
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33856" centery="31761" centerz="14" radius="1">
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33861" centery="31761" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Mycobiontic Beetle" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31744" />
+		<monster name="Oozing Corpus" x="0" y="1" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="31744" />
 	</monster>
 	<monster centerx="33893" centery="31761" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33900" centery="31761" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="-1" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="-1" y="0" z="14" spawntime="31744" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="31744" />
 	</monster>
 	<monster centerx="33498" centery="31762" centerz="14" radius="3">
 		<monster name="Shark" x="1" y="0" z="14" spawntime="60" />
@@ -171800,17 +173268,45 @@
 	</monster>
 	<monster centerx="33846" centery="31762" centerz="14" radius="1">
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Oozing Corpus" x="1" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33851" centery="31762" centerz="14" radius="1">
+		<monster name="Oozing Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33868" centery="31762" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Bloated Man-Maggot" x="0" y="0" z="14" spawntime="60" />
 	</monster>
+	<monster centerx="33871" centery="31762" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="60" />
+	</monster>
 	<monster centerx="33876" centery="31762" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Oozing Corpus" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="31744" />
+	</monster>
+	<monster centerx="33849" centery="31763" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="-1" y="1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="1" z="14" spawntime="60" />
+	</monster>
+	<monster centerx="33862" centery="31764" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="0" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="31744" />
+		<monster name="Oozing Carcass" x="0" y="0" z="14" spawntime="60" />
+		<monster name="Sopping Corpus" x="1" y="0" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="1" z="14" spawntime="31744" />
 	</monster>
 	<monster centerx="33881" centery="31764" centerz="14" radius="1">
+		<monster name="Sopping Corpus" x="-1" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="0" y="-1" z="14" spawntime="31744" />
+		<monster name="Sopping Corpus" x="1" y="-1" z="14" spawntime="60" />
 		<monster name="Sopping Corpus" x="0" y="0" z="14" spawntime="60" />
 	</monster>
 	<monster centerx="33415" centery="31769" centerz="14" radius="3">

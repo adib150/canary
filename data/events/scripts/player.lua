@@ -709,33 +709,36 @@ function Player:onInventoryUpdate(item, slot, equip)
 		if slot == CONST_SLOT_AMMO then
 			local soulBonuses = {
 				-- Mortal soul progression
-				[50345] = { critChance = 1, critDamage = 2, finalDamage = 101, damageReceived = 99 },
-				[50346] = { critChance = 2, critDamage = 4, finalDamage = 102, damageReceived = 99, hpPercent = 101 },
-				[50347] = { critChance = 3, critDamage = 6, finalDamage = 103, damageReceived = 99, hpPercent = 102, manaPercent = 101, lifeLeechChance = 50, lifeLeechAmount = 100 },
-				[50348] = { critChance = 4, critDamage = 8, finalDamage = 104, damageReceived = 99, hpPercent = 103, manaPercent = 102, lifeLeechChance = 60, lifeLeechAmount = 100, onslaught = 1 },
+				[50345] = { critChance = 100, critDamage = 200, finalDamage = 101, damageReceived = 99, resistPercent = 1 },
+				[50346] = { critChance = 200, critDamage = 400, finalDamage = 102, damageReceived = 99, resistPercent = 2, hpPercent = 101 },
+				[50347] = { critChance = 300, critDamage = 600, finalDamage = 103, damageReceived = 99, resistPercent = 3, hpPercent = 102, manaPercent = 101, lifeLeechChance = 50, lifeLeechAmount = 100 },
+				[50348] = { critChance = 400, critDamage = 800, finalDamage = 104, damageReceived = 99, resistPercent = 4, hpPercent = 103, manaPercent = 102, lifeLeechChance = 60, lifeLeechAmount = 100, onslaught = 1 },
 				-- Angel soul progression
-				[50349] = { critChance = 5, critDamage = 10, finalDamage = 105, damageReceived = 98, hpPercent = 104, manaPercent = 104, lifeLeechChance = 70, lifeLeechAmount = 200, onslaught = 1, transcendence = 1 },
-				[50350] = { critChance = 6, critDamage = 12, finalDamage = 106, damageReceived = 98, hpPercent = 106, manaPercent = 106, lifeLeechChance = 80, lifeLeechAmount = 200, onslaught = 2, transcendence = 1 },
-				[50351] = { critChance = 7, critDamage = 14, finalDamage = 107, damageReceived = 98, hpPercent = 108, manaPercent = 108, lifeLeechChance = 85, lifeLeechAmount = 200, onslaught = 2, transcendence = 2 },
+				[50349] = { critChance = 500, critDamage = 1000, finalDamage = 105, damageReceived = 98, resistPercent = 5, hpPercent = 104, manaPercent = 104, lifeLeechChance = 70, lifeLeechAmount = 200, onslaught = 1, transcendence = 1 },
+				[50350] = { critChance = 600, critDamage = 1200, finalDamage = 106, damageReceived = 98, resistPercent = 6, hpPercent = 106, manaPercent = 106, lifeLeechChance = 80, lifeLeechAmount = 200, onslaught = 2, transcendence = 1 },
+				[50351] = { critChance = 700, critDamage = 1400, finalDamage = 107, damageReceived = 98, resistPercent = 7, hpPercent = 108, manaPercent = 108, lifeLeechChance = 85, lifeLeechAmount = 200, onslaught = 2, transcendence = 2 },
 				-- Celestial progression
-				[50357] = { critChance = 8, critDamage = 16, finalDamage = 108, damageReceived = 97, hpPercent = 110, manaPercent = 110, lifeLeechChance = 90, lifeLeechAmount = 300, onslaught = 2, transcendence = 2, amplification = 1 },
-				[50358] = { critChance = 8, critDamage = 17, finalDamage = 109, damageReceived = 97, hpPercent = 111, manaPercent = 111, lifeLeechChance = 92, lifeLeechAmount = 300, onslaught = 2, transcendence = 2, amplification = 1 },
-				[50359] = { critChance = 9, critDamage = 18, finalDamage = 110, damageReceived = 97, hpPercent = 112, manaPercent = 112, lifeLeechChance = 94, lifeLeechAmount = 300, onslaught = 3, transcendence = 2, amplification = 2 },
-				[50360] = { critChance = 9, critDamage = 19, finalDamage = 110, damageReceived = 97, hpPercent = 113, manaPercent = 113, lifeLeechChance = 95, lifeLeechAmount = 300, onslaught = 3, transcendence = 2, amplification = 2 },
-				[50361] = { critChance = 10, critDamage = 20, finalDamage = 110, damageReceived = 97, hpPercent = 114, manaPercent = 114, lifeLeechChance = 96, lifeLeechAmount = 300, onslaught = 3, transcendence = 2, amplification = 3 },
+				[50357] = { critChance = 800, critDamage = 1600, finalDamage = 108, damageReceived = 97, resistPercent = 8, hpPercent = 110, manaPercent = 110, lifeLeechChance = 90, lifeLeechAmount = 300, onslaught = 2, transcendence = 2, amplification = 1 },
+				[50358] = { critChance = 800, critDamage = 1700, finalDamage = 109, damageReceived = 97, resistPercent = 9, hpPercent = 111, manaPercent = 111, lifeLeechChance = 92, lifeLeechAmount = 300, onslaught = 2, transcendence = 2, amplification = 1 },
+				[50359] = { critChance = 900, critDamage = 1800, finalDamage = 110, damageReceived = 97, resistPercent = 10, hpPercent = 112, manaPercent = 112, lifeLeechChance = 94, lifeLeechAmount = 300, onslaught = 3, transcendence = 2, amplification = 2 },
+				[50360] = { critChance = 900, critDamage = 1900, finalDamage = 110, damageReceived = 97, resistPercent = 11, hpPercent = 113, manaPercent = 113, lifeLeechChance = 95, lifeLeechAmount = 300, onslaught = 3, transcendence = 2, amplification = 2 },
+				[50361] = { critChance = 1000, critDamage = 2000, finalDamage = 110, damageReceived = 97, resistPercent = 12, hpPercent = 114, manaPercent = 114, lifeLeechChance = 96, lifeLeechAmount = 300, onslaught = 3, transcendence = 2, amplification = 3 },
 				-- Ascendant -> Godhood progression
-				[50362] = { critChance = 11, critDamage = 21, finalDamage = 111, damageReceived = 96, hpPercent = 115, manaPercent = 115, lifeLeechChance = 97, lifeLeechAmount = 400, onslaught = 3, transcendence = 3, amplification = 3, ruse = 1, vocationBonus = 2 },
-				[50363] = { critChance = 11, critDamage = 22, finalDamage = 112, damageReceived = 96, hpPercent = 115, manaPercent = 115, lifeLeechChance = 98, lifeLeechAmount = 400, onslaught = 3, transcendence = 3, amplification = 4, ruse = 1, vocationBonus = 4 },
-				[50364] = { critChance = 12, critDamage = 23, finalDamage = 113, damageReceived = 96, hpPercent = 115, manaPercent = 115, lifeLeechChance = 99, lifeLeechAmount = 400, onslaught = 4, transcendence = 3, amplification = 4, ruse = 2, vocationBonus = 6 },
-				[50365] = { critChance = 12, critDamage = 24, finalDamage = 113, damageReceived = 96, hpPercent = 115, manaPercent = 115, lifeLeechChance = 100, lifeLeechAmount = 400, onslaught = 4, transcendence = 3, amplification = 4, ruse = 3, vocationBonus = 8 },
+				[50362] = { critChance = 1100, critDamage = 2100, finalDamage = 111, damageReceived = 96, resistPercent = 13, hpPercent = 115, manaPercent = 115, lifeLeechChance = 97, lifeLeechAmount = 400, onslaught = 3, transcendence = 3, amplification = 3, ruse = 1, vocationBonus = 2 },
+				[50363] = { critChance = 1100, critDamage = 2200, finalDamage = 112, damageReceived = 96, resistPercent = 14, hpPercent = 115, manaPercent = 115, lifeLeechChance = 98, lifeLeechAmount = 400, onslaught = 3, transcendence = 3, amplification = 4, ruse = 1, vocationBonus = 4 },
+				[50364] = { critChance = 1200, critDamage = 2300, finalDamage = 113, damageReceived = 96, resistPercent = 15, hpPercent = 115, manaPercent = 115, lifeLeechChance = 99, lifeLeechAmount = 400, onslaught = 4, transcendence = 3, amplification = 4, ruse = 2, vocationBonus = 6 },
+				[50365] = { critChance = 1200, critDamage = 2400, finalDamage = 113, damageReceived = 96, resistPercent = 15, hpPercent = 115, manaPercent = 115, lifeLeechChance = 100, lifeLeechAmount = 400, onslaught = 4, transcendence = 3, amplification = 4, ruse = 3, vocationBonus = 8 },
 				-- Godhood final stages
-				[50353] = { critChance = 13, critDamage = 25, finalDamage = 113, damageReceived = 95, hpPercent = 115, manaPercent = 115, lifeLeechChance = 100, lifeLeechAmount = 500, onslaught = 4, transcendence = 4, amplification = 5, ruse = 4, baseMagicLevel = 1, vocationBonus = 10 },
-				[50352] = { critChance = 14, critDamage = 26, finalDamage = 114, damageReceived = 95, hpPercent = 115, manaPercent = 115, lifeLeechChance = 100, lifeLeechAmount = 500, onslaught = 5, transcendence = 4, amplification = 5, ruse = 5, baseMagicLevel = 3, vocationBonus = 15 },
-				[50366] = { critChance = 15, critDamage = 30, finalDamage = 115, damageReceived = 95, hpPercent = 120, manaPercent = 120, lifeLeechChance = 100, lifeLeechAmount = 500, onslaught = 5, transcendence = 5, amplification = 5, ruse = 5, baseMagicLevel = 5, vocationBonus = 20 },
+				[50353] = { critChance = 1300, critDamage = 2500, finalDamage = 113, damageReceived = 95, resistPercent = 15, hpPercent = 115, manaPercent = 115, lifeLeechChance = 100, lifeLeechAmount = 500, onslaught = 4, transcendence = 4, amplification = 5, ruse = 4, baseMagicLevel = 1, vocationBonus = 10 },
+				[50352] = { critChance = 1400, critDamage = 2600, finalDamage = 114, damageReceived = 95, resistPercent = 15, hpPercent = 115, manaPercent = 115, lifeLeechChance = 100, lifeLeechAmount = 500, onslaught = 5, transcendence = 4, amplification = 5, ruse = 5, baseMagicLevel = 3, vocationBonus = 15 },
+				[50366] = { critChance = 1500, critDamage = 3000, finalDamage = 115, damageReceived = 95, resistPercent = 15, hpPercent = 120, manaPercent = 120, lifeLeechChance = 100, lifeLeechAmount = 500, onslaught = 5, transcendence = 5, amplification = 5, ruse = 5, baseMagicLevel = 5, vocationBonus = 20 },
 			}
 
 			local bonuses = soulBonuses[item.itemid]
 			if bonuses then
+				-- Use per-item resistPercent when provided (percent for all elemental/physical resists)
+				local resistPercent = bonuses.resistPercent
+
 				-- Get player vocation to determine skill bonus type
 				local vocation = self:getVocation()
 				local vocationId = vocation:getId()
@@ -809,7 +812,18 @@ function Player:onInventoryUpdate(item, slot, equip)
 					condition:setParameter(CONDITION_PARAM_SKILL_MANA_LEECH_AMOUNT, bonuses.manaLeechAmount or 0)
 				end
 
-				self:addCondition(condition)
+					-- Apply elemental/physical resistances if defined by progression above
+					if resistPercent then
+						condition:setParameter(CONDITION_PARAM_ABSORB_PHYSICALPERCENT, resistPercent)
+						condition:setParameter(CONDITION_PARAM_ABSORB_ENERGYPERCENT, resistPercent)
+						condition:setParameter(CONDITION_PARAM_ABSORB_EARTHPERCENT, resistPercent)
+						condition:setParameter(CONDITION_PARAM_ABSORB_FIREPERCENT, resistPercent)
+						condition:setParameter(CONDITION_PARAM_ABSORB_ICEPERCENT, resistPercent)
+						condition:setParameter(CONDITION_PARAM_ABSORB_HOLYPERCENT, resistPercent)
+						condition:setParameter(CONDITION_PARAM_ABSORB_DEATHPERCENT, resistPercent)
+					end
+
+					self:addCondition(condition)
 				return
 			end
 		end
