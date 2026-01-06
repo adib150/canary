@@ -28,7 +28,7 @@ local config = {
 }
 
 -- Timer configuration
-local LOOT_COOLDOWN = 240 * 1000 -- 240 seconds (4 minutes) in milliseconds
+local LOOT_COOLDOWN = 60 * 1000 -- 60 seconds (1 minute) in milliseconds
 
 -- Storage for tracking cooldowns
 local STORAGE_LOOT_POUCH_SELLER_COOLDOWN = 45821

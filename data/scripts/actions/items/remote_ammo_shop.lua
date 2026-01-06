@@ -32,7 +32,7 @@ local SHOP_NPC_NAME = "Alexander"
 local SHOP_NPC_POSITION = Position(33256, 31839, 3) -- Change this to where your Alexander is
 
 -- Timer configuration
-local SHOP_COOLDOWN = 240 * 1000 -- 240 seconds (4 minutes) in milliseconds
+local SHOP_COOLDOWN = 60 * 1000 -- 60 seconds (1 minute) in milliseconds
 
 -- Storage for tracking cooldowns
 local STORAGE_AMMO_SHOP_COOLDOWN = 45822
