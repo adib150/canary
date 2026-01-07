@@ -57,7 +57,7 @@ cleanProtectionZones = false
 -- NOTE: maxPlayers set to 0 means no limit
 -- NOTE: MaxPacketsPerSeconds if you change you will be subject to bugs by WPE, keep the default value of 25,
 -- It's recommended to use a range like min 50 in this function, otherwise you will be disconnected after equipping two-handed distance wheels.
-ip = "127.0.0.1"
+ip = "72.61.129.125"
 allowOldProtocol = false
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
@@ -313,13 +313,13 @@ teleportSummons = false
 allowReload = true
 
 -- Stamina in Trainers
-staminaTrainer = false
-staminaTrainerDelay = 5
+staminaTrainer = true
+staminaTrainerDelay = 2
 staminaTrainerGain = 1
 -- Stamina in PZ
-staminaPz = false
+staminaPz = true
 staminaOrangeDelay = 1
-staminaGreenDelay = 5
+staminaGreenDelay = 3
 staminaPzGain = 1
 -- Max players allowed on a dummy.
 maxAllowedOnADummy = 1
