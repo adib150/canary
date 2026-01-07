@@ -506,7 +506,7 @@ sortLootByChance = false
 -- NOTE: rateExp, rateSkill and rateMagic is used when 'rateUseStages = false' - or a fallback only
 -- To configure rates see file data/stages.lua
 -- lowLevelBonusExp works up to level 50
-rateUseStages = false
+rateUseStages = true
 lowLevelBonusExp = 50
 rateExp = 3
 rateSkill = 10
@@ -519,9 +519,9 @@ rateKillingInTheNameOfPoints = 1
 
 -- Today regeneration condition over an loop every 1 second,
 -- So values which should regenerated less then 1 second or won't will work
-rateHealthRegen = 1.0
+rateHealthRegen = 5.0
 rateHealthRegenSpeed = 1.0
-rateManaRegen = 1.0
+rateManaRegen = 5.0
 rateManaRegenSpeed = 1.0
 rateSoulRegen = 1.0
 rateSoulRegenSpeed = 1.0
