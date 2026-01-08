@@ -1824,9 +1824,6 @@ end
 
 function GameStore.processPreyBonusReroll(player, offerCount)
 	local limit = GameStore.ItemLimit.PREY_WILDCARD
-	if player:getPreyCards() + offerCount >= limit + 1 then
-		return error({ code = 1, message = "You cannot own more than " .. limit .. " prey wildcards." })
-	end
 	player:addPreyCards(offerCount)
 end
 
