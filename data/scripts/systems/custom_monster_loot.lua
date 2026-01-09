@@ -1,6 +1,6 @@
 -- Drops custom loot for all monsters
 local allLootConfig = {
-	{ id = 37317, chance = 1, minCount = 1, maxCount = 1 }, -- Chance to drop tibia coin 0.001%
+	{ id = 22118, chance = 1, minCount = 1, maxCount = 1 }, -- Chance to drop tibia coin 0.001%
 }
 
 -- Custom loot for specific monsters (this has the same usage options as normal monster loot)
