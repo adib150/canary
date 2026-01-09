@@ -46,4 +46,5 @@ private:
 	static int luaConfigManagerGetBoolean(lua_State* L);
 	static int luaConfigManagerGetNumber(lua_State* L);
 	static int luaConfigManagerGetString(lua_State* L);
+	static int luaConfigManagerSetBoolean(lua_State* L);
 };

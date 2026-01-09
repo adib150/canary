@@ -237,11 +237,11 @@ GameStore.Categories = {
 			},
 			{
 				icons = { "Magic_Gold_Converter.png" },
-				name = "Magic Gold Bank",
+				name = "Insomnia Autobank",
 				price = 900,
 				itemtype = 28525,
 				count = 1,
-				description = "<i>Automatically sends gold, platinum or crystal coins to your bank whenever it is activated!</i>\n\n<i>Automatiamente envia ouro, platina ou cristais para o seu banco sempre que estiver ativado!</i>\n\n{character}\n{storeinbox}\n{once}\n{useicon} use para abrir\n{info} sempre colocado na primeira posicao da sua Store inbox",
+				description = "<i>All coins dropped from monsters will be directly added to your bank if activated.</i>\n\n<i>Todo dinheiro dropado de bixos vao direto para o banco se ativado.</i>\n\n{character}\n{storeinbox}\n{once}\n{useicon} use para abrir\n{info} sempre colocado na primeira posicao da sua Store inbox",
 				type = GameStore.OfferTypes.OFFER_TYPE_ITEM_UNIQUE,
 			},
 			{

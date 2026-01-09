@@ -53194,15 +53194,15 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 	</item>
 	<item fromid="28521" toid="28523" name="unknown item"/>
 	<item id="28524" name="RESERVED SPRITE"/>
-	<item id="28525" article="a" name="magic gold bank">
+	<item id="28525" article="a" name="insomnia autobank">
 <attribute key="primarytype" value="tools"/>
-		<attribute key="description" value="It is actually in the inactive state"/>
+		<attribute key="description" value="It is actually in the incative state. All coins dropped from monsters will be directly added to your bank if activated."/>
 		<attribute key="wrapableto" value="23398"/>
 		<attribute key="allowdistread" value="0"/>
 	</item>
-	<item id="28526" article="a" name="magic gold bank">
+	<item id="28526" article="a" name="insomnia autobank">
 <attribute key="primarytype" value="tools"/>
-		<attribute key="description" value="It is actually in the active state"/>
+		<attribute key="description" value="It is actually in the active state. All coins dropped from monsters will be directly added to your bank if activated."/>
 		<attribute key="allowdistread" value="0"/>
 	</item>
 	<item fromid="28527" toid="28528" article="a" name="altar of ritual sword"/>

@@ -509,6 +509,11 @@ bool ConfigManager::getBoolean(const ConfigKey_t &key, const std::source_locatio
 	return false;
 }
 
+void ConfigManager::setBoolean(const ConfigKey_t key, bool value) {
+	configs[key] = value;
+	m_configBoolean[key] = value;
+}
+
 float ConfigManager::getFloat(const ConfigKey_t &key, const std::source_location &location /*= std::source_location::current()*/) const {
 	auto itCache = m_configFloat.find(key);
 	if (itCache != m_configFloat.end()) {

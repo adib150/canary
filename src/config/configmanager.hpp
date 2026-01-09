@@ -41,6 +41,7 @@ public:
 	[[nodiscard]] int32_t getNumber(const ConfigKey_t &key, const std::source_location &location = std::source_location::current()) const;
 	[[nodiscard]] bool getBoolean(const ConfigKey_t &key, const std::source_location &location = std::source_location::current()) const;
 	[[nodiscard]] float getFloat(const ConfigKey_t &key, const std::source_location &location = std::source_location::current()) const;
+	void setBoolean(const ConfigKey_t key, bool value);
 	OTCFeatures getEnabledFeaturesOTC() const;
 	OTCFeatures getDisabledFeaturesOTC() const;
 

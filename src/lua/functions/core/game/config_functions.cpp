@@ -18,6 +18,7 @@ void ConfigFunctions::init(lua_State* L) {
 	Lua::registerMethod(L, "configManager", "getNumber", luaConfigManagerGetNumber);
 	Lua::registerMethod(L, "configManager", "getBoolean", luaConfigManagerGetBoolean);
 	Lua::registerMethod(L, "configManager", "getFloat", luaConfigManagerGetFloat);
+	Lua::registerMethod(L, "configManager", "setBoolean", luaConfigManagerSetBoolean);
 
 #define registerMagicEnumIn(L, tableName, enumValue)         \
 	do {                                                     \
@@ -86,4 +87,16 @@ int ConfigFunctions::luaConfigManagerGetFloat(lua_State* L) {
 	g_logger().debug("[{}] key: {}, finalValue: {}, shouldRound: {}", __FUNCTION__, magic_enum::enum_name(key), finalValue, shouldRound);
 	lua_pushnumber(L, finalValue);
 	return 1;
+}
+
+int ConfigFunctions::luaConfigManagerSetBoolean(lua_State* L) {
+	const auto key = Lua::getNumber<ConfigKey_t>(L, 1);
+	if (!key) {
+		Lua::reportErrorFunc("Wrong enum");
+		return 1;
+	}
+
+	const bool value = Lua::getBoolean(L, 2, false);
+	g_configManager().setBoolean(key, value);
+	return 0;
 }
