@@ -160,6 +160,11 @@ function playerLoginGlobal.onLogin(player)
 	player:registerEvent("DropLoot")
 	player:registerEvent("BossParticipation")
 	player:registerEvent("UpdatePlayerOnAdvancedLevel")
+
+	-- Reactivate Insomnia Autobank if the player carries the active item (ensures it stays on after relog).
+	if player:getItemById(28526, true) then
+		configManager.setBoolean(configKeys.AUTOBANK, true)
+	end
 	return true
 end
 
