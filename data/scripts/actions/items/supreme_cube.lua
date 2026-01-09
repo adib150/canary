@@ -35,7 +35,7 @@ local function clearAllIconsAndEffects(player)
     player:getPosition():sendMagicEffect(CONST_ME_POFF)
 end
 
-local ciudades = {
+local cidades = {
     { name = "Ab'Dendriel", teleport = Position(32732, 31634, 7), requiredLevel = 8 },
     { name = "Ankrahmun", teleport = Position(33194, 32853, 8), requiredLevel = 8 },
     { name = "Carlin", teleport = Position(32360, 31782, 7), requiredLevel = 8 },
@@ -99,14 +99,14 @@ local bosses = {
 local function showTeleportMenu(player, title, list)
     local window = ModalWindow({
         title = title,
-        message = "Selecciona un destino.",
+        message = "Selecione um destino.",
     })
 
     for _, entry in ipairs(list) do
         window:addChoice(entry.name, function(player, button)
-            if button.name == "Select" then
+            if button.name == "Selecionar" then
                 if player:getLevel() < entry.requiredLevel then
-                    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Necesitas al menos nivel " .. entry.requiredLevel .. " para ir a este lugar.")
+                    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Você precisa ter pelo menos nível " .. entry.requiredLevel .. " para ir a este lugar.")
                     return
                 end
 
@@ -126,8 +126,8 @@ local function showTeleportMenu(player, title, list)
         end)
     end
 
-    window:addButton("Select")
-    window:addButton("Volver")
+    window:addButton("Selecionar")
+    window:addButton("Fechar")
     window:setDefaultEnterButton(0)
     window:setDefaultEscapeButton(1)
     window:sendToPlayer(player)
@@ -139,40 +139,40 @@ function supremeCube.onUse(player, item, fromPosition, target, toPosition, isHot
     local inNologout = player:getTile():hasFlag(TILESTATE_NOLOGOUT)
     local inFight = player:isPzLocked() or player:getCondition(CONDITION_INFIGHT, CONDITIONID_DEFAULT)
 
-    if not inPz and inFight then
-        player:getPosition():sendMagicEffect(CONST_ME_POFF)
-        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "No puedes usar esto en combate.")
-        return false
-    end
+    -- if not inPz and inFight then
+    --     player:getPosition():sendMagicEffect(CONST_ME_POFF)
+    --     player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "No puedes usar esto en combate.")
+    --     return false
+    -- end
 
     if inNologout then
         player:getPosition():sendMagicEffect(CONST_ME_POFF)
-        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "No puedes usar esto en una zona de no logout.")
+        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Não pode ser usado em uma zona de não logout.")
         return false
     end
 
     if player:getMoney() + player:getBankBalance() < config.price then
         player:getPosition():sendMagicEffect(CONST_ME_POFF)
-        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "No tienes suficiente dinero.")
+        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Você não tem dinheiro suficiente.")
         return false
     end
 
     if player:getStorageValue(config.storage) > os.time() then
         local remaining = player:getStorageValue(config.storage) - os.time()
-        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Tienes que esperar " .. remaining .. " segundos antes de volver a usarlo.")
+        player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Você precisa esperar " .. remaining .. " segundos antes de usar novamente.")
         player:getPosition():sendMagicEffect(CONST_ME_AGONY)
         return false
     end
 
-    -- Menú principal: Ciudades o Bosses
+    -- Menú principal: cidades o Bosses
     local window = ModalWindow({
-        title = "Lunera Cube",
-        message = "Selecciona una categoria de destino:",
+        title = "InsomniaOT Cube",
+        message = "Selecione uma categoria de destino:",
     })
 
-    window:addChoice("Ciudades", function(player, button)
+    window:addChoice("Cidades", function(player, button)
         if button.name == "Select" then
-            showTeleportMenu(player, "Ciudades", ciudades)
+            showTeleportMenu(player, "Cidades", cidades)
         end
     end)
 
@@ -216,7 +216,7 @@ function supremeCube.onUse(player, item, fromPosition, target, toPosition, isHot
 	end
 
     window:addButton("Select")
-    window:addButton("Cerrar")
+    window:addButton("Fechar")
     window:setDefaultEnterButton(0)
     window:setDefaultEscapeButton(1)
     window:sendToPlayer(player)

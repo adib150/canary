@@ -59324,9 +59324,9 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="description" value="It's black and it's missing"/>
 		<attribute key="weight" value="100"/>
 	</item>
-	<item id="31633" article="the" name="supreme cube">
-		<attribute key="description" value="It's black and it's supreme"/>
-		<attribute key="weight" value="1000"/>
+	<item id="31633" article="the" name="InsomniaOt teleporter">
+		<attribute key="description" value="Teleports you to bosses and cities even with battle"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item id="31634" article="a" name="box with waterproof balm">
 		<attribute key="weight" value="240"/>
