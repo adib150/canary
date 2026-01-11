@@ -220,7 +220,7 @@ function equipmentUpgrade.onUse(player, item, fromPosition, target, toPosition, 
     target:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, socketsDescription)
 
     -- Visual feedback
-    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket " .. emptySocketIndex .. " has been infused with " .. randomAttribute .. "! (Tier 1)")
+    player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Socket " .. emptySocketIndex .. " has been infused with " .. attributeValueBase .. "! (Tier 1)")
     player:getPosition():sendMagicEffect(CONST_ME_ORANGE_ENERGY_SPARK)
 
     return true

@@ -7,7 +7,7 @@
 local config = {
     hammerId = 673,
     maxTier = 15,
-    baseCost = 1000000, -- Base cost for tier 1->2 upgrade (1kk)
+    baseCost = 2000000, -- Base cost for tier 1->2 upgrade (2kk)
     baseSuccessRate = 80, -- Starting success rate at 80%
     successRateDecreasePerTier = 10, -- Decrease by 10% per tier
     minSuccessRate = 15, -- Minimum success rate of 15%
@@ -21,10 +21,14 @@ local config = {
 }
 
 
--- Fibonacci sequence for tier costs up to 15: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610
+-- Tier 1->2: 2kk, then Fibonacci starting at 2->3: 3kk, 5kk, 8kk, 13kk...
 local function getUpgradeCost(currentTier)
-    local fibonacci = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610}
-    return config.baseCost * fibonacci[currentTier]
+    if currentTier == 1 then
+        return config.baseCost -- 2kk for tier 1->2
+    end
+    -- Fibonacci: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987
+    local fibonacci = {2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987}
+    return config.baseCost * fibonacci[currentTier - 1]
 end
 
 -- Calculate success rate based on current tier
