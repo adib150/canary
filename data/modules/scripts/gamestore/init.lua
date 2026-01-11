@@ -476,7 +476,7 @@ function parseBuyStoreOffer(playerId, msg)
 	-- Handled errors have a code index and unhandled errors do not
 	local pcallOk, pcallError = pcall(function()
 		if offer.type == GameStore.OfferTypes.OFFER_TYPE_ITEM or offer.type == GameStore.OfferTypes.OFFER_TYPE_ITEM_UNIQUE then
-			GameStore.processItemPurchase(player, offer.itemtype, offer.count or 1, offer.movable, offer.setOwner)
+				GameStore.processItemPurchase(player, offer)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_INSTANT_REWARD_ACCESS then
 			GameStore.processInstantRewardAccess(player, offer.count)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_CHARMS then
@@ -1589,14 +1589,37 @@ end
 -- take a table {code = ..., message = ...} if the error is handled. When no code
 -- index is present the error is assumed to be unhandled.
 
-function GameStore.processItemPurchase(player, offerId, offerCount, movable, setOwner)
+function GameStore.processItemPurchase(player, offer)
+	local offerId = offer.itemtype
+	local offerCount = offer.count or 1
 	local canReceive, errorMsg = player:canReceiveStoreItems(offerId, offerCount)
 	if not canReceive then
 		return error({ code = 0, message = errorMsg })
 	end
 
+	-- Bundle handling: create a container (default green backpack) and fill it with items
+	if offer.bundle then
+		local inbox = player:getStoreInbox()
+		if not inbox then
+			return error({ code = 0, message = "Unable to access store inbox." })
+		end
+
+		local containerId = offer.containerItemtype or offerId
+		local containerItem = Game.createItem(containerId, 1)
+		if not containerItem or not containerItem:isContainer() then
+			return error({ code = 0, message = "Unable to create bundle container." })
+		end
+
+		for _, entry in ipairs(offer.bundle) do
+			containerItem:addItem(entry.id, entry.count)
+		end
+
+		inbox:addItemEx(containerItem)
+		return
+	end
+
 	for t = 1, offerCount do
-		player:addItemStoreInbox(offerId, offerCount or 1, movable, setOwner)
+		player:addItemStoreInbox(offerId, offerCount or 1, offer.movable, offer.setOwner)
 	end
 end
 

@@ -82920,4 +82920,14 @@ Granted by TibiaGoals.com"/>
 			<attribute key="slot" value="ammo"/>
 		</attribute>
 	</item>
+	<item id="50370" article="a" name="infinite food delivery">
+		<attribute key="description" value="A loyal friend that will always bring you food."/>
+		<attribute key="primarytype" value="food"/>
+		<attribute key="weight" value="20"/>
+	</item>
+	<item id="50371" name="infinite stamina extension">
+		<attribute key="primarytype" value="liquids"/>
+		<attribute key="description" value="Using this item grants two hours of stamina. Can be used once a day."/>
+		<attribute key="weight" value="210"/>
+	</item>
 </items>

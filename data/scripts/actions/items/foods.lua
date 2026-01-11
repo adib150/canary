@@ -44,6 +44,7 @@ local foods = {
 	[3730] = { 3, "Munch." }, -- some mushrooms
 	[3731] = { 36, "Munch." }, -- fire mushroom
 	[3732] = { 5, "Munch." }, -- green mushroom
+	[50370] = { 22, "Munch." }, -- infinite food delivery (acts like brown mushroom)
 	[5096] = { 4, "Yum." }, -- mango
 	[20310] = { 4, "Mmmm." }, -- christmas cookie tray
 	[5678] = { 8, "Gulp." }, -- tortoise egg
@@ -152,7 +153,10 @@ function food.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	player:say(itemFood[2], TALKTYPE_MONSTER_SAY)
 	player:updateSupplyTracker(item)
 	player:getPosition():sendSingleSoundEffect(SOUND_EFFECT_TYPE_ACTION_EAT, player:isInGhostMode() and nil or player)
-	item:remove(1)
+	-- Do not consume the infinite food item
+	if item.itemid ~= 50370 then
+		item:remove(1)
+	end
 	return true
 end
 

@@ -58,7 +58,7 @@ GameStore.Categories = {
 		icons = { "Category_PremiumTime.png" },
 		name = "Best Sellers",
 		rookgaard = true,
-		subclasses = { "Power Sockets", "Roulettes", "Exclusives", "Equipables" },
+		subclasses = { "Power Sockets", "Roulettes", "Exclusives", "Equipables", "Imbuement Packs" },
 	},
 	-- Bests ~ Power Sockets
 	{
@@ -178,6 +178,58 @@ GameStore.Categories = {
 			},
 		},
 	},
+	-- Imbuement Packs
+	{
+		icons = { "Category_Bundles.png" },
+		name = "Imbuement Packs",
+		parent = "Best Sellers",
+		rookgaard = true,
+		state = GameStore.States.STATE_NONE,
+		offers = {
+			{
+				icons = { "Imbuing_Shrine.png" },
+				name = "Powerful Vampirism Pack",
+				price = 200,
+				itemtype = 2865, -- green backpack
+				count = 1,
+				description = "<i>Green bag containing all items for Powerful Vampirism imbuement.</i>\n\n<i>Sacola verde com todos os itens para o imbuement Vampirism Poderoso.</i>\n\n{character}\n{storeinbox}",
+				type = GameStore.OfferTypes.OFFER_TYPE_ITEM,
+				bundle = {
+					{ id = 9685, count = 25 }, -- vampire teeth
+					{ id = 9633, count = 15 }, -- bloody pincers
+					{ id = 9663, count = 5 }, -- piece of dead brain
+				},
+			},
+			{
+				icons = { "Imbuing_Shrine.png" },
+				name = "Powerful Void Pack",
+				price = 200,
+				itemtype = 2865,
+				count = 1,
+				description = "<i>Green bag containing all items for Powerful Void (mana leech) imbuement.</i>\n\n<i>Sacola verde com todos os itens para o imbuement Void Poderoso (mana leech).</i>\n\n{character}\n{storeinbox}",
+				type = GameStore.OfferTypes.OFFER_TYPE_ITEM,
+				bundle = {
+					{ id = 11492, count = 25 }, -- rope belt
+					{ id = 20200, count = 25 }, -- silencer claws
+					{ id = 22730, count = 5 }, -- some hardened bone (void third item)
+				},
+			},
+			{
+				icons = { "Imbuing_Shrine.png" },
+				name = "Powerful Strike Pack",
+				price = 200,
+				itemtype = 2865,
+				count = 1,
+				description = "<i>Green bag containing all items for Powerful Strike (critical) imbuement.</i>\n\n<i>Sacola verde com todos os itens para o imbuement Strike Poderoso (critical).</i>\n\n{character}\n{storeinbox}",
+				type = GameStore.OfferTypes.OFFER_TYPE_ITEM,
+				bundle = {
+					{ id = 11444, count = 20 }, -- protective charm
+					{ id = 10311, count = 25 }, -- sabretooth
+					{ id = 22728, count = 5 }, -- vexclaw talon
+				},
+			},
+		},
+	},
 	-- Exclusives
 	{
 		icons = { "Category_Bundles.png" },
@@ -195,6 +247,26 @@ GameStore.Categories = {
 				movable = true,
 				description = "<i>Used to get a random mount.</i>\n\n<i>Usado para obter uma montaria aleatoria.</i>\n\n{character}\n{storeinbox}\n{capacity}",
 				type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
+			},
+			{
+				icons = { "Useful_Things.png" },
+				name = "Infinite Food Delivery",
+				price = 500,
+				itemtype = 50370,
+				count = 1,
+				movable = true,
+				description = "<i>Infinite food. A loyal friend that will always keep you fed.</i>\n\n<i>Um amigo que sempre te deixara alimentado.</i>\n\n{character}\n{storeinbox}",
+				type = GameStore.OfferTypes.OFFER_TYPE_ITEM,
+			},
+			{
+				icons = { "Useful_Things.png" },
+				name = "Infinite Stamina Extension",
+				price = 4000,
+				itemtype = 50371,
+				count = 1,
+				movable = true,
+				description = "<i>Infinite stamina extension. Grants 2 hours of stamina on use. Can be used once a day.</i>\n\n<i>Extensao infinita de stamina. Concede 2 horas de stamina ao usar. Pode ser usado uma vez por dia</i>\n\n{character}\n{storeinbox}",
+				type = GameStore.OfferTypes.OFFER_TYPE_ITEM,
 			},
 			{
 				icons = { "Random_Mount_Doll.png" },
