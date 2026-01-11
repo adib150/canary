@@ -262,6 +262,14 @@ function socketRemoval.onUse(player, item, fromPosition, target, toPosition, isH
         return true
     end
 
+    -- Check gold requirement (3kk for reroll)
+    local rerollCost = 3000000
+    local totalMoney = player:getMoney() + player:getBankBalance()
+    if totalMoney < rerollCost then
+        player:sendCancelMessage("You need " .. rerollCost .. " gold to reroll a socket.")
+        return true
+    end
+
     -- Get current socket status and tier
     local socketKey = "socket" .. socketToRemove
     local currentSocket = target:getCustomAttribute(socketKey) or "empty"
@@ -278,6 +286,7 @@ function socketRemoval.onUse(player, item, fromPosition, target, toPosition, isH
     -- Consume resources
     player:removeItem(item:getId(), 1)
     player:removeItem(config.hammerId, 1)
+    player:removeMoneyBank(rerollCost)
 
     -- Reroll the socket attribute but keep its tier
     local slotType = getEquipmentSlotType(target)
